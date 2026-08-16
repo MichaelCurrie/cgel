@@ -23,7 +23,16 @@ We annotated data from Twitter and the English Web Treebank (EWT).
 </tr>
 </table>
 
-To load the CGEL trees for scripting, use the `cgel.py` library.
+To load the CGEL trees for scripting, use the `cgel` module from the
+[`cgel-json-converter`](packages/cgel-json-converter/) package:
+
+```python
+from cgel_json_converter import cgel
+
+with open('datasets/twitter.cgel', encoding='utf-8') as f:
+    for tree in cgel.trees(f, check_format=True):
+        print(tree.sentence())
+```
 
 Summary information is available in:
 - [STATS.md](STATS.md) (statistics extracted from the trees)
@@ -55,24 +64,49 @@ Under `datasets/iaa/`:
   - `adjudicated`: Final adjudicated version combining both annotations.
 
 ## Structure
-- `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
-- `cgel2jsonld.py`: converts CGEL trees to JSON-LD, one level of nesting per level of indentation; validates output against `schema/cgel-jsonld.schema.json` and can verify the mapping is lossless with `--round-trip`
+
+The tree library, the converters and the validator live in a standalone package
+under [`packages/cgel-json-converter/`](packages/cgel-json-converter/), so they
+can be reused from other repositories without copying files around. See that
+package's [README](packages/cgel-json-converter/README.md) for its full API,
+CLI and internals.
+
+| was | now |
+| --- | --- |
+| `cgel.py` | `from cgel_json_converter import cgel` |
+| `constituent.py` | `from cgel_json_converter import constituent` |
+| `cgel2jsonld.py` | `cgel-to-json` (or `cgel_json_converter.cgel2jsonld`) |
+| `ud2cgel.py` | `cgel_json_converter.ud2cgel` |
+| `validate_trees.py` | `cgel-validate` (or `cgel_json_converter.tree_validation`) |
+| `temp_txt2cgel.py` | `cgel-to-json --from text` |
+| `schema/cgel-jsonld.schema.json` | `cgel_json_converter.SCHEMA_PATH` |
+| `convertor/ud-to-cgel.ini` | `cgel_json_converter.DEPEDIT_CONFIG_PATH` |
+
+Remaining top-level scripts:
+
 - `cgel2ptb.py`: prints CGEL trees in PTB bracketed style
-- `constituent.py`: information about how constituents join in a tree, for use by other scripts
 - `eval.py`: script for comparing two sets of CGEL annotations with tree edit distance (and derived metrics)
 - `iaa.sh`: script that runs `eval.py` on all files involved in our interannotator study (comparing pre- and post-validation trees as well as final adjudicated version)
 - `tree2tex.py`: print CGEL trees in pretty LaTeX
-- `ud2cgel.py`: converts UD trees (from English EWT treebank) to CGEL format using rule-based system
-- `validate_trees.py`: script to check the well-formedness of trees
 
 **Folders**
 - `analysis/`: scripts for analysing the datasets, incl. edit distance
-- `convertor/`: includes conversion rules in DepEdit script + outputs from conversion, with a simple Flask web interface for local testing in the browser (English text > automatic UD w/ Stanza > CGEL)
+- `convertor/`: outputs from UD→CGEL conversion, with a simple Flask web interface for local testing in the browser (English text > automatic UD w/ Stanza > CGEL). The DepEdit conversion rules themselves now live in `packages/cgel-json-converter/`.
 - `datasets/`: all the final datasets
 - `figures/`: figures for papers/posters and code for generating them
-- `schema/`: JSON Schema for the JSON-LD serialization
+- `packages/cgel-json-converter/`: the CGEL tree library, the JSON-LD converter, the UD→CGEL converter, the tree validator, and the JSON Schema
 - `scripts/`: one-off scripts that were used to clean/restructure data
 - `test/`: validation tests
+
+## Setup
+
+```sh
+$ pip install -r requirements.txt
+```
+
+`requirements.txt` installs `packages/cgel-json-converter` in editable mode, so
+edits to the library take effect immediately and there is exactly one copy of
+each module.
 
 ## Tests
 
@@ -82,7 +116,15 @@ To run tests locally:
 $ python -m pytest
 ```
 
-This will validate the trees and test distance metrics (Levenshtein and TED).
+This will validate the trees, test distance metrics (Levenshtein and TED), and
+run the converter package's own suite.
+
+To check tree well-formedness or produce JSON-LD directly:
+
+```sh
+$ cgel-validate datasets/ewt.cgel datasets/twitter.cgel
+$ cgel-to-json datasets/*.cgel -o cgelbank.jsonld --round-trip
+```
 
 ## History
 

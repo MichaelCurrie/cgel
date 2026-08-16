@@ -1,4 +1,4 @@
-from cgel import Tree
+from cgel_json_converter.cgel import Tree
 from typing import List, Tuple, Mapping, DefaultDict
 
 from collections import defaultdict

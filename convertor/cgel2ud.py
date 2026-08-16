@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../')
-import cgel
-from cgel import Tree, Node
+from cgel_json_converter import cgel
+from cgel_json_converter.cgel import Tree, Node
 from typing import List, Tuple, Set, Mapping, Dict, Literal
 from conllu import Token, TokenList
 from udapi.core.document import Document

@@ -1,4 +1,4 @@
-import cgel
+from cgel_json_converter import cgel
 """
 CGELBank 1.0 conventions put :p punctuations before the next lexical token.
 Move to the previous lexical token, with exceptions for "(" and "[".

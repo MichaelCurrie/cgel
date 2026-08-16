@@ -1,7 +1,7 @@
 import conllu
 import sys
 sys.path.append('../')
-import cgel
+from cgel_json_converter import cgel
 from collections import Counter
 from math import log
 from difflib import get_close_matches

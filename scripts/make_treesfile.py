@@ -2,7 +2,7 @@ import io
 import sys
 import argparse
 import glob
-import cgel
+from cgel_json_converter import cgel
 
 # Always use UTF-8, whatever the platform's locale encoding says.
 for _stream in (sys.stdout, sys.stderr):

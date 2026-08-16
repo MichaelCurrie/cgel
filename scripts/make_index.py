@@ -3,7 +3,7 @@ import sys
 import argparse
 import glob
 import math
-import cgel
+from cgel_json_converter import cgel
 from collections import Counter, defaultdict
 
 # Always use UTF-8, whatever the platform's locale encoding says.

@@ -1,9 +1,9 @@
 import glob
-from cgel import Tree
+from cgel_json_converter.cgel import Tree
 import re
 from tqdm import tqdm
 import conllu
-import ud2cgel
+from cgel_json_converter import ud2cgel
 
 node = re.compile(r'\\(.*?)\{(.*)\}')
 textsf = re.compile(r'\\textsf\{(.*?)\}\\\\(.+)')

@@ -4,7 +4,7 @@ sys.path.append('../')
 import glob
 from typing import Optional
 import pandas as pd
-import cgel
+from cgel_json_converter import cgel
 from collections import Counter, defaultdict
 from itertools import zip_longest
 import argparse

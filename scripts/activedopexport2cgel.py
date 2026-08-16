@@ -30,7 +30,7 @@ import fileinput
 import sys
 from collections import defaultdict
 
-from cgel import Tree
+from cgel_json_converter.cgel import Tree
 
 def chunks(inF):
     chunk = None    # omit BOS and EOS lines

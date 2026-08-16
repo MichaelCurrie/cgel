@@ -1,5 +1,5 @@
 from analysis.edit_distance import levenshtein, TED
-from cgel import trees
+from cgel_json_converter.cgel import trees
 
 from collections import defaultdict
 

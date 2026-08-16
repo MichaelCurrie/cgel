@@ -1,4 +1,4 @@
-from cgel import Tree, trees
+from cgel_json_converter.cgel import Tree, trees
 from analysis.edit_distance import TED
 
 from collections import defaultdict, Counter

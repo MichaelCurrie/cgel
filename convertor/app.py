@@ -3,7 +3,11 @@ from flask import Flask, render_template, request
 from depedit import DepEdit
 from json import dumps as jsonify
 
-config_file  = open("ud-to-cgel.ini", encoding='utf-8')
+from cgel_json_converter import DEPEDIT_CONFIG_PATH
+
+# The DepEdit rules ship inside cgel_json_converter, so this no longer depends
+# on the working directory being convertor/.
+config_file  = open(DEPEDIT_CONFIG_PATH, encoding='utf-8')
 d = DepEdit(config_file)
 
 app = Flask(__name__)

@@ -2,7 +2,7 @@ import conllu
 import sys
 import re
 sys.path.append('../')
-import cgel
+from cgel_json_converter import cgel
 from itertools import zip_longest
 
 """

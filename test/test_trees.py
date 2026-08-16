@@ -1,4 +1,4 @@
-import cgel
+from cgel_json_converter import cgel
 import sys
 
 def test_validate():

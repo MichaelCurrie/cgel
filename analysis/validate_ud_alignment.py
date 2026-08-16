@@ -1,7 +1,7 @@
 import conllu
 import sys
 sys.path.append('../')
-import cgel
+from cgel_json_converter import cgel
 
 """
 Check the alignment of tokens between .cgel and .conllu files.

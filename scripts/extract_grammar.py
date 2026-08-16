@@ -9,7 +9,7 @@ TODO: Options control refinement of nonterminals. E.g. clause types, marked coor
 
 from collections import Counter, defaultdict
 from itertools import chain
-import cgel
+from cgel_json_converter import cgel
 
 def count_rules(i, node, tree, counts, examples, select_rules=set(), opts=set()):
     """

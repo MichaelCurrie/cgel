@@ -10,7 +10,7 @@ import io
 import sys
 from itertools import chain
 from typing import Iterable
-import cgel
+from cgel_json_converter import cgel
 
 # Always use UTF-8, whatever the platform's locale encoding says.
 for _stream in (sys.stdout, sys.stderr):

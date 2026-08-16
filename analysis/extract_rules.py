@@ -1,6 +1,6 @@
 import sys
 sys.path.append('../')
-import cgel
+from cgel_json_converter import cgel
 from collections import Counter, defaultdict
 from pprint import pprint
 

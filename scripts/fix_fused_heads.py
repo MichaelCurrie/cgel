@@ -1,4 +1,4 @@
-import cgel
+from cgel_json_converter import cgel
 
 class Tree(cgel.Tree):
 

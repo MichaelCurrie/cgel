@@ -1,8 +1,8 @@
 import conllu
 import sys
 sys.path.append('../')
-import cgel
-from cgel import Node
+from cgel_json_converter import cgel
+from cgel_json_converter.cgel import Node
 
 """
 This was written to align original versions of the .cgel trees with the UD tokenization,

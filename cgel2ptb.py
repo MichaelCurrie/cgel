@@ -1,6 +1,6 @@
 import io
 import sys
-import cgel
+from cgel_json_converter import cgel
 import fileinput
 
 # Always use UTF-8, whatever the platform's locale encoding says.

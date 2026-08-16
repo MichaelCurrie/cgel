@@ -25,7 +25,7 @@ In this framework,
 """
 import sys
 sys.path.append('../')
-from cgel import Tree as CGELTree
+from cgel_json_converter.cgel import Tree as CGELTree
 from typing import Any, Literal
 from nltk.tree import Tree
 from nltk.parse.dependencygraph import DependencyGraph

@@ -1,5 +1,5 @@
-import cgel
-from cgel import eprint
+from cgel_json_converter import cgel
+from cgel_json_converter.cgel import eprint
 
 class Tree(cgel.Tree):
 
