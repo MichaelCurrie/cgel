@@ -7,7 +7,7 @@ import json
 import pytest
 
 from cgel_json_converter.cli import main
-from cgel_json_converter.validate import validate_cgel_files
+from cgel_json_converter.tree_validation import validate_cgel_files
 
 
 def test_writes_valid_jsonld_to_a_file(demo_cgel, tmp_path):

@@ -9,6 +9,9 @@ Two independent layers, both worth running:
 
 Both are wired into the ``cgel-to-json`` CLI; this module additionally installs
 a ``cgel-validate`` entry point for checking ``.cgel`` files on their own.
+
+Named ``tree_validation`` rather than ``validate`` so that the submodule does
+not shadow the re-exported ``cgel_json_converter.validate`` function.
 """
 
 from __future__ import annotations

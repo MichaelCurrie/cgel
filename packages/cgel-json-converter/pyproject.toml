@@ -24,7 +24,7 @@ dependencies = [
 
 [project.scripts]
 cgel-to-json = "cgel_json_converter.cli:main"
-cgel-validate = "cgel_json_converter.validate:main"
+cgel-validate = "cgel_json_converter.tree_validation:main"
 
 [dependency-groups]
 dev = ["pytest>=8"]

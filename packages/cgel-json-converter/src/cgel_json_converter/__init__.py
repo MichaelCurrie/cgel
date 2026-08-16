@@ -34,7 +34,11 @@ from .cgel2jsonld import (
     write,
 )
 from .resources import DEPEDIT_CONFIG_PATH, SCHEMA_PATH
-from .validate import Report, validate_cgel_files
+from .tree_validation import Report, validate_cgel_files
+
+#: Explicit alias for `validate`, for callers who want both validators named
+#: symmetrically alongside `validate_cgel_files`.
+validate_jsonld = validate
 
 __version__ = '0.1.0'
 
@@ -56,6 +60,7 @@ __all__ = [
     'ud_to_cgel',
     'validate',
     'validate_cgel_files',
+    'validate_jsonld',
     'write',
 ]
 

@@ -31,6 +31,17 @@ PROCESSORS = 'tokenize,mwt,pos,lemma,depparse'
 PACKAGE = 'ewt'
 
 
+def as_blocks(text: str) -> str:
+    """Normalise input to one sentence per blank-line-separated block.
+
+    `tokenize_no_ssplit` disables Stanza's sentence splitter and instead takes
+    *double* newlines as the sentence boundary; a single newline is just
+    whitespace within a sentence. Input files are written one sentence per
+    line, so without this every line would be glued into a single tree.
+    """
+    return '\n\n'.join(line.strip() for line in text.splitlines() if line.strip())
+
+
 @lru_cache(maxsize=1)
 def _pipeline():
     """Build (once) the Stanza pipeline. Downloads models on first use."""
@@ -52,7 +63,7 @@ def text_to_conllu(text: str, out_path: str | Path) -> Path:
 
     out_path = Path(out_path)
     log('Parsing text with Stanza...')
-    doc = _pipeline()(text)
+    doc = _pipeline()(as_blocks(text))
     # CoNLL.write_doc2conll opens the file itself, so hand it a str path.
     CoNLL.write_doc2conll(doc, str(out_path))
     return out_path

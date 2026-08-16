@@ -23,7 +23,7 @@ from typing import Sequence
 
 from . import cgel2jsonld
 from .io_utils import configure_stdio, log
-from .validate import validate_cgel_files
+from .tree_validation import validate_cgel_files
 
 #: Suffixes read as CGEL trees under `--from auto`. Everything else is text.
 CGEL_SUFFIXES = {'.cgel'}
