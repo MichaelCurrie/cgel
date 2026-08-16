@@ -188,7 +188,7 @@ def add_gaps(dtree: DependencyGraph, cwords: list[T]):
         if address==0 or address>1000: continue
         cpos = dnode['cpos']
         if cpos==':p': continue
-        ordered_deps = list(sorted([(a,rel) for rel in dnode['deps'] for a in dnode['deps'][rel]]))
+        list(sorted([(a,rel) for rel in dnode['deps'] for a in dnode['deps'][rel]]))
         if cpos in ('V','V_aux'):
             # canonical order: SBJ on left, nominal-OBJs, then other dependents on right
             if len(dnode['deps']['SBJ'])==1:
@@ -231,7 +231,7 @@ def add_gaps(dtree: DependencyGraph, cwords: list[T]):
 
 def infer_cgel_function(dtree: DependencyGraph, dchild: dict, dparent: dict) -> str:
     drel = dchild['rel']
-    xpos = dchild['tag']
+    dchild['tag']
     cpos = dchild['cpos']
 
     match drel:

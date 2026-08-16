@@ -5,7 +5,7 @@ from mizani.formatters import percent_format
 
 cols = ['# of Rules', 'Coverage', 'Type']
 data = []
-with open('CGEL.csv', 'r') as fin:
+with open('CGEL.csv', 'r', encoding='utf-8') as fin:
     reader = csv.reader(fin)
     d = list(reader)
     # cols = d[0]

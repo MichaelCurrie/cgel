@@ -3,9 +3,6 @@ import sys
 sys.path.append('../')
 import cgel
 from cgel import Node
-from collections import Counter
-from math import log
-from difflib import get_close_matches
 
 """
 This was written to align original versions of the .cgel trees with the UD tokenization,
@@ -19,12 +16,12 @@ INFER_VAUX = False
 INFER_LEMMA = True
 ADD_XPOS = {'CD', 'MD', 'VB', 'VBD', 'VBG', 'VBN', 'VBP', 'VBZ'}  # add XPOS tags in this list
 
-with open('../datasets/twitter.conllu') as f, open('../datasets/trial/twitter-etc-trial.conllu') as f2:
+with open('../datasets/twitter.conllu', encoding='utf-8') as f, open('../datasets/trial/twitter-etc-trial.conllu', encoding='utf-8') as f2:
     ud_trees = conllu.parse( #f.read() +
         f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../datasets/trial/twitter-etc-trial.cgel') as f2:
+with open('../datasets/twitter.cgel', encoding='utf-8') as f, open('../datasets/trial/twitter-etc-trial.cgel', encoding='utf-8') as f2:
     for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 

@@ -38,9 +38,9 @@ class Tree(cgel.Tree):
 cgel.Tree = Tree
 
 for file in ['../datasets/twitter.cgel', '../datasets/ewt.cgel']:
-    with open(file) as f:
+    with open(file, encoding='utf-8') as f:
 
-        with open(f'{file}2', 'w') as fout:
+        with open(f'{file}2', 'w', encoding='utf-8') as fout:
             for tree in cgel.trees(f, check_format=True):
                 if tree.fix_fused_heads():
                     pass

@@ -6,10 +6,13 @@ from typing import List
 from collections import defaultdict
 import constituent
 import copy
-from tqdm import tqdm
-import random
 import glob
 from cgel import Tree
+
+import sys
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 def token_tree_to_list(tree: TokenTree) -> TokenList:
     def flatten_tree(root_token: TokenTree, token_list: List[Token] = [], head: int = 0) -> List[Token]:
@@ -30,9 +33,9 @@ def token_tree_to_list(tree: TokenTree) -> TokenList:
 test = False
 
 def combine_conllus():
-    with open('convertor/all.conllu', 'w') as fout:
+    with open('convertor/all.conllu', 'w', encoding='utf-8') as fout:
         for file in glob.glob('datasets/*.conllu'):
-            with open(file) as fin:
+            with open(file, encoding='utf-8') as fin:
                 for line in fin:
                     fout.write(line)
 
@@ -46,8 +49,8 @@ def convert(infile: str, resfile: str, outfile: str):
     """
 
     print('Getting files...')
-    infile = open(infile)
-    config_file = open("convertor/ud-to-cgel.ini")
+    infile = open(infile, encoding='utf-8')
+    config_file = open("convertor/ud-to-cgel.ini", encoding='utf-8')
     d = DepEdit(config_file)
 
     print('Running depedit...')
@@ -62,7 +65,7 @@ def convert(infile: str, resfile: str, outfile: str):
 
     # create projected constituents recursively
     def project_categories(node):
-        upos, form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
+        upos, _form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
 
         if deprel == 'Clause': rel, pos = 'Root', 'Clause'
         elif ':' in deprel: rel, pos = deprel.split(':')
@@ -129,7 +132,7 @@ def convert(infile: str, resfile: str, outfile: str):
 
     # convert to constituency and write out CGEL trees
     print('Converting to constituency...')
-    with open(outfile + '.cgel', 'w') as fout, open(outfile + '.conllu', 'w') as fout2:
+    with open(outfile + '.cgel', 'w', encoding='utf-8') as fout, open(outfile + '.conllu', 'w', encoding='utf-8') as fout2:
 
         # get flattened CGEL trees (post-conversion)
         trees = conllu.parse(result)
@@ -219,7 +222,7 @@ def convert(infile: str, resfile: str, outfile: str):
             sent[1] += 1
             if complete: sent[0] += 1
 
-    with open(resfile, 'w') as fout:
+    with open(resfile, 'w', encoding='utf-8') as fout:
         fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
         fout.write(f'{sent[2]} / {sent[1]} sentences with all projections known ({sent[2] * 100 / sent[1]:.2f}%).\n')
         fout.write(f'{tok[0]} / {tok[1]} words fully parsed ({tok[0] * 100 / tok[1]:.2f}%).\n\n')

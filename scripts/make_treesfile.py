@@ -1,9 +1,11 @@
-import sys, traceback
+import sys
 import argparse
 import glob
-import re
 import cgel
-from cgel import Node
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 """
 Lists all trees, one per line.
@@ -13,9 +15,8 @@ python -m scripts.make_treesfile > all.trees
 """
 
 def main(cgelpaths):
-    nTrees = 0
     for cgelFP in cgelpaths:
-        with open(cgelFP) as f:
+        with open(cgelFP, encoding='utf-8') as f:
             print(cgelFP, file=sys.stderr)
             for tree in cgel.trees(f, empty='warn'):
                 print(' '.join(ln.strip() for ln in str(tree).split('\n')))

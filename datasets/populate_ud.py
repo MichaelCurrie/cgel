@@ -1,7 +1,9 @@
 """
 Given a set of sentids, extract the relevant .conllu data from the UD_English-EWT directory.
 """
-import conllu, fileinput, sys, glob
+import conllu
+import fileinput
+import sys
 
 SENTIDS = 'ewt.sentids'
 if __name__=='__main__':

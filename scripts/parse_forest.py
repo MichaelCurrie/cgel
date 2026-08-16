@@ -45,16 +45,16 @@ def parse_constituent(constituent, ct):
 
 def get_ud():
     sentences = []
-    with open('datasets/cgel_from_ud/training_set_all.txt') as fin:
+    with open('datasets/cgel_from_ud/training_set_all.txt', encoding='utf-8') as fin:
         for line in fin:
             sentences.append(line.strip().replace('# text = ', ''))
     ud = {}
     print('Getting UD')
-    with open('datasets/cgel_from_ud/ud_train.conllu') as fin:
+    with open('datasets/cgel_from_ud/ud_train.conllu', encoding='utf-8') as fin:
         for token_list in tqdm(conllu.parse_incr(fin)):
             if token_list.metadata['text'] in sentences:
                 ud[token_list.metadata['text']] = token_list
-    with open('datasets/cgel_from_ud/ud_train.conllu', 'w') as fout:
+    with open('datasets/cgel_from_ud/ud_train.conllu', 'w', encoding='utf-8') as fout:
         for sent in sentences:
             if sent in ud:
                 fout.write(ud[sent].serialize())
@@ -68,7 +68,7 @@ def parse():
         ct = 0
         tree = Tree()
 
-        with open(file, 'r') as fin:
+        with open(file, 'r', encoding='utf-8') as fin:
             parsing, active = False, False
             cur = ""
             stack = [('', -1)]
@@ -112,7 +112,7 @@ def parse():
                                 cur += char
 
 
-    with open('datasets/cgel_from_ud/training_set.txt', 'w') as fout:
+    with open('datasets/cgel_from_ud/training_set.txt', 'w', encoding='utf-8') as fout:
         for file, tree in trees:
             tree.prune('phantom')
             tree.prune('hspace')

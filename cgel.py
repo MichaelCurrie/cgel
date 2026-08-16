@@ -7,7 +7,9 @@ format, exposing useful helper functions.
 """
 
 from collections import defaultdict
-import re, sys, traceback
+import re
+import sys
+import traceback
 from enum import Enum
 from typing import List, Optional, Tuple
 from pylatexenc.latexencode import unicode_to_latex
@@ -768,11 +770,12 @@ class Tree:
         # ExtraposedSubj, ExtraposedObj go in a separate VP layer from other complements
 
         # Category names
-        _or = lambda parts: r'(' + r'|'.join(parts) + r')'
+        def _or(parts):
+            return r'(' + r'|'.join(parts) + r')'
         RE_CAT = r'^(' + _or(
             [_or(LEX),  # lexical category
              _or(NONTERM_ATOMIC) + r'(\+' + _or(NONTERM_ATOMIC) + r')*'] # plain or nonce nonterminal category
-        ) + rf')$'
+        ) + r')$'
         RE_NUM = r'[0-9]|zero|^one|^two|three|four|five|six|seven|^eight|^nine|^ten\b|eleven|twelve|(thir|fif)teen|(twen|thir|fif)ty|hundred|thousand|(m|b|tr)illion'
         RE_NUM_EXCLUDE = r'[a-z][0-9]|old|s$'
         for node in self.tokens.values():
@@ -1221,7 +1224,7 @@ class Tree:
                                 # or may be a Sdr in an unmarked coordinate (coordination of clauses).
                                 # Either way, it should have a Head.
                                 assert len(dd)==2,self.draw_rec(c, 0)
-                                d0 = self.tokens[dd[0]]
+                                self.tokens[dd[0]]
                                 d1 = self.tokens[dd[1]]
                                 if d1.deprel!='Head' or d1.constituent!=ch.constituent:
                                     eprint(f'Invalid coordination structure: {d1.deprel}:{d1.constituent} in {ch.constituent} in sentence {self.sentid}')
@@ -1409,7 +1412,7 @@ def parse(s: str) -> List[Tree]:
         elif char == "\\" and status in [State.TEXT]:
             status = State.TEXT_ESCAPE
         elif status in [State.TEXT_ESCAPE]:
-            assert char=='"' or char=='\\',f'Unrecognized backslash escape in string: ' + repr("\\"+char)
+            assert char=='"' or char=='\\','Unrecognized backslash escape in string: ' + repr("\\"+char)
             token += char
             status = State.TEXT
         elif status in [State.NODE, State.EDGE, State.TEXT, State.TERMINAL]:

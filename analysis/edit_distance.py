@@ -1,4 +1,4 @@
-from cgel import Tree, Node, trees, Span
+from cgel import Tree
 from typing import List, Tuple, Mapping
 
 from collections import Counter

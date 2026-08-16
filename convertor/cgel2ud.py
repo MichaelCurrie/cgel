@@ -1,13 +1,13 @@
 import sys
 sys.path.append('../')
 import cgel
-from cgel import Tree, Node, trees, Span
+from cgel import Tree, Node
 from typing import List, Tuple, Set, Mapping, Literal
 from conllu import Token, TokenList
 from udapi.core.document import Document
 from udapi.block.ud.fixpunct import FixPunct
 
-from collections import Counter, defaultdict
+from collections import defaultdict
 
 """
 Ignoring punctuation
@@ -98,7 +98,7 @@ def remove_gaps(ctree: Tree) -> int:
                 p = node.head
                 pnode = ctree.tokens[p]
                 g = pnode.head
-                gnode = ctree.tokens[g]
+                ctree.tokens[g]
                 ctree.children[p].remove(n)
                 node.head = g
                 ctree.children[g].insert(ctree.children[g].index(p), n)
@@ -208,7 +208,7 @@ def ensure_headedness(ctree: Tree) -> int:
     """
     nChanges = 0
     for n,node in ctree.tokens.items():
-        fe = next((c for c in ctree.children[n] if (child := ctree.tokens[c]).deprel in ('Coordinate','Flat')), None)
+        fe = next((c for c in ctree.children[n] if (_child := ctree.tokens[c]).deprel in ('Coordinate','Flat')), None)
         firstelt = ctree.tokens[fe] if fe is not None else None
         if firstelt is not None:
             if firstelt.deprel=='Coordinate':
@@ -720,12 +720,12 @@ def convert(ctree: Tree):
                 udtokenized.append((node.text, node.lemma, n, None))
         for s in node.postpunct:
             udtokenized.append((s, s, None, None))
-    origS = ctree.draw()
+    ctree.draw()
     adjust_lexicalization(ctree)
     relativizers_and_fusion(ctree)
-    nGapsRemoved = remove_gaps(ctree)
-    nMerges = flatten_adjuncts(ctree)
-    nHeadChanges = ensure_headedness(ctree)
+    remove_gaps(ctree)
+    flatten_adjuncts(ctree)
+    ensure_headedness(ctree)
     #print(ctree)
     lexheads0 = propagate_heads(ctree)
     feats = add_feats(ctree, lexheads0)
@@ -746,7 +746,7 @@ def convert(ctree: Tree):
         udeprels[n] = (rel, lexheads[h], ctree.tokens[lexheads[h]].lexeme, ctree.tokens[lexheads0[n]].lexeme)
     # note that for the function word dependent we have to use lexheads0[n] following CGEL headedness as opposed to UD headedness
     udeprels |= process_dependents(ctree, feats, lexheads)
-    finalS = ctree.draw()
+    ctree.draw()
     #print(ctree.draw())
     # print(nGapsRemoved, 'gaps removed; ', nMerges, 'merges', nHeadChanges, 'head changes')
     # if nGapsRemoved>0:
@@ -849,7 +849,7 @@ def convert(ctree: Tree):
 
 
 inFP = sys.argv[1]
-with open(inFP) as inF:
+with open(inFP, encoding='utf-8') as inF:
     for tree in cgel.trees(inF):
         convert(tree)
         #assert False

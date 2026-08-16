@@ -1,11 +1,10 @@
 import sys
 import cgel
-from cgel import Node
-from collections import Counter
-from math import log
-from difflib import get_close_matches
-from itertools import chain
 import fileinput
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 MODE = ['tags', 'trees'][1]
 PUNCT = [True, False][0]

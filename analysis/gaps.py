@@ -1,22 +1,19 @@
 import conllu
-import sys, re
+import sys
+import re
 sys.path.append('../')
 import cgel
-from cgel import Node
-from collections import Counter
-from math import log
-from difflib import get_close_matches
 from itertools import zip_longest
 
 """
 Compare CGEL gaps to PTB empty categories on EWT data.
 """
 
-with open('../datasets/ewt.conllu') as f2:
+with open('../datasets/ewt.conllu', encoding='utf-8') as f2:
     ud_trees = conllu.parse(f2.read())
 
 cgel_trees = []
-with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
+with open('../datasets/twitter.cgel', encoding='utf-8') as f, open('../datasets/ewt.cgel', encoding='utf-8') as f2:
     for tree in cgel.trees(f2):
         cgel_trees.append(tree)
 
@@ -61,7 +58,7 @@ while True:
     genre, docid, sentnum = sentid.split('-')
     assert genre in ('answers','email','newsgroup','reviews','weblog')
     sentnum = int(sentnum)
-    with open(f'ewtdata/{genre}/penntree/{docid}.xml.tree') as pennF:
+    with open(f'ewtdata/{genre}/penntree/{docid}.xml.tree', encoding='utf-8') as pennF:
         for i,ln in zip(range(sentnum), pennF):
             otree = ln.strip()
 

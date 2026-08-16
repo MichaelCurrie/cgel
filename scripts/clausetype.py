@@ -10,7 +10,8 @@ in the Twitter data. Just run this script directly with no arguments.
 @since: 2022-06-11
 """
 
-import conllu, math
+import conllu
+import math
 
 def first_child(node, deprels):
     for c in node.children:
@@ -155,7 +156,7 @@ def extract_clause_feats(node, wh):
             # (subordinate what-exclamatives that do not start with "what a" are rare)
             excl = True
         else:
-            assert interrog==False
+            assert not interrog
             interrog = 'OpenInt'
     else: # check for SAI that would indicate a main clause closed interrogative
         aux = first_child(node, {'cop', 'aux', 'aux:pass'})

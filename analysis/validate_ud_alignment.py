@@ -2,8 +2,6 @@ import conllu
 import sys
 sys.path.append('../')
 import cgel
-from collections import Counter
-from itertools import chain
 
 """
 Check the alignment of tokens between .cgel and .conllu files.
@@ -13,12 +11,12 @@ parts of the CGEL token.
 
 ud_trees = []
 for filename in ['twitter.conllu', 'ewt.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu']:
-    with open('../datasets/' + filename) as f:
+    with open('../datasets/' + filename, encoding='utf-8') as f:
         ud_trees.extend(conllu.parse(f.read()))
 
 cgel_trees = []
 for filename in ['twitter.cgel', 'ewt.cgel', 'ewt-test_pilot5.cgel', 'ewt-test_iaa50.cgel']:
-    with open('../datasets/' + filename) as f:
+    with open('../datasets/' + filename, encoding='utf-8') as f:
         for tree in cgel.trees(f):
             cgel_trees.append(tree)
 

@@ -179,17 +179,17 @@ def analyse(ud_data, trees):
 
 def main():
     # read UD trees
-    with open('../datasets/twitter.conllu') as f, open('../datasets/ewt.conllu') as f2:
+    with open('../datasets/twitter.conllu', encoding='utf-8') as f, open('../datasets/ewt.conllu', encoding='utf-8') as f2:
         twitter, ewt = f.read(), f2.read()
-        twitter_ud = conllu.parse(twitter)
-        ewt_ud = conllu.parse(ewt)
+        conllu.parse(twitter)
+        conllu.parse(ewt)
         all_ud = conllu.parse(twitter + ewt)
 
     # parse CGEL trees + output conllu-style versions of them
-    with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2, open('cgel.conllu', 'w') as fout:
+    with open('../datasets/twitter.cgel', encoding='utf-8') as f, open('../datasets/ewt.cgel', encoding='utf-8') as f2, open('cgel.conllu', 'w', encoding='utf-8') as fout:
         twitter, ewt = f.readlines(), f2.readlines()
-        twitter_trees = read_cgel(twitter)
-        ewt_trees = read_cgel(ewt)
+        read_cgel(twitter)
+        read_cgel(ewt)
         all_trees = read_cgel(twitter + ewt, fout)
 
     # analyse(twitter_ud, twitter_trees)

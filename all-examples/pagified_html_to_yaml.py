@@ -1,5 +1,4 @@
 import re
-import sys
 from collections import defaultdict
 from more_itertools import peekable
 import yaml
@@ -52,7 +51,8 @@ def propagate_em_across_tabs(line):
     return line
 
 def main(pagified_path, yamlified):
-    autodict = lambda: defaultdict(autodict)  # handles generating a nested dictionary
+    def autodict():
+        return defaultdict(autodict)  # handles generating a nested dictionary
     examples_dict = autodict()
     skip_next = False
     num_ex = None
@@ -61,7 +61,6 @@ def main(pagified_path, yamlified):
     special_label = None
     page = None
     sent = ''
-    keys = []
     headers = []
     with open(pagified_path, 'r', encoding="utf-8") as pagified:
         p = peekable(pagified.readlines()[1:])  # skip first line - list of docx files
@@ -203,7 +202,6 @@ def main(pagified_path, yamlified):
 
             entries_this_line = []
 
-            changed = False
             no_subnumbers = False
             line_parts = re.split(RE_EX_SPLITTER, line) # recognize and split based on (sub)numbers
             if len(line_parts)>1 and line_parts[1] and line_parts[1].startswith('['):
@@ -245,7 +243,7 @@ def main(pagified_path, yamlified):
                 if page=='849':
                     _line = _line.replace('[12]\t', '').replace('[13]\t', '')   # remove these so they won't interfere with processing (they are stored in line_starter)
                 if _line!=line:
-                    changed = True
+                    pass
                 line = _line
 
                 if page=='849':
@@ -859,7 +857,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             ROMAN_NUMS = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
                           'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
                           'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
-            if not ROMAN_NUMS[ROMAN_NUMS.index(r := roman_num.split('-')[0])-1] in examples_dict[key][num_ex]:
+            if ROMAN_NUMS[ROMAN_NUMS.index(r := roman_num.split('-')[0])-1] not in examples_dict[key][num_ex]:
                 if not (page=='993' and num_ex=='[5]'): # in this example, only a subset of roman numerals matching a previous example
                     print('[roman]',flat_key)
         if letter is not None and letter!='a':

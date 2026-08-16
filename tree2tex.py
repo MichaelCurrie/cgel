@@ -6,10 +6,14 @@ Most of the implementation is in cgel.py.
 @since: 2022-07-29
 """
 
-import re, sys
+import sys
 from itertools import chain
 from typing import Iterable
 import cgel
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 r""" fusion (new style):
 (x / NP
@@ -102,7 +106,7 @@ def trees2tex(trees: Iterable[cgel.Tree]) -> str:
     return s
 
 def main(cgelFP: str):
-    with open(cgelFP) as f2:
+    with open(cgelFP, encoding='utf-8') as f2:
         print(trees2tex(tree for tree in cgel.trees(chain(f2))))
 
 if __name__=='__main__':

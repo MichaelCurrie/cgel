@@ -7,7 +7,6 @@ TODO: Options control refinement of nonterminals. E.g. clause types, marked coor
 @since: 2022-07-30
 """
 
-import re, sys
 from collections import Counter, defaultdict
 from itertools import chain
 import cgel
@@ -22,10 +21,10 @@ def count_rules(i, node, tree, counts, examples, select_rules=set(), opts=set())
     assert tree.tokens[i] is node
     children = [(c,tree.tokens[c]) for c in tree.children[i]]
     if children:
-        rhsCondition = lambda x: ('Head' in x.deprel or 'heads-only' not in opts) and (not x.isSupp or 'ignore-supp' not in opts)
+        def rhsCondition(x):
+            return ('Head' in x.deprel or 'heads-only' not in opts) and (not x.isSupp or 'ignore-supp' not in opts)
         rhs = ' '.join(f'{ch.deprel}:{ch.constituent}' for ch in list(zip(*children))[1] if rhsCondition(ch))
         if 'group-cats' in opts:
-            fullrhs = rhs
             rhs = ' '.join(f'{ch.deprel}:*' for ch in list(zip(*children))[1] if rhsCondition(ch))
         rule = f'{node.constituent} -> {rhs}'
         if not select_rules or rule in select_rules:
@@ -60,7 +59,7 @@ if __name__=='__main__':
         'Clause -> Head:VP Mod:GAP', 'Clause -> Marker:Sdr Head:VP'}
     SELECTED_RULES = set()
     OPTS = {'ignore-supp'}
-    with open('../datasets/twitter.cgel') as f, open('../datasets/ewt.cgel') as f2:
+    with open('../datasets/twitter.cgel', encoding='utf-8') as f, open('../datasets/ewt.cgel', encoding='utf-8') as f2:
         i = 0
         for tree in cgel.trees(chain(f,f2)):
             s = tree.draw()

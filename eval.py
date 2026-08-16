@@ -1,11 +1,13 @@
-from cgel import Tree, trees, Span
-from analysis.edit_distance import levenshtein, TED
+from cgel import Tree, trees
+from analysis.edit_distance import TED
 
 from collections import defaultdict, Counter
-from typing import List, Tuple, Mapping
-import glob
 import sys
 from tqdm import tqdm
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, extra_counts=Counter()) -> dict:
     """
@@ -32,10 +34,11 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
                 assert node.label not in antecedents[i]
                 antecedents[i][node.label] = n
 
-    labeler = lambda node: (node.constituent if includeCat else None, 
-                            node.deprel if includeFxn else None, 
-                            node.lexeme, 
-                            None)
+    def labeler(node):
+        return (node.constituent if includeCat else None, 
+                                node.deprel if includeFxn else None, 
+                                node.lexeme, 
+                                None)
 
     cost, editcosts, alignment = TED(tree1, tree2, labeler=labeler, SUB=1 if strict else float('-inf'))
 
@@ -150,7 +153,7 @@ def test(gold, pred):
 
     counts = Counter()
     count = 0
-    with open(gold) as f, open(pred) as p:
+    with open(gold, encoding='utf-8') as f, open(pred, encoding='utf-8') as p:
         gold = [tree for tree in trees(f, check_format=True)]
         pred = [tree for tree in trees(p, check_format=True)]
         assert len(gold) == len(pred), "Both files should have the same number of trees."

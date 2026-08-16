@@ -1,4 +1,5 @@
-import re, glob
+import re
+import glob
 import stanza
 from stanza.utils.conll import CoNLL
 from tqdm import tqdm
@@ -6,7 +7,7 @@ from tqdm import tqdm
 nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse', tokenize_no_ssplit=True)
 
 def parse(filename, fout):
-    with open(filename, 'r') as fin:
+    with open(filename, 'r', encoding='utf-8') as fin:
         text = fin.read().replace('\n', ';')
         filename = re.search(r'/(.*?)\.tex', filename).group(1)
         for num, tree in enumerate(re.findall(r'\\begin\{parsetree\}.*?\\end\{parsetree\}', text)):
@@ -125,7 +126,7 @@ def parse(filename, fout):
             fout.write(res + '\n\n')
     return sentence
 
-with open('datasets/twitter_parsed/parsed.txt', 'w') as fout:
+with open('datasets/twitter_parsed/parsed.txt', 'w', encoding='utf-8') as fout:
     sentences = []
     for file in tqdm(glob.glob('trees/*.tex')):
         # print(file)
@@ -134,6 +135,6 @@ with open('datasets/twitter_parsed/parsed.txt', 'w') as fout:
         sentences.append(sentence)
 
     doc = nlp('\n\n'.join(sentences))
-    with open('datasets/twitter_parsed/sentences.txt', 'w') as fout:
+    with open('datasets/twitter_parsed/sentences.txt', 'w', encoding='utf-8') as fout:
         fout.write('\n'.join(sentences))
     conll = CoNLL.write_doc2conll(doc, 'ud_silver.conllu')

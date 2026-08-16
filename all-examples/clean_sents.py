@@ -2,13 +2,16 @@ import yaml
 import re
 import sys
 from typing import Mapping
-from collections import defaultdict
-from yaml.representer import Representer
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdin.reconfigure(encoding='utf-8')
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
-    from yaml import Loader, Dumper
+    from yaml import Loader
 
 """
 From the YAML file, extracts unproblematic sentences
@@ -42,7 +45,7 @@ def recurse(d: Mapping):
             yield from recurse(v)
 
 
-with (open(sys.argv[1]) if sys.argv[1:] else sys.stdin) as inF:
+with (open(sys.argv[1], encoding='utf-8') if sys.argv[1:] else sys.stdin) as inF:
     doc = yaml.load(inF, Loader)
     for v in list(doc.values()):
         for (globalexid, y) in recurse(v):

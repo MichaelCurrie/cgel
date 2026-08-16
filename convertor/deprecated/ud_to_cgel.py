@@ -11,7 +11,7 @@ def rules(rows):
 
 def preliminary():
     general = {}
-    with open('general.csv', 'r') as fin:
+    with open('general.csv', 'r', encoding='utf-8') as fin:
         reader = csv.reader(fin)
         for i, row in enumerate(reader):
             if i == 0: continue
@@ -20,7 +20,7 @@ def preliminary():
             general[row[1]] = row[0]
 
     special = []
-    with open('words.csv', 'r') as fin:
+    with open('words.csv', 'r', encoding='utf-8') as fin:
         reader = csv.reader(fin)
         for i, row in enumerate(reader):
             if i == 0: continue
@@ -36,7 +36,7 @@ def preliminary():
     pbar = tqdm(total=247861)
     rows = []
 
-    with open('en_ewt-ud-train.conllu', 'r') as fin, open('en_ewt-cgel.txt', 'w') as fout:
+    with open('en_ewt-ud-train.conllu', 'r', encoding='utf-8') as fin, open('en_ewt-cgel.txt', 'w', encoding='utf-8'):
         reader = csv.reader(fin, delimiter='\t', quoting=csv.QUOTE_NONE)
         row_buffer = []
         buffer = []
@@ -89,7 +89,7 @@ def main():
     with open('rows.txt', 'rb') as fin:
         rows = pickle.load(fin)
     rows = rules(rows)
-    with open('en_ewt-cgel.txt', 'w') as fout:
+    with open('en_ewt-cgel.txt', 'w', encoding='utf-8') as fout:
         for row in rows:
             if row.word.startswith('#'):
                 fout.write(f"\n{row.word}\n")

@@ -26,7 +26,8 @@ I	--	Npro-Head	--	--	503
 @since: 2022-12-30
 """
 
-import fileinput, sys
+import fileinput
+import sys
 from collections import defaultdict
 
 from cgel import Tree
@@ -142,7 +143,7 @@ def convert(inF, outF):
     for iSent,tree in enumerate(load(inF=inF), start=1):
         print(f'# sent_id = ???{iSent}', file=outF)
         print(f'# sent_num = {iSent}', file=outF)
-        print(f'# text = ???', file=outF)
+        print('# text = ???', file=outF)
         print(f'# sent = {tree.sentence(gaps=True)}', file=outF)
         print(str(tree), file=outF)
         print(file=outF)

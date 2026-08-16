@@ -44,7 +44,6 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
                 group = '#'
             line = line.replace('<p>', '<p>' + p, 1)
 
-            c0 = c
 
             line_count += 1 + line.count('<br />')  # ch. 3 p. 130 has <br /> line breaks within text
             print(line)

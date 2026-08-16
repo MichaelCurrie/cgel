@@ -3,7 +3,7 @@ import sys
 
 def test_validate():
     for file in ['datasets/ewt.cgel', 'datasets/twitter.cgel']:
-        with open(file) as f:
+        with open(file, encoding='utf-8') as f:
             for tree in cgel.trees(f, check_format=True):
                 # check_format=True ensures that the generated tree structure matches the input
 

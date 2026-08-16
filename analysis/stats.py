@@ -1,14 +1,15 @@
-import conllu
 import sys
 sys.path.append('../')
 import glob
 import pandas as pd
 import cgel
 from collections import Counter, defaultdict
-from math import log
-from difflib import get_close_matches
-from itertools import zip_longest, chain
+from itertools import zip_longest
 import argparse
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 """
 Report stats on CGEL only (without aligning to UD): summary stats
@@ -99,13 +100,6 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
                             high_valencies[valency] += 1
 
 
-    TOP_72 = {'be': 120, 'the': 103, 'to': 83, 'and': 66, 'a': 63, 'of': 52, 'i': 52, 'that': 48, 'have': 41, 'in': 38,
-        'it': 29, 'you': 25, 'for': 24, 'they': 22, 'we': 20, 'do': 18, 'on': 18, 'this': 18, 'my': 16, 'at': 15, 'with': 14,
-        'so': 14, 'as': 14, 'your': 13, 'not': 13, 'will': 12, 'get': 12, 'he': 12, 'just': 11, 'if': 11, 'can': 11, 'or': 11,
-        'what': 10, 'all': 10, 'take': 10, 'but': 10, "'s": 9, 'who': 9, 'there': 9, 'time': 9, 'go': 8, 'would': 8, 'new': 8,
-        'by': 8, 'an': 8, 'like': 8, 'person': 7, 'about': 7, 'more': 7, 'me': 7, 'from': 7, 'his': 7, 'out': 6, 'call': 6,
-        'enough': 6, 'now': 6, 'their': 6, 'should': 6, 'could': 6, 'also': 6, 'any': 6, 'come': 6, 'our': 6, 'find': 5, 'how': 5,
-        'want': 5, 'think': 5, 'very': 5, 'one': 5, 'first': 5, 'try': 5, 'him': 5}
     for lemma,poses in poses_by_lemma.items():
         if lemmas[lemma]>=5:
             ambig_class[frozenset(poses)].add(lemma)
@@ -213,7 +207,7 @@ def main():
 
     for cgelFP in files:
         print(cgelFP, file=sys.stderr)
-        with open(cgelFP, 'r') as f:
+        with open(cgelFP, 'r', encoding='utf-8') as f:
             for tree in cgel.trees(f, empty='warn'):
                 trees.append(tree)
 

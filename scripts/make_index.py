@@ -1,13 +1,13 @@
-import sys, traceback
+import sys
 import argparse
 import glob
 import math
 import cgel
-from cgel import Node
 from collections import Counter, defaultdict
-from math import log
-from difflib import get_close_matches
-from itertools import chain
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 """
 Run in root directory as:
@@ -35,7 +35,7 @@ See also: [STATS.md](STATS.md)
     nTrees = 0
     for cgelFP in cgelpaths:
         print(f'## [{cgelFP.replace("datasets/","")}]({cgelFP})\n')
-        with open(cgelFP) as f:
+        with open(cgelFP, encoding='utf-8') as f:
             print(cgelFP, file=sys.stderr)
             for tree in cgel.trees(f, empty='warn'):
                 nTrees += 1
@@ -58,11 +58,11 @@ See also: [STATS.md](STATS.md)
         print()
     print()
     thresh = math.floor(nTrees*.05)
-    print(f'# Sentence Metadata Fields\n')
+    print('# Sentence Metadata Fields\n')
     for m,count in metaC.most_common():
         print(f'- `{m}` ({count}/{nTrees})' + (' <small>' + ', '.join(sorted(meta[m])) + '</small>' if count<thresh else ''))
     print()
-    print(f'# Node Notes\n')
+    print('# Node Notes\n')
     for nodecat,nodelex,note,sentId in sorted(notes):
         print(f'- `{nodecat}`' + (f' _{nodelex}_ ' if nodelex else '') + f' {note} <small>({sentId})</small>')
     print()

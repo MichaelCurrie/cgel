@@ -24,10 +24,14 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from typing import Any, Optional
+from typing import Any
 from urllib.parse import quote
 
 import cgel
+
+# Always use UTF-8, whatever the platform's locale encoding says.
+sys.stdout.reconfigure(encoding='utf-8')
+sys.stderr.reconfigure(encoding='utf-8')
 
 SCHEMA_PATH = Path(__file__).parent / 'schema' / 'cgel-jsonld.schema.json'
 

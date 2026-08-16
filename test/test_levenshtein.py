@@ -14,7 +14,7 @@ def test_levenshtein_seqs():
     assert levenshtein(['a', 'a'], ['a', 'a', 'a'], matches=True) == (1.0, [('match', 0, 0), ('match', 1, 1), ('insert', 2, 2)])
 
 def test_TED():
-    with open('test/test1.cgel') as f, open('test/test2.cgel') as g:
+    with open('test/test1.cgel', encoding='utf-8') as f, open('test/test2.cgel', encoding='utf-8') as g:
         F = [tree for tree in trees(f, check_format=True)]
         G = [tree for tree in trees(g, check_format=True)]
 

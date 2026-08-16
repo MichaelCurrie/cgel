@@ -1,12 +1,7 @@
 import conllu
-import sys, re
+import sys
+import re
 sys.path.append('../')
-import cgel
-from cgel import Node
-from collections import Counter
-from math import log
-from difflib import get_close_matches
-from itertools import zip_longest
 
 """
 Given EWT sentences with both UD and PTB trees, produce a tagged version for
@@ -16,7 +11,7 @@ Heuristics are applied to guess the POS.
 
 OUTFORMAT = ['sentperline','tokperline'][0]
 
-with open('../datasets/ewt.conllu') as f2:
+with open('../datasets/ewt.conllu', encoding='utf-8') as f2:
     ud_trees = conllu.parse(f2.read())
 
 # cgel_trees = []
@@ -60,7 +55,7 @@ def cgelpos(tree, udnode):
     upos = udnode['upos']
     xpos = udnode['xpos']
     lemma = udnode['lemma']
-    deprel = udnode['deprel']
+    udnode['deprel']
     pardeprel = tree[udnode['head']-1]['deprel']
 
     if xpos=='TO':
@@ -120,7 +115,7 @@ for tree in ud_trees:
     genre, docid, sentnum = sentid.split('-')
     assert genre in ('answers','email','newsgroup','reviews','weblog')
     sentnum = int(sentnum)
-    with open(f'analysis/ewtdata/{genre}/penntree/{docid}.xml.tree') as pennF:
+    with open(f'analysis/ewtdata/{genre}/penntree/{docid}.xml.tree', encoding='utf-8') as pennF:
         for i,ln in zip(range(sentnum), pennF):
             otree = ln.strip()
 

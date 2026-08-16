@@ -8,9 +8,9 @@ Run in root directory as python -m scripts.move_punct
 for file in ['datasets/twitter.cgel', 'datasets/ewt.cgel',
              'datasets/ewt-test_iaa50.cgel', 'datasets/ewt-test_pilot5.cgel',
              'datasets/trial/ewt-trial.cgel', 'datasets/trial/twitter-etc-trial.cgel']:
-    with open(file) as f:
+    with open(file, encoding='utf-8') as f:
 
-        with open(f'{file}2', 'w') as fout:
+        with open(f'{file}2', 'w', encoding='utf-8') as fout:
             for tree in cgel.trees(f, check_format=True):
                 terminals = tree.terminals(gaps=False)
                 for i,t in enumerate(terminals):
