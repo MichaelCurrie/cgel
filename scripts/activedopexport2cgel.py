@@ -80,7 +80,8 @@ def load(inF):
             i, _, cat_func, _, _, head = ln.split('\t')
             assert i.startswith('#')
             i = int(i[1:])
-            if i==root: continue
+            if i==root:
+                continue
             assert cat_func.count('-')==1,(cat_func,' '.join(tln.split('\t')[0] for tln in terms))
             cat, func = cat_func.split('-')
             cat = cat.replace("Clauserel","Clause_rel").replace("Npro","N_pro").replace("Vaux","V_aux").replace("PPstrand","PP_strand")
@@ -89,7 +90,8 @@ def load(inF):
                 cat = label + ' / ' + cat
             func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus").replace("PCComp","PredComp/Comp")
             head = int(head)
-            if head==root: head = 0
+            if head==root:
+                head = 0
             nodes[i] = (None, func, cat, i, head)
             children[head].append(i)
 
@@ -107,7 +109,8 @@ def load(inF):
                 cat = label + ' / ' + cat
             func = func.replace("DetHead","Det-Head").replace("ModHead","Mod-Head").replace("MarkerHead","Marker-Head").replace("HeadPrenucleus","Head-Prenucleus").replace("PCComp","PredComp/Comp")
             head = int(head)
-            if head==root: head = 0
+            if head==root:
+                head = 0
             nodes[i] = (w, func, cat, i, head)
             sent.append(w if w is not None else '--')
             children[head].append(i)
@@ -149,4 +152,4 @@ def convert(inF, outF):
         print(file=outF)
 
 if __name__=='__main__':
-    convert(inF=fileinput.input(), outF=sys.stdout)
+    convert(inF=fileinput.input(encoding='utf-8'), outF=sys.stdout)

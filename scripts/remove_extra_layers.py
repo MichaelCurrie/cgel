@@ -23,6 +23,7 @@ class Tree(cgel.Tree):
 
         # Lexical Projection Principle
         if ch.constituent in LEX_projecting:
+            assert par is not None,ch.constituent   # a lexical category is never the root
             if ch.deprel=='Flat':
                 assert par.constituent==ch.constituent and ch.constituent in {'D','N'}
             else:
@@ -54,7 +55,7 @@ class Tree(cgel.Tree):
 
 
 
-cgel.Tree = Tree
+cgel.Tree = Tree    # type: ignore[invalid-assignment]  # monkeypatch so cgel.trees() builds the subclass
 
 for file in ['../datasets/twitter.cgel', '../datasets/ewt.cgel']:
     with open(file, encoding='utf-8') as f:

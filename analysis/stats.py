@@ -1,3 +1,4 @@
+import io
 import sys
 sys.path.append('../')
 import glob
@@ -8,8 +9,9 @@ from itertools import zip_longest
 import argparse
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 """
 Report stats on CGEL only (without aligning to UD): summary stats

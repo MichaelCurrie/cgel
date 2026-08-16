@@ -22,6 +22,7 @@ Usage:
 
 import argparse
 import json
+import io
 import sys
 from pathlib import Path
 from typing import Any
@@ -30,8 +31,9 @@ from urllib.parse import quote
 import cgel
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 SCHEMA_PATH = Path(__file__).parent / 'schema' / 'cgel-jsonld.schema.json'
 
@@ -178,10 +180,11 @@ def convert(paths: list[Path]) -> dict[str, Any]:
 def jsonld_to_node(n: dict[str, Any]) -> cgel.Node:
     """Rebuild a cgel.Node so we can reuse its canonical __str__ serializer.
 
-    Constructed with `constituent=None` to bypass the label-parsing in
+    Constructed with an empty `constituent` to bypass the label-parsing in
     Node.__init__ -- `category` and `index` are already separated here.
+    The root has no `function`, so it gets the same empty deprel the PENMAN parser gives it.
     """
-    node = cgel.Node(n.get('function'), None, -1)
+    node = cgel.Node(n.get('function') or '', '', -1)
     node.constituent = n['category']
     node.label = n.get('index')
     node.text = n.get('text')

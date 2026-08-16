@@ -1,5 +1,6 @@
 import re
 from collections import defaultdict
+from typing import Any
 from more_itertools import peekable
 import yaml
 from yaml.representer import Representer
@@ -19,6 +20,10 @@ RE_INFO_LINE = re.compile(r'^(<small-caps>[a-zA-Z \-]+</small-caps>[.:])|<strong
 RE_END_TAG = re.compile(r'(\[[A-Za-z0-9 \-+=<>\[\]]+]$)')
 RE_EM_TAG = re.compile(r'<em>')
 RE_X_EXPLANATION = re.compile(r'<em>X ?</em>')
+
+# parts of an item spanning a large curly brace, carried across calls to insert_sent()
+beforeCurlyBrace: str | None = None
+afterCurlyBrace: list[str] | None = None
 
 yaml.add_representer(defaultdict, Representer.represent_dict)
 
@@ -55,6 +60,7 @@ def main(pagified_path, yamlified):
         return defaultdict(autodict)  # handles generating a nested dictionary
     examples_dict = autodict()
     skip_next = False
+    key = None
     num_ex = None
     roman_num = None
     letter_label = None
@@ -275,7 +281,9 @@ def main(pagified_path, yamlified):
                     line_parts = line_starter + [c1+'\t'+r for r in rest if r.strip()]
 
             string_list = process_full_sentence_line(line_parts)    # each entry is a sentence, with possible tab-separated headers
-            page = re.search(r'[0-9?_]+', string_list[0]).group()
+            pageM = re.search(r'[0-9?_]+', string_list[0])
+            assert pageM is not None,string_list
+            page = pageM.group()
             #assert page!='338' or string_list[0][0]!='#',string_list
             if page in ('257','258') and line.startswith('<p>#') and num_ex in ('[14]','[15]') and '[16]' not in line and '| \ti' not in line:  # note that num_ex may be stale
                 line = propagate_em_across_tabs(line).replace('<p>','').replace('</p>','')
@@ -377,6 +385,7 @@ def main(pagified_path, yamlified):
                         if (no_subnumbers and page not in ('257','258')) or (page == '50' and num_ex == '[1]'):
                             if page not in ('50', '849'):
                                 assert sent.startswith(('<small-caps>', '<em><small-caps>')),(sent,line)
+                            assert num_ex is not None,line
                             _num_ex = num_ex + f'-{sum(1 for k in examples_dict[key] if k.startswith("["))+1}'
                         
                         _roman_num = roman_num
@@ -455,7 +464,7 @@ def main(pagified_path, yamlified):
                   width=float("inf"), sort_keys=False)
 
 
-def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman_num, letter, special, page, headers, sent, prev_same_line: list) -> str:
+def insert_sent(examples_dict: dict[str,dict[str,Any]], key, num_ex, roman_num, letter, special, page, headers, sent, prev_same_line: list) -> str:
     sent = sent.replace('Ph. D.', 'Ph.D.')
     sent = sent.replace('`', '\'')
     sent = sent.replace('≡', '')    # on p. 359 this is used as a semantic relation between examples
@@ -569,7 +578,8 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
     if len(contents)>2: # sequence is: exampleID preTag* main+ postTag*
         section = 'pre'
         for i,part in enumerate(contents):
-            if i==0: continue   # example ID
+            if i==0:
+                continue   # example ID
             elif part.startswith(('<small-caps>', '<em><small-caps>', '<strong>', 'verb \u2013')):
                 assert section=='pre',(part,contents)
                 contents[i] = '<preTag>' + part + '</preTag>'
@@ -741,6 +751,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             if special is None:
                 # num_ex
                 if headers:
+                    assert pseudonum is not None,(num_ex,headers)
                     col = (int(pseudonum)-1) % len(headers)  # pseudonum counting is row by row. assume each row has len(headers) columns
                     header = headers[col]
                     contents.insert(1, f'<preTag>{header}</preTag>')
@@ -857,7 +868,7 @@ def insert_sent(examples_dict: dict[str,dict[str,dict|list]], key, num_ex, roman
             ROMAN_NUMS = ['i', 'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix', 'x',
                           'xi', 'xii', 'xiii', 'xiv', 'xv', 'xvi', 'xvii', 'xviii', 'xix', 'x',
                           'xx', 'xxi', 'xxii', 'xxiii', 'xxiv', 'xxv', 'xxvi', 'xxvii', 'xxviii', 'xxix', 'xxx']
-            if ROMAN_NUMS[ROMAN_NUMS.index(r := roman_num.split('-')[0])-1] not in examples_dict[key][num_ex]:
+            if ROMAN_NUMS[ROMAN_NUMS.index(roman_num.split('-')[0])-1] not in examples_dict[key][num_ex]:
                 if not (page=='993' and num_ex=='[5]'): # in this example, only a subset of roman numerals matching a previous example
                     print('[roman]',flat_key)
         if letter is not None and letter!='a':

@@ -14,7 +14,8 @@ for file in ['datasets/twitter.cgel', 'datasets/ewt.cgel',
             for tree in cgel.trees(f, check_format=True):
                 terminals = tree.terminals(gaps=False)
                 for i,t in enumerate(terminals):
-                    if i==0: continue
+                    if i==0:
+                        continue
                     while t.prepunct and not (set(t.prepunct[0]) & {"(", "["}):
                         p = t.prepunct.pop(0)
                         terminals[i-1].postpunct.append(p)

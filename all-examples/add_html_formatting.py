@@ -23,6 +23,7 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
     html_lines_pagified.append(html_text.partition('\n')[0])
 
     group = None
+    c0 = None
 
     for line in html_text.splitlines()[1:]:
         if re.search(RE_ALPHA, BeautifulSoup(line, "lxml").text) is None:
@@ -31,6 +32,7 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
             continue
         else:
             prefix = re.match(RE_LINE_TAG, pagified_lines[line_count])
+            assert prefix is not None,pagified_lines[line_count]
             p = prefix.group()
             if (c := p[0])=='@':
                 #assert 'small-caps>' not in line,(prefix.group(),line)
@@ -44,6 +46,7 @@ def main(html_text, pagified_lines, outFP="pagified.html"):
                 group = '#'
             line = line.replace('<p>', '<p>' + p, 1)
 
+            c0 = c
 
             line_count += 1 + line.count('<br />')  # ch. 3 p. 130 has <br /> line breaks within text
             print(line)

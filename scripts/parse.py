@@ -9,7 +9,9 @@ nlp = stanza.Pipeline(lang='en', processors='tokenize,mwt,pos,lemma,depparse', t
 def parse(filename, fout):
     with open(filename, 'r', encoding='utf-8') as fin:
         text = fin.read().replace('\n', ';')
-        filename = re.search(r'/(.*?)\.tex', filename).group(1)
+        fnameM = re.search(r'/(.*?)\.tex', filename)
+        assert fnameM is not None,filename
+        filename = fnameM.group(1)
         for num, tree in enumerate(re.findall(r'\\begin\{parsetree\}.*?\\end\{parsetree\}', text)):
             fout.write(f'Tree {filename}-{num}\n')
 
@@ -19,7 +21,9 @@ def parse(filename, fout):
             deps = []
             for i, char in enumerate(tree):
                 if char == '(':
-                    label = re.search(r'^\(.*?\.(.*?)\.', tree[i:]).group(1)
+                    labelM = re.search(r'^\(.*?\.(.*?)\.', tree[i:])
+                    assert labelM is not None,tree[i:]
+                    label = labelM.group(1)
                     if 'SIEG' in filename:
                         sublabels = re.search(r'\\begin\{tabular\}\{c\}(.*?)\\end\{tabular\}', label)
                     else:
@@ -70,7 +74,8 @@ def parse(filename, fout):
                 labels.append(label)
                 # print(_, i, label)
 
-                if label not in cts: cts[label] = 0
+                if label not in cts:
+                    cts[label] = 0
                 cts[label] += 1
 
                 if i[2] != '_':
@@ -109,13 +114,16 @@ def parse(filename, fout):
                     res += f'\n({deprel}'
                 elif label == 'GAP':
                     res += f'\n{"    " * depth}:{deprel} '
-                    if name: res += f'{name}'
+                    if name:
+                        res += f'{name}'
                     append = False
                 else:
                     res += f'\n{"    " * depth}:{deprel} ('
-                    if name: res += f'{name} / '
+                    if name:
+                        res += f'{name} / '
                     res += label
-                    if text: res += " :t " + text
+                    if text:
+                        res += " :t " + text
                 
                 # future node children
                 if append:

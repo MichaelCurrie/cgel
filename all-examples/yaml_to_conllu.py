@@ -17,7 +17,7 @@ def get_nested_sentences(nested_dict):
     for value in nested_dict.values():
         if isinstance(value, dict):
             yield from get_nested_sentences(value)
-        elif type(value) == list:  # ignore page numbers
+        elif isinstance(value, list):  # ignore page numbers
             yield value
 
 

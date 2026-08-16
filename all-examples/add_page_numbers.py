@@ -115,8 +115,8 @@ def main(docx_path, pdfI):
         while True: # loop over pages
             # if the example is numbered, is the number missing from the page? (to avoid suffix match false positives)
             m = reNUMERICEX.match(cleaned_excerpt)
-            numericMismatch = m and m.group(0) not in cleaned_page_text
-            if numericMismatch and (rest := cleaned_excerpt[len(m.group(0)):]) in cleaned_page_text:
+            numericMismatch = m is not None and m.group(0) not in cleaned_page_text
+            if m is not None and numericMismatch and (rest := cleaned_excerpt[len(m.group(0)):]) in cleaned_page_text:
                 # looks like example numbers differ - a mismatch between docx and PDF (a few are typos in the PDF)
                 if cleaned_excerpt=="[13]iShedoesn'tsitandmopebut(rather)makesthebestofthesituation.":
                     cleaned_excerpt = '[14]'+cleaned_excerpt[4:]    # PDF p. 737 has no example [13] and two [14]s

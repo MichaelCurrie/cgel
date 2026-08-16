@@ -1,11 +1,13 @@
+import io
 import sys
 import traceback
 import argparse
 import cgel
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 def main(cgelpaths, punct: bool=False):
     nWarn = 0

@@ -2,12 +2,14 @@ from cgel import Tree, trees
 from analysis.edit_distance import TED
 
 from collections import defaultdict, Counter
+import io
 import sys
 from tqdm import tqdm
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, strict=False, extra_counts=Counter()) -> dict:
     """

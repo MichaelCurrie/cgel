@@ -66,10 +66,11 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
         j1: int,    # end of subforest within T1 (rightmost root node + 1)
         i2: int,    # start of subforest within T2
         j2: int,    # end of subforest within T2
-    ) -> Tuple[float,float,float,float,Tuple[Tuple[int,int]]]:    # cost
+    ) -> Tuple[float,float,float,float,Tuple[Tuple[int,int],...]]:    # cost
         hashed = (i1, j1, i2, j2)
         if hashed in memo:
-            if DEBUG: print(hashed, memo[hashed], "memo")
+            if DEBUG:
+                print(hashed, memo[hashed], "memo")
             return memo[hashed]
 
         # Base cases
@@ -126,7 +127,7 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
     alignments = {nodes1[i1]: nodes2[i2] for i1,i2 in offset_alignments}
     return cost, editcosts, alignments
 
-def stringify_alignments(alignments: Mapping[int,int], T1: Tree, T2: Tree) -> Tuple[Tuple[str,str]]:
+def stringify_alignments(alignments: Mapping[int,int], T1: Tree, T2: Tree) -> Tuple[Tuple[str,str],...]:
     result = [(f'{n1}:{T1.node_yield(n1, gaps=True)}', f'{n2}:{T2.node_yield(n2, gaps=True)}') for n1,n2 in alignments.items()]
     return tuple(result)
 
@@ -150,8 +151,10 @@ def levenshtein(
 
     # fill out matrix of size (len(s1) + 1) x (len(s2) + 1)
     matrix: List[List[Tuple]] = [[() for _ in range(len(s2) + 1)] for _ in range(len(s1) + 1)]
-    for j in range(len(s2) + 1): matrix[0][j] = (j, 'insert')
-    for i in range(len(s1) + 1): matrix[i][0] = (i, 'delete')
+    for j in range(len(s2) + 1):
+        matrix[0][j] = (j, 'insert')
+    for i in range(len(s1) + 1):
+        matrix[i][0] = (i, 'delete')
     for i in range(1, len(s1) + 1):
         for j in range(1, len(s2) + 1):
             matrix[i][j] = min(
@@ -180,7 +183,8 @@ def levenshtein(
             cost += ins
             j -= 1
         else:
-            if editOp == 'substitute': cost += sub
+            if editOp == 'substitute':
+                cost += sub
             i -= 1
             j -= 1
 

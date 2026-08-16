@@ -136,7 +136,8 @@ for tree in ud_trees:
         upos = node['upos']
         xpos = node['xpos']
         lemma = node['lemma']
-        if upos=='PUNCT' or xpos==',': continue # some SYM tokens are xpos=,
+        if upos=='PUNCT' or xpos==',':
+            continue # some SYM tokens are xpos=,
 
         # determine the CGEL wordform
 

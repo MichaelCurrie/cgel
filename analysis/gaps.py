@@ -49,10 +49,9 @@ Omitting *PRO*: 6/7
 gaps = set()
 gaptypes = set()
 ud_treesI = iter(ud_trees)
-TIME_TO_BREAK = object()
 while True:
-    ud_tree = next(ud_treesI, TIME_TO_BREAK)
-    if ud_tree is TIME_TO_BREAK:
+    ud_tree = next(ud_treesI, None)
+    if ud_tree is None:
         break
     sentid = ud_tree.metadata['sent_id']
     genre, docid, sentnum = sentid.split('-')

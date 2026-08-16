@@ -1,4 +1,4 @@
-from eval import levenshtein, TED
+from analysis.edit_distance import levenshtein, TED
 from cgel import trees
 
 from collections import Counter

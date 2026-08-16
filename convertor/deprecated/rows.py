@@ -26,11 +26,17 @@ def apply_rule(comp, new, rows, label):
     ct = 0
     for row in rows:
         if match(comp, row):
-            if new.word != r".*": row.word = new.word
-            if new.lemma != r".*": row.lemma = new.lemma
-            if new.pos != r".*": row.pos = new.pos
-            if new.head != r".*": row.head = new.head
-            if new.deprel != r".*": row.deprel = new.deprel
-            if new.misc != r".*": row.misc = new.misc
+            if new.word != r".*":
+                row.word = new.word
+            if new.lemma != r".*":
+                row.lemma = new.lemma
+            if new.pos != r".*":
+                row.pos = new.pos
+            if new.head != r".*":
+                row.head = new.head
+            if new.deprel != r".*":
+                row.deprel = new.deprel
+            if new.misc != r".*":
+                row.misc = new.misc
             ct += 1
     print(f"{label}: {ct} replacement(s)")

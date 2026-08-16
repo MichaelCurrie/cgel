@@ -220,12 +220,15 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
             if buf:
                 # We've matched part of buf but there is more (multiple corresponding UD nodes). grab the next one
                 udn = next(udnI)
-                if hold_word is not None: print('next188', file=sys.stderr)
+                if hold_word is not None:
+                    print('next188', file=sys.stderr)
 
     # n is the last CGEL token. insert any subsequent UD stuff
+    assert last_nongap is not None,cgel_sentid
     while udn:
         udn = next(udnI, None)
-        if udn is None: continue
+        if udn is None:
+            continue
         assert udn['deprel']=='punct',udn
         insert_postpunct(last_nongap, udn['form'])
 

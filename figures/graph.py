@@ -1,5 +1,5 @@
 import csv
-from plotnine import *
+from plotnine import aes, geom_point, geom_smooth, ggplot, scale_y_continuous
 import pandas as pd
 from mizani.formatters import percent_format
 
@@ -20,5 +20,5 @@ df = pd.DataFrame(data, columns=cols)
 
 g = ggplot(df, aes(x='# of Rules', y='Coverage', color='Type')) + \
     geom_smooth() + geom_point()
-g += scale_y_continuous(labels=percent_format(), limits=[0, 1])
+g += scale_y_continuous(labels=percent_format(), limits=(0, 1))
 g.save('graph.png', width=5, height=3)

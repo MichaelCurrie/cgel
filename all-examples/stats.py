@@ -1,16 +1,17 @@
 import yaml
 import re
+import io
 import sys
 from typing import Mapping
 from collections import Counter
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdin.reconfigure(encoding='utf-8')
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdin, sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 try:
-    from yaml import CLoader as Loader, CDumper as Dumper
+    from yaml import CLoader as Loader
 except ImportError:
     from yaml import Loader
 
@@ -33,7 +34,8 @@ def recursive_count(d: Mapping):
     nPreTags = 0
     nPostTags = 0
     for k,v in d.items():
-        if k=='page': continue
+        if k=='page':
+            continue
         if k=='title':
             titles.add(v)
             continue

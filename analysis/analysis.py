@@ -171,10 +171,8 @@ def analyse(ud_data, trees):
     print()
     print('DEPRELS (CGEL vs UD)')
     print('Same head:', f'{agree_head / tot:0.1%}')
-    head_pairs = Counter()
-    for i in all_ud:
-        head_pairs[i] = match_ud[i] / all_ud[i]
-    for x, y in head_pairs.most_common():
+    head_pairs = {i: match_ud[i] / all_ud[i] for i in all_ud}
+    for x, y in sorted(head_pairs.items(), key=lambda kv: kv[1], reverse=True):
         print(f'{x:<20} {y:>6.1%} ({all_ud[x]})')
 
 def main():

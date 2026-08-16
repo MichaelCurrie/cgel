@@ -26,7 +26,7 @@ In this framework,
 import sys
 sys.path.append('../')
 from cgel import Tree as CGELTree
-from typing import Literal, Self
+from typing import Any, Literal
 from nltk.tree import Tree
 from nltk.parse.dependencygraph import DependencyGraph
 from nltk.corpus.reader import DependencyCorpusReader
@@ -35,7 +35,8 @@ from nltk.corpus.reader import DependencyCorpusReader
 
 def infer_cgel_pos(dtree: DependencyGraph) -> None:
     for i,node in dtree.nodes.items():
-        if i==0: continue
+        if i==0:
+            continue
         if node['rel']=='P':    # punctuation
             cpos = ':p'
         else:
@@ -78,11 +79,12 @@ def infer_cgel_pos(dtree: DependencyGraph) -> None:
                     cpos = ':subt'
                 case _:
                     assert False,node
-        node['cpos'] = cpos # type: ignore
+        node['cpos'] = cpos
 
 def attach_subtokens(dtree: DependencyGraph) -> None:
     for i,node in dtree.nodes.items():
-        if i==0: continue
+        if i==0:
+            continue
         if node['cpos']==':subt':    # 's clitic
             prevnode = dtree.nodes[i-1]
             prevnode['subtoks'] = [(':subt', prevnode['word']), (':subt', node['word'])]
@@ -90,7 +92,7 @@ def attach_subtokens(dtree: DependencyGraph) -> None:
             prevnode['word'] += node['word']
 
 class T(Tree):
-    def __call__(self, fxn: str) -> Self:
+    def __call__(self, fxn: str) -> 'T':
         """A copy of this tree with the specified function appended to the category of the root."""
         t = T(self.label()+'-'+fxn, list(self))
         if hasattr(self, '_dnode'):
@@ -145,7 +147,7 @@ def lex_project(dtree: DependencyGraph) -> list[T]:
                     cword = T(cpos, [word])
                     cword.dnode = node
             cwords.append(cword)
-            node['cproj'] = cword # type: ignore
+            node['cproj'] = cword
     return cwords
 
 def is_det_or_poss(dnode: dict) -> bool:
@@ -162,7 +164,7 @@ def is_wh_phrase(dtree: DependencyGraph, dnode: dict) -> bool:
 
 def _move_wh(dtree: DependencyGraph, whnode: dict, parent: dict) -> None:
     whaddr = whnode["address"]
-    gapnode = {"address": 1000+whaddr, "word": '--', "lemma": '--',
+    gapnode: dict[str,Any] = {"address": 1000+whaddr, "word": '--', "lemma": '--',
                 "rel": whnode["rel"],
                 "tag": None, "cpos": 'GAP', "antecedent": whaddr, "deps": {},
                 "cproj": T('GAP', ['--'])}
@@ -184,10 +186,12 @@ def add_gaps(dtree: DependencyGraph, cwords: list[T]):
     Note that such addresses do not reflect the linear position of the gap relative to words in the sentence.
     """
     for dnode in list(dtree.nodes.values()):
-        address: int = dnode['address'] # type: ignore
-        if address==0 or address>1000: continue
+        address: int = dnode['address']
+        if address==0 or address>1000:
+            continue
         cpos = dnode['cpos']
-        if cpos==':p': continue
+        if cpos==':p':
+            continue
         list(sorted([(a,rel) for rel in dnode['deps'] for a in dnode['deps'][rel]]))
         if cpos in ('V','V_aux'):
             # canonical order: SBJ on left, nominal-OBJs, then other dependents on right
@@ -292,7 +296,8 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
     def _process_child(address, l_or_r: Literal['L','R']):
         nonlocal result, cat
         child_dnode = dtree.nodes[address]
-        if child_dnode['cpos'] in (':p',':subt'): return
+        if child_dnode['cpos'] in (':p',':subt'):
+            return
         child_subtree = build_ctree(dtree, child_dnode) # recurse!
         fxn = infer_cgel_function(dtree, child_dnode, dnode)
         child_cat = child_subtree.label()
@@ -303,7 +308,8 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
         
         if child_subtree.label()=='Clause' and child_dnode['tag'] in ('VBD', 'VBP','VBZ') and child_dnode['rel']=='NMOD':
             child_subtree.set_label('Clause_rel')
-            if any((clhd := node).label()=='Clause-Head' for node in child_subtree):
+            clhd = next((node for node in child_subtree if node.label()=='Clause-Head'), None)
+            if clhd is not None:
                 clhd.set_label('Clause_rel-Head')
         child_cat = child_subtree.label()
         
@@ -407,12 +413,13 @@ def build_cgel_tree(targettree: CGELTree, subtree: T, parent: int, dtree: Depend
                 if 'subtoks' in dnode:
                     targettree.tokens[i].substrings = dnode['subtoks']
 
-def attach_punct(tree: CGELTree, sent: list[tuple[str,int]], dtree: dict) -> None:
+def attach_punct(tree: CGELTree, sent: list[tuple[str,int]], dtree: DependencyGraph) -> None:
     """Add punctuation terminals to the CGEL tree given the CGEL-tokenized
     leaves with alignments to the dependency tree nodes."""
     b = 0
     for node in tree.leaves():
-        if node.constituent=='GAP': continue
+        if node.constituent=='GAP':
+            continue
         tok, _ = sent[b]
         while node.text!=tok:
             node.prepunct.append(tok)

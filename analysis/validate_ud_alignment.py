@@ -33,7 +33,8 @@ for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     udI = iter(ud_tree)
     hold_word = hold_word2 = None
     for leaf in cgel_tree.leaves():
-        if leaf.constituent=='GAP': continue
+        if leaf.constituent=='GAP':
+            continue
         if leaf.text: # non-gap terminal node
             # skip e.g. (Nom) in fused determiner-head NP
             # also skip insertion corrections (not present in UD)

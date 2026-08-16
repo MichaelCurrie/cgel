@@ -20,7 +20,9 @@ def parse_constituent(constituent, ct):
     constituent = re.sub(r'\\textdollar *', r'$', constituent)
 
     if 'textit' in constituent:
-        constituent = textit.search(constituent).group(1)
+        textitM = textit.search(constituent)
+        assert textitM is not None,constituent
+        constituent = textitM.group(1)
 
     res = node.search(constituent)
     if 'textsf' in constituent:
@@ -74,7 +76,8 @@ def parse():
             stack = [('', -1)]
             for line in fin:
                 # print(line)
-                if line.startswith('%'): continue
+                if line.startswith('%'):
+                    continue
                 if '\\begin{forest}' in line and not parsing:
                     parsing = True
                 elif parsing:
@@ -82,7 +85,8 @@ def parse():
                         parsing = False
                     else:
                         for char in line:
-                            if char == '%': break
+                            if char == '%':
+                                break
                             if char == '[':
                                 if cur != "":
                                     cur = cur.strip()

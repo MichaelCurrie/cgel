@@ -1,3 +1,4 @@
+import io
 import sys
 import argparse
 import glob
@@ -6,8 +7,9 @@ import cgel
 from collections import Counter, defaultdict
 
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 """
 Run in root directory as:

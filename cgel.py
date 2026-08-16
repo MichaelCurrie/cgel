@@ -155,7 +155,7 @@ class Node:
         self.prepunct: list[str] = []
         self.postpunct: list[str] = []
         self.correct: Optional[str] = None
-        self.substrings: Optional[list[str]] = None
+        self.substrings: Optional[list[tuple[str,str]]] = None
         self.note: Optional[str] = None
         self.xpos: Optional[str] = None
         self._lemma = None  # UD lemma
@@ -234,8 +234,9 @@ class Node:
             assert '/' not in f,f
             s += f
 
-        if self.correct or self.text:
-            s += f' {(self.correct or self.text).replace(" ", complex_lexeme_separator)}'
+        lexeme = self.correct or self.text
+        if lexeme:
+            s += f' {lexeme.replace(" ", complex_lexeme_separator)}'
         elif self.constituent=='GAP':
             s += f' {gap_token_symbol}'
         return s
@@ -313,8 +314,8 @@ class Tree:
         self.sent = None
         self.metadata: dict[str,str] = {}
 
-    def add_token(self, token: Optional[str], deprel: Optional[str], constituent: Optional[str], i: int, head: int):
-        # print(token, deprel, constituent, i, head)
+    def add_token(self, token: Optional[str], deprel: Optional[str], constituent: Optional[str], i: Optional[int], head: int):
+        """`i` (the new node's index) is only required when adding a nonterminal, i.e. when `token` is None."""
         if token is not None:
             if deprel == 'correct':
                 self.tokens[head].correct = token
@@ -336,6 +337,7 @@ class Tree:
             else:
                 self.tokens[head].text = token
         else:
+            assert deprel is not None and constituent is not None and i is not None,(deprel,constituent,i)
             node = Node(deprel, constituent, head)
 
             # Don't actually unify the coindexed nodes.
@@ -568,7 +570,7 @@ class Tree:
                 if punct:
                     for p in t.prepunct:
                         s += ' ' + p
-                s += ' ' + (t.text or t.correct)
+                s += ' ' + (t.text or t.correct or '')
                 if punct:
                     for p in t.postpunct:
                         if t.text and t.text.endswith('.') and p.startswith('.') and not double_period:
@@ -604,8 +606,8 @@ class Tree:
 
         # create the span for this constituent
         span = Span(offset, offset, self.tokens[cur])
-        if self.tokens[cur].text is not None:
-            txt = self.tokens[cur].text.replace(' ', '').replace('-', '').replace('\'', '')
+        if (curtext := self.tokens[cur].text) is not None:
+            txt = curtext.replace(' ', '').replace('-', '').replace('\'', '')
             span.right = offset + len(txt)
             string += txt
         res.append(span)
@@ -690,7 +692,8 @@ class Tree:
         desc = []
         for i in self.children[cur]:
             add = self._get_heads_rec(i)
-            if add[0][0]: desc.extend(add)
+            if add[0][0]:
+                desc.extend(add)
         desc.sort(key=lambda x: x[0])
 
         # find the "true" head, i.e. prioritise fused heads
@@ -1023,11 +1026,13 @@ class Tree:
 
                         sister = self.tokens[isister] if isister is not None else None
                         if sister and sister.constituent=='Sdr':
+                            assert isister is not None
                             assert sister.lemma in ('that','for'),(self.sentid, self.draw_rec(isister,0))
                             assert sister.deprel=='Marker'
                             handled = True
                         elif (not hasLowerRC) or hasLowerThatRC:
                             assert not handled
+                            assert sister is not None and isister is not None,self.draw_rec(p,0)
 
                             if higherRC is not ch and higherRC.constituent!='Coordination':
                                 assert 'Prenucleus' in sister.deprel,self.draw_rec(isister,0)
@@ -1191,7 +1196,8 @@ class Tree:
 
         # Invalid rules
         for p, cc in self.children.items():
-            if p == -1: continue  # root
+            if p == -1:
+                continue  # root
 
             par = self.tokens[p]
 
@@ -1402,7 +1408,8 @@ def parse(s: str) -> List[Tree]:
             token += char
             status = State.NODE
         elif char == '"' and status in [State.EDGE, State.NODE]:
-            if token.strip(): tokens.append((token.strip(), status))
+            if token.strip():
+                tokens.append((token.strip(), status))
             token = ''
             status = State.TEXT
         elif char == '"' and status in [State.TEXT]:
@@ -1419,7 +1426,7 @@ def parse(s: str) -> List[Tree]:
             token += char
 
     res = []
-    result = None
+    result: Optional[Tree] = None
     stack = []
     count = 0
     edge = None
@@ -1431,9 +1438,12 @@ def parse(s: str) -> List[Tree]:
             d += 1
         elif state == State.NODE:
             assert len(stack) == d - 1
-            if stack: result.add_token(None, edge, token, count, stack[-1][1])
+            if stack:
+                assert result is not None
+                result.add_token(None, edge, token, count, stack[-1][1])
             else:
-                if result: res.append(result)
+                if result:
+                    res.append(result)
                 result = Tree()
                 count = 0
                 result.add_token(None, '', token, count, -1)
@@ -1442,9 +1452,11 @@ def parse(s: str) -> List[Tree]:
         elif state == State.EDGE:
             edge = token
         elif state == State.TERMINAL:
+            assert result is not None
             result.add_token(None, edge, token, count, stack[-1][1])
             count += 1
         elif state == State.TEXT:
+            assert result is not None
             result.add_token(token, edge, None, count, stack[-1][1])
             count += 1
         elif state == State.CLOSE_PAREN:
@@ -1454,5 +1466,6 @@ def parse(s: str) -> List[Tree]:
             except IndexError:
                 raise Exception('Mismatched brackets')
 
-    if result: res.append(result)
+    if result:
+        res.append(result)
     return res

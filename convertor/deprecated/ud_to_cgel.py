@@ -1,6 +1,6 @@
 import csv
 from tqdm import tqdm
-from rows import *
+from rows import Row, apply_rule
 import pickle
 
 def rules(rows):
@@ -14,7 +14,8 @@ def preliminary():
     with open('general.csv', 'r', encoding='utf-8') as fin:
         reader = csv.reader(fin)
         for i, row in enumerate(reader):
-            if i == 0: continue
+            if i == 0:
+                continue
             if row[1] == '':
                 row[1] = '?'
             general[row[1]] = row[0]
@@ -23,7 +24,8 @@ def preliminary():
     with open('words.csv', 'r', encoding='utf-8') as fin:
         reader = csv.reader(fin)
         for i, row in enumerate(reader):
-            if i == 0: continue
+            if i == 0:
+                continue
             words = row[0].split()
             pos = row[3].split(' + ')
             res = row[1].split(' + ')

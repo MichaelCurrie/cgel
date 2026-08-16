@@ -265,6 +265,7 @@ def add_clause_feats(node):
 
     global nClCorrect, nClUnsure, nClWrong
     if i_am_santa:
+        assert result is not None  # guaranteed by the assertion above
         if first_child(node, {'nsubj:outer','csubj:outer'}):
             print('Skipping predicate because it has an :outer subject and thus projects multiple clauses', node.token)
             nClUnsure += 1
@@ -308,7 +309,8 @@ if __name__=='__main__':
         i = 0
         for tree in conllu.parse_tree_incr(inF):
             i += 1
-            if i==2: continue # TODO: s2 isn't done yet
+            if i==2:
+                continue # TODO: s2 isn't done yet
             add_clause_feats(tree)
             print()
     print(f'''Clauses Correct: {nClCorrect}

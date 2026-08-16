@@ -9,10 +9,12 @@ import copy
 import glob
 from cgel import Tree
 
+import io
 import sys
 # Always use UTF-8, whatever the platform's locale encoding says.
-sys.stdout.reconfigure(encoding='utf-8')
-sys.stderr.reconfigure(encoding='utf-8')
+for _stream in (sys.stdout, sys.stderr):
+    if isinstance(_stream, io.TextIOWrapper):
+        _stream.reconfigure(encoding='utf-8')
 
 def token_tree_to_list(tree: TokenTree) -> TokenList:
     def flatten_tree(root_token: TokenTree, token_list: List[Token] = [], head: int = 0) -> List[Token]:
@@ -49,12 +51,11 @@ def convert(infile: str, resfile: str, outfile: str):
     """
 
     print('Getting files...')
-    infile = open(infile, encoding='utf-8')
-    config_file = open("convertor/ud-to-cgel.ini", encoding='utf-8')
-    d = DepEdit(config_file)
+    with open(infile, encoding='utf-8') as inF, open("convertor/ud-to-cgel.ini", encoding='utf-8') as config_file:
+        d = DepEdit(config_file)
 
-    print('Running depedit...')
-    result = d.run_depedit(infile)
+        print('Running depedit...')
+        result = d.run_depedit(inF)
 
     print('Done with depedit.')
     types = defaultdict(int)
@@ -67,9 +68,12 @@ def convert(infile: str, resfile: str, outfile: str):
     def project_categories(node):
         upos, _form, deprel = node.token['upos'], node.token['form'], node.token['deprel']
 
-        if deprel == 'Clause': rel, pos = 'Root', 'Clause'
-        elif ':' in deprel: rel, pos = deprel.split(':')
-        else: rel, pos = deprel, upos
+        if deprel == 'Clause':
+            rel, pos = 'Root', 'Clause'
+        elif ':' in deprel:
+            rel, pos = deprel.split(':')
+        else:
+            rel, pos = deprel, upos
 
         # collect all the new projected categories for reference
         projected = {}
@@ -142,7 +146,8 @@ def convert(infile: str, resfile: str, outfile: str):
             # create the tree, project unary nodes
             tree = sentence.to_tree()
             fixed, status = project_categories(tree)
-            if status: sent[2] += 1
+            if status:
+                sent[2] += 1
 
             # convert to tokenlist, make cgel object
             orig = token_tree_to_list(fixed)
@@ -169,7 +174,8 @@ def convert(infile: str, resfile: str, outfile: str):
             words = []
             puncts = []
             for j, word in enumerate(orig):
-                if not isinstance(word['id'], int): continue
+                if not isinstance(word['id'], int):
+                    continue
                 word['id'] -= 1
                 word['head'] -= 1
 
@@ -213,14 +219,17 @@ def convert(infile: str, resfile: str, outfile: str):
                 # stats
                 pos[word['upos']] += 1
                 types[deprel] += 1
-                if deprel.islower(): complete = False
-                else: tok[0] += 1
+                if deprel.islower():
+                    complete = False
+                else:
+                    tok[0] += 1
                 tok[1] += 1
 
             # output
             fout.write(converted.draw(include_metadata=True) + '\n\n')
             sent[1] += 1
-            if complete: sent[0] += 1
+            if complete:
+                sent[0] += 1
 
     with open(resfile, 'w', encoding='utf-8') as fout:
         fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
@@ -231,7 +240,8 @@ def convert(infile: str, resfile: str, outfile: str):
             fout.write(f'{i}, {pos[i]}\n')
         fout.write('\nDEP\n')
         for i in types:
-            if i[1].islower(): fout.write('-->')
+            if i[1].islower():
+                fout.write('-->')
             fout.write(f'{i}, {types[i]}\n')
 
 def main():

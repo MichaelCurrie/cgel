@@ -13,7 +13,7 @@ from collections import defaultdict
 Ignoring punctuation
 """
 
-def adjust_lexicalization(ctree: Tree) -> int:
+def adjust_lexicalization(ctree: Tree) -> None:
     """
     (0) lexicalization
         split words-with-spaces into flat structures where the first is :Head and others are :Fixed
@@ -209,8 +209,8 @@ def ensure_headedness(ctree: Tree) -> int:
     nChanges = 0
     for n,node in ctree.tokens.items():
         fe = next((c for c in ctree.children[n] if (_child := ctree.tokens[c]).deprel in ('Coordinate','Flat')), None)
-        firstelt = ctree.tokens[fe] if fe is not None else None
-        if firstelt is not None:
+        if fe is not None:
+            firstelt = ctree.tokens[fe]
             if firstelt.deprel=='Coordinate':
                 assert node.constituent=='Coordination',node.constituent
                 if '+' in node.deprel:  # nonce function
@@ -221,10 +221,12 @@ def ensure_headedness(ctree: Tree) -> int:
                     firstelt.constituent = nonceconstit.split('+')[0]
                     # designate the first part of the coordinate as the head
                     h = next((c for c in ctree.children[fe] if ctree.tokens[c].deprel==noncedeprel.split('+')[0]), None)
+                    assert h is not None,noncedeprel
                     ctree.tokens[h].deprel = 'Head'
                     for part in noncedeprel.split('+')[1:]:
                         part = part.split('/')[0]
                         c = next((c for c in ctree.children[fe] if ctree.tokens[c].deprel==part), None)
+                        assert c is not None,(noncedeprel,part)
                         # reattach c to higher phrase (the Coordination as opposed to the nonce phrase)
                         ctree.tokens[c].head = n
                         ctree.children[fe].remove(c)
@@ -242,6 +244,7 @@ def ensure_headedness(ctree: Tree) -> int:
             node.constituent = nonceconstit.split('+')[0]
             # designate the first non-Marker part of the coordinate as the head
             h = next((c for c in ctree.children[n] if ctree.tokens[c].deprel!='Marker'), None)
+            assert h is not None,nonceconstit
             ctree.tokens[h].deprel = 'Head'
             for c in ctree.children[n]:
                 if ctree.tokens[c].deprel not in ('Head', 'Marker'):
@@ -547,7 +550,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
     """
     # TODO: list, dislocated, reparandum?
 
-    def meets_constraint(val: str | Node, feat: Set[str], constraint: str):
+    def meets_constraint(val: str | Node | None, feat: Set[str], constraint: str):
         if constraint=='*' or val==constraint:
             return True
         elif constraint=='-':
@@ -565,18 +568,21 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             return val=='Clause'
         elif constraint=='PP[by]':
             return val=='PP' and 'by' in feat
-        elif constraint=='V_aux[exist]':
-            return val.constituent=='V_aux' and 'exist' in feat
-        elif constraint=='V[x]':
-            return val.constituent=='V' and 'x' in feat
-        elif constraint=='V[pass]':
-            return val.constituent=='V' and 'pass' in feat
-        elif constraint=='N_pro[it]':
-            return val.constituent=='N_pro' and val.lemma=='it'
-        elif constraint=='N_pro[there]':
-            return val.constituent=='N_pro' and val.lemma=='there'
-        elif constraint=='D[xpos=CD]':
-            return val.constituent=='D' and val.xpos=='CD'
+        elif constraint in ('V_aux[exist]','V[x]','V[pass]','N_pro[it]','N_pro[there]','D[xpos=CD]'):
+            # lexical constraints: only meaningful for the Plex/Nlex columns, whose values are nodes
+            assert isinstance(val, Node),(val,constraint)
+            if constraint=='V_aux[exist]':
+                return val.constituent=='V_aux' and 'exist' in feat
+            elif constraint=='V[x]':
+                return val.constituent=='V' and 'x' in feat
+            elif constraint=='V[pass]':
+                return val.constituent=='V' and 'pass' in feat
+            elif constraint=='N_pro[it]':
+                return val.constituent=='N_pro' and val.lemma=='it'
+            elif constraint=='N_pro[there]':
+                return val.constituent=='N_pro' and val.lemma=='there'
+            else:   # D[xpos=CD]
+                return val.constituent=='D' and val.xpos=='CD'
         elif constraint=='[coord]':
             return feat and 'coord' in feat  # has Coordinator as Marker
         elif '[' in constraint:
@@ -614,8 +620,8 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
         nlex = ctree.tokens[lexheads[n]]
         p = node.head
         if p==-1:
-            pnode = pcat = plex = plexfeat = None
-            pfeat = set()
+            pnode = pcat = plex = None
+            pfeat = plexfeat = set()
         else:
             pnode = ctree.tokens[p]
             pcat = pnode.constituent
@@ -628,7 +634,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             Pcat, Plex, Nfxn, Ncat, Nlex, Result = rule
             #if Nlex=='N_pro[there]' and nlex.constituent=='N_pro' and nlex.lemma=='there':
             #    assert False,(plex.lemma,plex.constituent,pfeat,plexfeat,(plex,plexfeat,Plex),meets_constraint(plex,plexfeat,Plex))
-            if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,None,Nfxn),(ncat,nfeat,Ncat),(nlex,None,Nlex)]):
+            if all(meets_constraint(val, feat, constraint) for val,feat,constraint in [(pcat,pfeat,Pcat),(plex,plexfeat,Plex),(nfxn,set(),Nfxn),(ncat,nfeat,Ncat),(nlex,set(),Nlex)]):
                 if plex is None:
                     udeprels[lexheads[n]] = (Result, None, None, nlex.lexeme)
                 else:

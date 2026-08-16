@@ -19,7 +19,7 @@ for udFP in EWTSRC:
         for sent in sents:
             alltrees[sent.metadata['sent_id']] = sent
 
-for ln in fileinput.input(SENTIDS):
+for ln in fileinput.input(SENTIDS, encoding='utf-8'):
     sentid = ln.strip().split()[-1]
     sent = alltrees[sentid]
     print(sent.serialize(), end='')
