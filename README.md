@@ -56,6 +56,7 @@ Under `datasets/iaa/`:
 
 ## Structure
 - `cgel.py`: library that implements classes for CGEL trees and the nodes within them, incl. helpful functions for printing and processing trees in PENMAN notation
+- `cgel2jsonld.py`: converts CGEL trees to JSON-LD, one level of nesting per level of indentation; validates output against `schema/cgel-jsonld.schema.json` and can verify the mapping is lossless with `--round-trip`
 - `cgel2ptb.py`: prints CGEL trees in PTB bracketed style
 - `constituent.py`: information about how constituents join in a tree, for use by other scripts
 - `eval.py`: script for comparing two sets of CGEL annotations with tree edit distance (and derived metrics)
@@ -69,6 +70,7 @@ Under `datasets/iaa/`:
 - `convertor/`: includes conversion rules in DepEdit script + outputs from conversion, with a simple Flask web interface for local testing in the browser (English text > automatic UD w/ Stanza > CGEL)
 - `datasets/`: all the final datasets
 - `figures/`: figures for papers/posters and code for generating them
+- `schema/`: JSON Schema for the JSON-LD serialization
 - `scripts/`: one-off scripts that were used to clean/restructure data
 - `test/`: validation tests
 
