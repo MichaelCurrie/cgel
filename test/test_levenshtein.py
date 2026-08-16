@@ -1,7 +1,7 @@
 from analysis.edit_distance import levenshtein, TED
 from cgel import trees
 
-from collections import Counter
+from collections import defaultdict
 
 def test_levenshtein_seqs():
     assert levenshtein([('a','a'), ('b','b')], [('a','a'), ('b','b')]) == (0.0, [])
@@ -18,7 +18,7 @@ def test_TED():
         F = [tree for tree in trees(f, check_format=True)]
         G = [tree for tree in trees(g, check_format=True)]
 
-        totEditcosts = Counter()
+        totEditcosts: defaultdict[str, float] = defaultdict(float)
         nFnodes = nGnodes = 0
         for i in range(len(F)):
             nFnodes += len(F[i].tokens)
@@ -30,7 +30,8 @@ def test_TED():
                 cost, editcosts, alignment = TED(F[i], G[i], SUB=float('-inf'))
                 assert sum(editcosts.values())==cost
                 assert cost == float(cwted),(i,cost,editcosts,cwted,alignment)
-                totEditcosts += editcosts
+                for k,v in editcosts.items():
+                    totEditcosts[k] += v
 
         precCost = totEditcosts['DEL']  # present only in T1 (treated as system output)
         recCost = totEditcosts['INS']   # only in T2

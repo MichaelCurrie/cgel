@@ -15,10 +15,10 @@ with open('../datasets/twitter_cgel.txt', encoding='utf-8') as f, open('../datas
         trees.append(tree)
         #trees.append(conllu.parse(tree.to_conllu())[0])
 
-fxn_words = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
+fxn_words: dict[str, set] = {'D': set(), 'N_pro': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
 
-rules = Counter()  # {(CAT, Fxn, Fxn2, Fxn3, ...): count}   [where CAT -> Fxn, Fxn2, Fxn3, ... is the rule]
-cats_in_fxn = defaultdict(Counter)  # {Fxn^PARCAT: {CAT: count}}
+rules: Counter[tuple[str, ...]] = Counter()  # {(CAT, Fxn, Fxn2, Fxn3, ...): count}   [where CAT -> Fxn, Fxn2, Fxn3, ... is the rule]
+cats_in_fxn: defaultdict[str, Counter[str]] = defaultdict(Counter)  # {Fxn^PARCAT: {CAT: count}}
 
 # node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
 for cgel_tree in trees:
@@ -46,7 +46,7 @@ for cgel_tree in trees:
             #    assert False,(k,rule,cgel_tree.sentence())
 
 # count number of dependents
-num_dependents = Counter()
+num_dependents: Counter[int] = Counter()
 
 print('PART 1: Counts of extracted rules (mother category + functions)')
 print('  +h means more than one Head function; -h means no Head')

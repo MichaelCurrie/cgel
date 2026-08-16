@@ -20,13 +20,13 @@ RE_QUALITY = re.compile(r'^([*!?%#]?)\[?\(?<')
 RE_QUALITY_POSTSLASH = re.compile(r'/ ?([*!?%#]?)\[?\(?<')
 
 lbls = set()
-items = []
+items: list[str] = []
 titles = set()
 pretags = set()
 posttags = []
 subnum_ids = []
-qualitymarks = Counter()
-qualitymarks_postslash = Counter()
+qualitymarks: Counter[str] = Counter()
+qualitymarks_postslash: Counter[str] = Counter()
 
 def recursive_count(d: Mapping):
     nSubnum = 0

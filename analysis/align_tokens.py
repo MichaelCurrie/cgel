@@ -79,9 +79,9 @@ AUX_LEMMAS = {'be','can','could','do','have','may','might','must','ought','shall
 #EWT_MISTRANSCRIPTIONS = {("200","200,000"),("San","Sao"),("Grill","Grille"),("investigators","interrogators"),
 #    ("favour","favor"),("issues","issue"),("trouble","problems"),("sushi","sashimi"),("sashimi","sushi"),
 #    ("lawyers","politicians"),("politicians","lawyers")}
-EWT_MISTRANSCRIPTIONS = set()
+EWT_MISTRANSCRIPTIONS: set[tuple[str,str]] = set()
 #EWT_SPELLING_CORRECTIONS_IN_CGEL = {("lose","Loose"),("billings","Billing"),("schedule","scheduled")}
-EWT_SPELLING_CORRECTIONS_IN_CGEL = set()
+EWT_SPELLING_CORRECTIONS_IN_CGEL: set[tuple[str,str]] = set()
 
 gaps = set()
 

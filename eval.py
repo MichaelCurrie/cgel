@@ -28,7 +28,7 @@ def score_tree(tree1: Tree, tree2: Tree, includeCat=True, includeFxn=True, stric
     """
 
     # Store antecedent nodes by label
-    antecedents = [{}, {}]
+    antecedents: list[dict[str, int]] = [{}, {}]
     for i, tree in enumerate([tree1, tree2]):
         for n, node in tree.tokens.items():
             extra_counts[('CAT',node.constituent,'gold' if i==0 else 'pred')] += 1

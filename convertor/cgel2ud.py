@@ -2,7 +2,7 @@ import sys
 sys.path.append('../')
 import cgel
 from cgel import Tree, Node
-from typing import List, Tuple, Set, Mapping, Literal
+from typing import List, Tuple, Set, Mapping, Dict, Literal
 from conllu import Token, TokenList
 from udapi.core.document import Document
 from udapi.block.ud.fixpunct import FixPunct
@@ -604,7 +604,7 @@ def process_dependents(ctree: Tree, feats: Mapping[int,Set[str]], lexheads: Mapp
             rule[-1] = r[:r.index('#')].strip()
         RULES.append(rule)
     
-    udeprels: Mapping[int, Tuple[str,int|None,str|None,str|None]] = {}
+    udeprels: Dict[int, Tuple[str,int|None,str|None,str|None]] = {}
 
     # Traverse the tree bottom-up. For each node, process rules in order.
     def _process_dependents(n: int):
@@ -708,8 +708,10 @@ def convert(ctree: Tree):
                         udtokenized.append((subt, subt, None, None))
                         continue
 
+                    sufftype: Literal['fixed','advmod','case','compound']
                     if ' ' in node.lexeme:
                         sufftype = 'fixed'
+                        subtlemma = subt
                     elif subt in ('not', "n't", 'nt'):
                         assert node.constituent=='V_aux',node.constituent
                         sufftype = 'advmod'
@@ -738,18 +740,18 @@ def convert(ctree: Tree):
     udeprels0 = demote_heads(ctree, feats)
     lexheads = propagate_heads(ctree)
     feats = mark_passive(ctree, feats)
-    udeprels: Mapping[int, Tuple[str,int,str|None,str|None]] = {}
+    udeprels: Dict[int, Tuple[str,int|None,str|None,str|None]] = {}
     passive_aux_marked = set()
-    for n,(h,rel) in sorted(udeprels0.items(), reverse=True):   # RTL so we mark the rightmost aux dep of a passive verb as aux:pass, others as plain aux
+    for n,(h0,rel) in sorted(udeprels0.items(), reverse=True):   # RTL so we mark the rightmost aux dep of a passive verb as aux:pass, others as plain aux
         if rel=='aux*':
-            if lexheads[h] in passive_aux_marked:
+            if lexheads[h0] in passive_aux_marked:
                 rel = 'aux'
-            elif 'pass' in feats[lexheads[h]]:
+            elif 'pass' in feats[lexheads[h0]]:
                 rel = 'aux:pass'
-                passive_aux_marked.add(lexheads[h])
+                passive_aux_marked.add(lexheads[h0])
             else:
                 rel = 'aux'
-        udeprels[n] = (rel, lexheads[h], ctree.tokens[lexheads[h]].lexeme, ctree.tokens[lexheads0[n]].lexeme)
+        udeprels[n] = (rel, lexheads[h0], ctree.tokens[lexheads[h0]].lexeme, ctree.tokens[lexheads0[n]].lexeme)
     # note that for the function word dependent we have to use lexheads0[n] following CGEL headedness as opposed to UD headedness
     udeprels |= process_dependents(ctree, feats, lexheads)
     ctree.draw()
@@ -768,30 +770,32 @@ def convert(ctree: Tree):
     conllutoks = []
     cur_n = None
     buffer = ctree.metadata['text']
-    for i,(tok,lemma,n,sufftype) in enumerate(udtokenized, start=1):
+    for i,(tok,lemma,tok_n,tok_sufftype) in enumerate(udtokenized, start=1):
         surfacetok = buffer[:len(tok)]
         assert surfacetok.lower().replace('’',"'")==tok.lower().replace('’',"'"),(surfacetok,tok)
         buffer = buffer[len(surfacetok):]
-        spaceafter = buffer.startswith(' ')
+        spaceafter: bool | str = buffer.startswith(' ')
         if spaceafter:
             buffer = buffer[1:]
         if not buffer:
             spaceafter = 'EOS'
         correct = None
 
-        if n is not None:
-            deprel = udeprels.get(n)
+        deprel: Tuple[str,int|None,str|None,str|None] | None
+        is_punct = False
+        if tok_n is not None:
+            deprel = udeprels.get(tok_n)
             if not deprel:
-                assert False,(n,lexheads[n],lemma,udtokenized,udeprels)
-            cur_n = n
+                assert False,(tok_n,lexheads[tok_n],lemma,udtokenized,udeprels)
+            cur_n = tok_n
             # if ctree.tokens[lexheads.get(cur_n,cur_n)].constituent=='NP':
             #     assert False,(n,lexheads[n],lemma,udtokenized,udeprels,ctree.tokens[lexheads.get(cur_n,cur_n)].deprel,nGapsRemoved)
             upos, xpos = infer_upos_xpos(ctree.tokens[lexheads.get(cur_n,cur_n)])
             correct = ctree.tokens[lexheads.get(cur_n,cur_n)].correct
-        elif sufftype is not None:
+        elif tok_sufftype is not None:
             assert cur_n is not None
-            deprel = (sufftype, n, lemma, tok)
-            match sufftype:
+            deprel = (tok_sufftype, tok_n, lemma, tok)
+            match tok_sufftype:
                 case 'case':    # 's
                     upos = 'PART'
                     xpos = 'POS'
@@ -801,11 +805,12 @@ def convert(ctree: Tree):
                 case _: # compound, fixed
                     upos, xpos = infer_upos_xpos(ctree.tokens[lexheads[cur_n]])
         else:
-            deprel = 'PUNCT'
+            deprel = None
+            is_punct = True
             upos = 'PUNCT'
             xpos = {'!': '.', '?': '.', '--': ':', '—': ':'}.get(tok,tok)
 
-        if deprel=='PUNCT':
+        if is_punct:
             # attach all punct to root for now; clean up later with udapi FixPunct
             conllutoks.append(Token({"id": i, "form": surfacetok, "lemma": lemma,
                                      "upos": upos,
@@ -814,6 +819,7 @@ def convert(ctree: Tree):
                                      "deps": None, "misc": None if spaceafter else 'SpaceAfter=No'}))
             #print(i, tok, deprel, sep='\t')
         else:
+            assert deprel is not None
             rel, h, hlexeme, nlexeme = deprel   # h is the ctree node offset of the lexical head of the dependency
             if h is None:
                 udh = 0 # root

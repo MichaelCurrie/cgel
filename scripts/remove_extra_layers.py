@@ -55,7 +55,7 @@ class Tree(cgel.Tree):
 
 
 
-cgel.Tree = Tree    # type: ignore[invalid-assignment]  # monkeypatch so cgel.trees() builds the subclass
+cgel.Tree = Tree    # type: ignore[misc]  # monkeypatch so cgel.trees() builds the subclass
 
 for file in ['../datasets/twitter.cgel', '../datasets/ewt.cgel']:
     with open(file, encoding='utf-8') as f:

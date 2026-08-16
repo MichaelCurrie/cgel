@@ -1,22 +1,49 @@
-from depedit import DepEdit
-import conllu
-from conllu import TokenList, TokenTree, Token
+"""Universal Dependencies (CoNLL-U) -> CGEL constituency trees.
+
+DepEdit rewrites UD relations into CGEL functions using the rule file shipped at
+``data/ud-to-cgel.ini``; `project_categories` then inserts the unary projections
+CGEL requires but dependency syntax leaves implicit (N -> Nom -> NP, V -> VP ->
+Clause, and so on).
+
+Adapted from the CGELBank repository's top-level ``ud2cgel.py``. Differences:
+
+* the DepEdit rule file is resolved inside the package rather than by the
+  relative path ``convertor/ud-to-cgel.ini``, so the caller's working directory
+  no longer matters;
+* the corpus-specific ``main()``/``combine_conllus()`` drivers, which hard-coded
+  ``datasets/*`` paths, are gone;
+* progress output goes to stderr so stdout stays reserved for JSON;
+* the root token is given the empty deprel ``''`` rather than ``None`` -- see
+  ``ROOT_DEPREL`` below.
+"""
+
+from __future__ import annotations
+
+import copy
+from collections import defaultdict
+from pathlib import Path
 from typing import List
 
-from collections import defaultdict
-import constituent
-import copy
-import glob
-from cgel import Tree
+import conllu
+from conllu import Token, TokenList, TokenTree
+from depedit import DepEdit
 
-import io
-import sys
-# Always use UTF-8, whatever the platform's locale encoding says.
-for _stream in (sys.stdout, sys.stderr):
-    if isinstance(_stream, io.TextIOWrapper):
-        _stream.reconfigure(encoding='utf-8')
+from . import constituent
+from .cgel import Tree
+from .io_utils import log, open_read, open_write
+from .resources import DEPEDIT_CONFIG_PATH
+
+#: Function label for the tree root.
+#:
+#: The PENMAN reader in ``cgel.py`` gives a root node the empty string, and
+#: ``Tree.add_token`` asserts ``deprel is not None``. The upstream script passed
+#: ``None`` here, which trips that assertion; ``''`` both satisfies it and makes
+#: a converted tree indistinguishable from a parsed one.
+ROOT_DEPREL = ''
+
 
 def token_tree_to_list(tree: TokenTree) -> TokenList:
+    """Flatten a CoNLL-U tree back into a token list, renumbering ids and heads."""
     def flatten_tree(root_token: TokenTree, token_list: List[Token] = [], head: int = 0) -> List[Token]:
         root_token.token['id'] = len(token_list) + 1
         root_token.token['head'] = head
@@ -32,32 +59,34 @@ def token_tree_to_list(tree: TokenTree) -> TokenList:
     token_list = TokenList(tokens, tree.metadata)
     return token_list
 
-test = False
 
-def combine_conllus():
-    with open('convertor/all.conllu', 'w', encoding='utf-8') as fout:
-        for file in glob.glob('datasets/*.conllu'):
-            with open(file, encoding='utf-8') as fin:
-                for line in fin:
-                    fout.write(line)
-
-def convert(infile: str, resfile: str, outfile: str):
+def convert(infile: str | Path, resfile: str | Path | None, outfile: str | Path,
+            config_path: str | Path = DEPEDIT_CONFIG_PATH) -> Path:
     """Convert a UD treebank to CGEL.
-    
-    Args:
-        infile: UD source file in CONLLU format.
-        resfile: Logging file for results.
-        outfile: Output file for the converted CGEL treebank.
-    """
 
-    print('Getting files...')
-    with open(infile, encoding='utf-8') as inF, open("convertor/ud-to-cgel.ini", encoding='utf-8') as config_file:
+    Args:
+        infile: UD source file in CoNLL-U format.
+        resfile: Where to write the conversion-coverage report; None to skip it.
+        outfile: Output *prefix*; ``.cgel`` and ``.conllu`` are appended to it.
+        config_path: DepEdit rule file. Defaults to the packaged UD->CGEL rules.
+
+    Returns:
+        Path of the written ``.cgel`` file.
+    """
+    infile, outfile = Path(infile), Path(outfile)
+    # Append rather than with_suffix(): a prefix like `out.v2` must become
+    # `out.v2.cgel`, not `out.cgel`.
+    cgel_out = outfile.with_name(outfile.name + '.cgel')
+    conllu_out = outfile.with_name(outfile.name + '.conllu')
+
+    log('Getting files...')
+    with open_read(infile) as inF, open_read(config_path) as config_file:
         d = DepEdit(config_file)
 
-        print('Running depedit...')
+        log('Running depedit...')
         result = d.run_depedit(inF)
 
-    print('Done with depedit.')
+    log('Done with depedit.')
     types: defaultdict[str, int] = defaultdict(int)
     pos: defaultdict[str, int] = defaultdict(int)
 
@@ -122,7 +151,7 @@ def convert(infile: str, resfile: str, outfile: str):
                     projected[level].children.sort(key=lambda x: x.token['id'])
                 else:
                     remaining.append(result)
-                
+
             last.children.extend(remaining)
             last.children.sort(key=lambda x: x.token['id'])
             node.children = []
@@ -135,8 +164,8 @@ def convert(infile: str, resfile: str, outfile: str):
         return last, status
 
     # convert to constituency and write out CGEL trees
-    print('Converting to constituency...')
-    with open(outfile + '.cgel', 'w', encoding='utf-8') as fout, open(outfile + '.conllu', 'w', encoding='utf-8') as fout2:
+    log('Converting to constituency...')
+    with open_write(cgel_out) as fout, open_write(conllu_out) as fout2:
 
         # get flattened CGEL trees (post-conversion)
         trees = conllu.parse(result)
@@ -185,7 +214,7 @@ def convert(infile: str, resfile: str, outfile: str):
                 if deprel != 'Punct':
                     converted.add_token(
                         token=None,
-                        deprel=deprel if deprel != 'Root' else None,
+                        deprel=deprel if deprel != 'Root' else ROOT_DEPREL,
                         constituent=word['upos'],
                         i=word['id'],
                         head=word['head']
@@ -231,24 +260,18 @@ def convert(infile: str, resfile: str, outfile: str):
             if complete:
                 sent[0] += 1
 
-    with open(resfile, 'w', encoding='utf-8') as fout:
-        fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
-        fout.write(f'{sent[2]} / {sent[1]} sentences with all projections known ({sent[2] * 100 / sent[1]:.2f}%).\n')
-        fout.write(f'{tok[0]} / {tok[1]} words fully parsed ({tok[0] * 100 / tok[1]:.2f}%).\n\n')
-        fout.write('POS\n')
-        for pos_key in pos:
-            fout.write(f'{pos_key}, {pos[pos_key]}\n')
-        fout.write('\nDEP\n')
-        for dep_key in types:
-            if dep_key[1].islower():
-                fout.write('-->')
-            fout.write(f'{dep_key}, {types[dep_key]}\n')
+    if resfile is not None:
+        with open_write(resfile) as fout:
+            fout.write(f'{sent[0]} / {sent[1]} sentences fully parsed ({sent[0] * 100 / sent[1]:.2f}%).\n')
+            fout.write(f'{sent[2]} / {sent[1]} sentences with all projections known ({sent[2] * 100 / sent[1]:.2f}%).\n')
+            fout.write(f'{tok[0]} / {tok[1]} words fully parsed ({tok[0] * 100 / tok[1]:.2f}%).\n\n')
+            fout.write('POS\n')
+            for i in pos:
+                fout.write(f'{i}, {pos[i]}\n')
+            fout.write('\nDEP\n')
+            for i in types:
+                if i[1].islower():
+                    fout.write('-->')
+                fout.write(f'{i}, {types[i]}\n')
 
-def main():
-    # combine_conllus()
-    # convert('convertor/all.conllu', 'convertor/results.txt', 'convertor/ewt_auto')
-    convert('datasets/ewt.conllu', 'convertor/ewt_results.txt', 'convertor/ewt_pred')
-    convert('datasets/twitter.conllu', 'convertor/twitter_results.txt', 'convertor/twitter_pred')
-
-if __name__ == '__main__':
-    main()
+    return cgel_out

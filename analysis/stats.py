@@ -2,6 +2,7 @@ import io
 import sys
 sys.path.append('../')
 import glob
+from typing import Optional
 import pandas as pd
 import cgel
 from collections import Counter, defaultdict
@@ -43,16 +44,16 @@ def overview(trees: list[cgel.Tree]):
     print(f"- Avg Tree Depth: {sum(t.depth for t in trees) / len(trees):.1f}")
 
 def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
-    cgels = Counter()
-    lemmas = Counter()
-    cats = Counter()
-    fxns = Counter()
-    catsbyfxn = defaultdict(Counter)    # for each function, what categories occur in that function?
-    parcatsbyfxn = defaultdict(Counter) # for each function, what categories of parent does it have?
-    high_valencies = Counter()
+    cgels: Counter[str] = Counter()
+    lemmas: Counter[Optional[str]] = Counter()
+    cats: Counter[str] = Counter()
+    fxns: Counter[str] = Counter()
+    catsbyfxn: defaultdict[str, Counter[str]] = defaultdict(Counter)    # for each function, what categories occur in that function?
+    parcatsbyfxn: defaultdict[str, Counter[str]] = defaultdict(Counter) # for each function, what categories of parent does it have?
+    high_valencies: Counter[str] = Counter()
     poses_by_lemma = defaultdict(set)
     ambig_class = defaultdict(set)
-    fxn_words = {'D': set(), 'N_pro': set(), 'V_aux': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
+    fxn_words: dict[str, set] = {'D': set(), 'N_pro': set(), 'V_aux': set(), 'P': set(), 'Sdr': set(), 'Coordinator': set()}
 
     # node properties: 'constituent' (POS or phrasal category), 'deprel' (grammatical function), 'head' (index), 'label' (coindexation variable), 'text' (terminals only)
     for cgel_tree in trees:
@@ -127,11 +128,11 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
     if mode=='code':
         print(fxn_words)
     else:
-        for k,v in fxn_words.items():
+        for pos,lemmaset in fxn_words.items():
             if mode=='markdown':
-                print(f'- `{k}`', ': ', ', '.join(sorted(v)), sep='')
+                print(f'- `{pos}`', ': ', ', '.join(sorted(lemmaset)), sep='')
             else:
-                print(f'{k:>11}', ': ', ', '.join(sorted(v)), sep='')
+                print(f'{pos:>11}', ': ', ', '.join(sorted(lemmaset)), sep='')
 
     if mode!='tex':
         print('\n## Nonterminal categories\n')
@@ -153,11 +154,11 @@ def analyse_pos(trees: list[cgel.Tree], mode='code' or 'tex' or 'markdown'):
         nGAPs = cats['GAP']
         del cats['GAP']
         del fxns['(root)']
-        for (p,pN),(c,cN),(f,fN) in zip_longest(cgels.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
-            p = p.replace("_",r"\_")
-            c = c.replace("_",r"\_")
-            f = f.replace("_",r"\_")
-            print(rf'{pN:3} & {p:11} & {cN:4} & {c:20} & {fN:4} & {f} \\')
+        for (pw,pN),(cw,cN),(fw,fN) in zip_longest(cgels.most_common(), cats.most_common(), fxns.most_common(), fillvalue=('','')):
+            pw = pw.replace("_",r"\_")
+            cw = cw.replace("_",r"\_")
+            fw = fw.replace("_",r"\_")
+            print(rf'{pN:3} & {pw:11} & {cN:4} & {cw:20} & {fN:4} & {fw} \\')
         print(nGAPs, r'& \textit{GAP}')
 
     print('\n## High Valencies (ternary+, omitting Supplements and Coordinations)\n')

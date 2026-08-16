@@ -9,7 +9,7 @@ If the UD tokens are finer-grained, this should be reflected in :subt and :subp
 parts of the CGEL token.
 """
 
-ud_trees = []
+ud_trees: list[conllu.TokenList] = []
 for filename in ['twitter.conllu', 'ewt.conllu', 'ewt-test_pilot5.conllu', 'ewt-test_iaa50.conllu']:
     with open('../datasets/' + filename, encoding='utf-8') as f:
         ud_trees.extend(conllu.parse(f.read()))
@@ -29,8 +29,8 @@ assert len(ud_trees)==len(cgel_trees)
 iSent = 0
 for ud_tree,cgel_tree in zip(ud_trees,cgel_trees):
     #print(cgel_tree.leaves())
-    ud_tree = [n for n in ud_tree if isinstance(n['id'], int)]
-    udI = iter(ud_tree)
+    ud_tree_toks = [n for n in ud_tree if isinstance(n['id'], int)]
+    udI = iter(ud_tree_toks)
     hold_word = hold_word2 = None
     for leaf in cgel_tree.leaves():
         if leaf.constituent=='GAP':

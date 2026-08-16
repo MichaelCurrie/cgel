@@ -10,11 +10,11 @@ with open('CGEL.csv', 'r', encoding='utf-8') as fin:
     d = list(reader)
     # cols = d[0]
     for i in d[1:]:
-        i[1] = int(i[1])
-        i[2] = int(i[2]) / 12543
-        i[3] = int(i[3]) / 207234
-        data.append([i[1], i[2], 'sent'])
-        data.append([i[1], i[3], 'tok'])
+        nRules = int(i[1])
+        sentCoverage = int(i[2]) / 12543
+        tokCoverage = int(i[3]) / 207234
+        data.append([nRules, sentCoverage, 'sent'])
+        data.append([nRules, tokCoverage, 'tok'])
 
 df = pd.DataFrame(data, columns=cols)
 

@@ -1,12 +1,12 @@
 from cgel import Tree
-from typing import List, Tuple, Mapping
+from typing import List, Tuple, Mapping, DefaultDict
 
-from collections import Counter
+from collections import defaultdict
 
 DEBUG = False
 
 def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel, node.lexeme, None),
-        INS: float = 1, DEL: float = 1, SUB: float = 1) -> Tuple[float,Counter,Mapping[int,int]]:
+        INS: float = 1, DEL: float = 1, SUB: float = 1) -> Tuple[float,DefaultDict[str,float],Mapping[int,int]]:
     """
     TREE EDIT DISTANCE
     Implementation of Milos Simic's pseudocode in <https://www.baeldung.com/cs/tree-edit-distance>,
@@ -28,12 +28,14 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
     @author: @nschneid
     @since: 2023-05-16
     """
-    memo = {}
+    memo: dict[tuple[int,int,int,int], Tuple[float,float,float,float,Tuple[Tuple[int,int],...]]] = {}
 
     nodes1: List[int] = []
     nodes2: List[int] = []
-    leftmost1, labels1 = [], []
-    leftmost2, labels2 = [], []
+    leftmost1: List[int] = []
+    labels1: List[tuple] = []
+    leftmost2: List[int] = []
+    labels2: List[tuple] = []
     # populate nodes by postorder traversal.
     # labels are what will be compared when two nodes are aligned to determine whether to incur a substitution cost
     # note that any gap antecedent is not included in the label - it will have to be checked after the full alignment is computed by TED
@@ -106,7 +108,7 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
 
         # cost of aligning rightmost tree roots
         if labels1[r1]==labels2[r2]:
-            align_cost = 0
+            align_cost: float = 0
         elif SUB==float('-inf'):
             # component-wise cost
             nComponents = len(labels1[r1])
@@ -123,7 +125,7 @@ def TED(T1: Tree, T2: Tree, labeler=lambda node: (node.constituent, node.deprel,
         return memo[hashed]
 
     cost, INScost, DELcost, SUBcost, offset_alignments = _TED(0, len(nodes1), 0, len(nodes2))
-    editcosts = Counter({'INS': INScost, 'DEL': DELcost, 'SUB': SUBcost})
+    editcosts: DefaultDict[str,float] = defaultdict(float, {'INS': INScost, 'DEL': DELcost, 'SUB': SUBcost})
     alignments = {nodes1[i1]: nodes2[i2] for i1,i2 in offset_alignments}
     return cost, editcosts, alignments
 

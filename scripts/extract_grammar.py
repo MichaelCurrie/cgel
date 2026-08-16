@@ -38,8 +38,8 @@ def count_rules(i, node, tree, counts, examples, select_rules=set(), opts=set())
             count_rules(c, ch, tree, counts, examples, select_rules, opts)
 
 if __name__=='__main__':
-    rules = Counter()
-    examples = defaultdict(set)
+    rules: Counter[str] = Counter()
+    examples: defaultdict[str, set[str]] = defaultdict(set)
 
     # SELECTED_RULES = {  # heads-only rules
     #             #'Clause -> ',

@@ -801,7 +801,7 @@ def insert_sent(examples_dict: dict[str,dict[str,Any]], key, num_ex, roman_num, 
                 if (page,num_ex) not in {('257','[14]'), ('258','[15]'), ('355','[3]')}:
                     assert roman_num not in examples_dict[key][num_ex],(roman_num,contents,examples_dict[key][num_ex])
                 if contents[0].endswith('_p156_[24]_iv'):   # middle col is empty
-                    contents.insert(2, None)
+                    contents.insert(2, '')
                 while headers and 'A: ' in contents[1] and ' B: ' in contents[1]: # e.g. p. 887 [54]; sometimes A: B: B: as p. 889 [59], hence the loop
                     # split A: and B: into two parts as they have independent col headers
                     contents.insert(2,contents[1][contents[1].rindex(' B: ')+1:])

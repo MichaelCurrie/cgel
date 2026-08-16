@@ -1,0 +1,43 @@
+[project]
+name = "cgel-json-converter"
+version = "0.1.0"
+description = "Convert CGEL constituency trees, or plain English text, into annotated JSON-LD."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "CC-BY-4.0" }
+keywords = ["cgel", "treebank", "constituency", "json-ld", "syntax", "nlp"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+dependencies = [
+    # cgel.py -> texquote(); jsonschema validates converter output.
+    "jsonschema>=4.0",
+    "pylatexenc>=2.10",
+    # UD -> CGEL stage.
+    "conllu>=4.0",
+    "depedit==3.2.1.0",
+    # Text -> UD stage. Pulls torch; models download on first use.
+    "stanza>=1.7",
+]
+
+[project.scripts]
+cgel-to-json = "cgel_json_converter.cli:main"
+cgel-validate = "cgel_json_converter.validate:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cgel_json_converter"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "demo_input.cgel", "demo_input.txt", "README.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -356,8 +356,8 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
 
 
     address = dnode['address']
-    lchildren = []
-    rchildren = []
+    lchildren: list[int] = []
+    rchildren: list[int] = []
     for drel,children in dnode['deps'].items():
         if drel!='Prenucleus':
             for c in children:
@@ -367,7 +367,7 @@ def build_ctree(dtree: DependencyGraph, dnode: dict) -> T:
 
     # right-branching analysis by default, but
     # - x<-[SBJ]-VP-[COORD]->y-[SBJ]->z should attach the higher Subj to form a clause before coordinating
-    agenda = []
+    agenda: list[tuple[int, Literal['L','R']]] = []
     for c in rchildren:
         agenda.append((c, 'R'))
     for c in lchildren[::-1]:

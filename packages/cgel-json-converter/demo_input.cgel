@@ -1,0 +1,50 @@
+# sent_id = Tree TheFutureOfLinguistics-0
+# sent_num = 1
+# text = The #futureoflinguistics is integrative, computationally-aided, impactful in the world.
+# sent = the #futureoflinguistics is integrative computationally aided impactful in the world
+(Clause
+    :Subj (NP
+        :Det (DP
+            :Head (D :t "the"))
+        :Head (Nom
+            :Head (N :t "#futureoflinguistics")))
+    :Head (VP
+        :Head (V_aux :t "is" :l "be" :xpos "VBZ")
+        :PredComp (Coordination
+            :Coordinate (AdjP
+                :Head (Adj :t "integrative" :p ","))
+            :Coordinate (VP
+                :Mod (AdvP
+                    :Head (Adv :t "computationally" :p "-"))
+                :Head (V :t "aided" :l "aid" :xpos "VBN" :p ","))
+            :Coordinate (AdjP
+                :Head (Adj :t "impactful")
+                :Mod (PP
+                    :Head (P :t "in")
+                    :Obj (NP
+                        :Det (DP
+                            :Head (D :t "the"))
+                        :Head (Nom
+                            :Head (N :t "world" :p "."))))))))
+
+# sent_id = Tree WhatARemarkableClaim-0
+# sent_num = 2
+# text = What a remarkable claim to make!
+# sent = what a remarkable claim to make --
+(NP
+    :Mod (AdjP
+        :Head (Adj :t "what"))
+    :Head (NP
+        :Det (DP
+            :Head (D :t "a"))
+        :Head (Nom
+            :Head (x / Nom
+                :Mod (AdjP
+                    :Head (Adj :t "remarkable"))
+                :Head (N :t "claim"))
+            :Comp_ind (Clause
+                :Head (VP
+                    :Marker (Sdr :t "to")
+                    :Head (VP
+                        :Head (V :t "make" :xpos "VB" :p "!")
+                        :Obj (x / GAP)))))))

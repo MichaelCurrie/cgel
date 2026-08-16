@@ -4,3 +4,4 @@ __pycache__
 all-examples/cgel-clean.pdf
 .venv/
 /temp_data
+/.mypy_cache
