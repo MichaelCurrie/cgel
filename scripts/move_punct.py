@@ -6,8 +6,7 @@ Move to the previous lexical token, with exceptions for "(" and "[".
 Run in root directory as python -m scripts.move_punct
 """
 for file in ['datasets/twitter.cgel', 'datasets/ewt.cgel',
-             'datasets/ewt-test_iaa50.cgel', 'datasets/ewt-test_pilot5.cgel',
-             'datasets/trial/ewt-trial.cgel', 'datasets/trial/twitter-etc-trial.cgel']:
+             'datasets/ewt-test_iaa50.cgel', 'datasets/ewt-test_pilot5.cgel']:
     with open(file, encoding='utf-8') as f:
 
         with open(f'{file}2', 'w', encoding='utf-8') as fout:

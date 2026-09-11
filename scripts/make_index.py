@@ -95,6 +95,5 @@ if __name__=='__main__':
     else:
         main(args.treebankName,
              ['datasets/ewt.cgel', 'datasets/twitter.cgel',
-              'datasets/ewt-test_pilot5.cgel', 'datasets/ewt-test_iaa50.cgel',
-              'datasets/trial/ewt-trial.cgel', 'datasets/trial/twitter-etc-trial.cgel'] 
+              'datasets/ewt-test_pilot5.cgel', 'datasets/ewt-test_iaa50.cgel']
               + sorted(glob.glob('datasets/oneoff/*.cgel')))

@@ -37,4 +37,7 @@ package = false
 cgel-json-converter = { path = "packages/cgel-json-converter", editable = true }
 
 [tool.pytest.ini_options]
+# Root is not installed as a package ([tool.uv] package = false), so tests
+# that import analysis.* need the repo root on sys.path.
+pythonpath = ["."]
 testpaths = ["test", "packages/cgel-json-converter/tests"]

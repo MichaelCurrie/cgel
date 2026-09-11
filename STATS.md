@@ -1,13 +1,11 @@
 # CGELBank Statistics
 
-Analyzing 48 files:
+Analyzing 46 files:
 
 - [datasets/twitter.cgel](datasets/twitter.cgel)
 - [datasets/ewt.cgel](datasets/ewt.cgel)
 - [datasets/ewt-test_pilot5.cgel](datasets/ewt-test_pilot5.cgel)
 - [datasets/ewt-test_iaa50.cgel](datasets/ewt-test_iaa50.cgel)
-- [datasets/trial/ewt-trial.cgel](datasets/trial/ewt-trial.cgel)
-- [datasets/trial/twitter-etc-trial.cgel](datasets/trial/twitter-etc-trial.cgel)
 - [datasets/oneoff/whatcolorsocks.cgel](datasets/oneoff/whatcolorsocks.cgel)
 - [datasets/oneoff/elton.cgel](datasets/oneoff/elton.cgel)
 - [datasets/oneoff/insectspecies.cgel](datasets/oneoff/insectspecies.cgel)

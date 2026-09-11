@@ -349,7 +349,7 @@ stay in the parent repository:
 - `datasets/ewt.cgel` — a sample of EWT train sentences, manually annotated
 - `datasets/{ewt-test_iaa50,ewt-test_pilot5}.cgel` — adjudicated trees from the
   interannotator experiment, drawn from the EWT test split
-- `datasets/oneoff/*.cgel`, `datasets/trial/*.cgel` — ad hoc and unadjudicated trees
+- `datasets/oneoff/*.cgel` — ad hoc trees
 
 ## Resources
 

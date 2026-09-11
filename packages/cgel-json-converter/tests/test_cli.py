@@ -86,6 +86,16 @@ def test_missing_file_is_an_error(tmp_path):
         main([str(tmp_path / 'nope.cgel')])
 
 
+def test_glob_expands_on_the_cli(demo_cgel, tmp_path):
+    """PowerShell does not expand `*.cgel`; the CLI has to."""
+    (tmp_path / 'a.cgel').write_bytes(demo_cgel.read_bytes())
+    (tmp_path / 'b.cgel').write_bytes(demo_cgel.read_bytes())
+    out = tmp_path / 'out.json'
+    assert main([str(tmp_path / '*.cgel'), '-o', str(out)]) == 0
+    doc = json.loads(out.read_text(encoding='utf-8'))
+    assert len(doc['trees']) == 4
+
+
 def test_indent_zero_is_one_line(demo_cgel, tmp_path):
     out = tmp_path / 'compact.json'
     main([str(demo_cgel), '-o', str(out), '--indent', '0'])

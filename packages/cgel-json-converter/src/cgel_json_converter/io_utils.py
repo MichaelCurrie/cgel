@@ -13,12 +13,33 @@ Two invariants hold everywhere:
 
 from __future__ import annotations
 
+import glob as globlib
 import io
 import sys
 from pathlib import Path
-from typing import TextIO
+from typing import Sequence, TextIO
 
 ENCODING = 'utf-8'
+
+
+def expand_paths(patterns: Sequence[str | Path]) -> list[Path]:
+    """Expand shell globs in *patterns*.
+
+    bash/zsh expand ``datasets/*.cgel`` before the process starts. PowerShell
+    and cmd.exe pass the asterisk through, so without this the CLI looks for a
+    file whose name is literally ``*.cgel``.
+    """
+    out: list[Path] = []
+    for raw in patterns:
+        pattern = Path(raw).as_posix()
+        if any(ch in pattern for ch in '*?['):
+            matches = sorted(Path(p) for p in globlib.glob(pattern))
+            if not matches:
+                raise SystemExit(f'error: no such file: {pattern}')
+            out.extend(matches)
+        else:
+            out.append(Path(raw))
+    return out
 
 
 def open_read(path: str | Path) -> TextIO:

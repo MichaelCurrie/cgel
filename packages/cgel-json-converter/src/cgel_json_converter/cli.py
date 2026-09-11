@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Sequence
 
 from . import cgel2jsonld
-from .io_utils import configure_stdio, log
+from .io_utils import configure_stdio, expand_paths, log
 from .tree_validation import validate_cgel_files
 
 #: Suffixes read as CGEL trees under `--from auto`. Everything else is text.
@@ -49,7 +49,7 @@ def prepare_inputs(files: Sequence[Path], mode: str, workdir: Path
     cgel_paths: list[Path] = []
     labels: list[Path] = []
 
-    for path in files:
+    for path in expand_paths(files):
         if not path.exists():
             raise SystemExit(f'error: no such file: {path.as_posix()}')
         if is_cgel(path, mode):

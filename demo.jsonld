@@ -1,0 +1,458 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0",
+      "@type": "Tree",
+      "source": "packages/cgel-json-converter/demo_input.cgel",
+      "sentId": "Tree TheFutureOfLinguistics-0",
+      "sentNum": 1,
+      "text": "The #futureoflinguistics is integrative, computationally-aided, impactful in the world.",
+      "sent": "the #futureoflinguistics is integrative computationally aided impactful in the world",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree TheFutureOfLinguistics-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "1"
+        },
+        {
+          "key": "text",
+          "value": "The #futureoflinguistics is integrative, computationally-aided, impactful in the world."
+        },
+        {
+          "key": "sent",
+          "value": "the #futureoflinguistics is integrative computationally aided impactful in the world"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "the",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "#futureoflinguistics",
+                    "position": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n6",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "is",
+                "position": 3,
+                "lemma": "be",
+                "xpos": "VBZ"
+              },
+              {
+                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n8",
+                "@type": "Node",
+                "function": "PredComp",
+                "category": "Coordination",
+                "children": [
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n9",
+                    "@type": "Node",
+                    "function": "Coordinate",
+                    "category": "AdjP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adj",
+                        "text": "integrative",
+                        "position": 4,
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n11",
+                    "@type": "Node",
+                    "function": "Coordinate",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n12",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdvP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n13",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adv",
+                            "text": "computationally",
+                            "position": 5,
+                            "postPunct": [
+                              "-"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "aided",
+                        "position": 6,
+                        "lemma": "aid",
+                        "xpos": "VBN",
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n15",
+                    "@type": "Node",
+                    "function": "Coordinate",
+                    "category": "AdjP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n16",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adj",
+                        "text": "impactful",
+                        "position": 7
+                      },
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n17",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n18",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "in",
+                            "position": 8
+                          },
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n19",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n20",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n21",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "the",
+                                    "position": 9
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n22",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:demo_input:Tree%20TheFutureOfLinguistics-0#n23",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "world",
+                                    "position": 10,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0",
+      "@type": "Tree",
+      "source": "packages/cgel-json-converter/demo_input.cgel",
+      "sentId": "Tree WhatARemarkableClaim-0",
+      "sentNum": 2,
+      "text": "What a remarkable claim to make!",
+      "sent": "what a remarkable claim to make --",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree WhatARemarkableClaim-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "2"
+        },
+        {
+          "key": "text",
+          "value": "What a remarkable claim to make!"
+        },
+        {
+          "key": "sent",
+          "value": "what a remarkable claim to make --"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "AdjP",
+            "children": [
+              {
+                "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Adj",
+                "text": "what",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n4",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "a",
+                    "position": 2
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "index": "x",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n8",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "remarkable",
+                            "position": 3
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "claim",
+                        "position": 4
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n11",
+                    "@type": "Node",
+                    "function": "Comp_ind",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n12",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n13",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Sdr",
+                            "text": "to",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "make",
+                                "position": 6,
+                                "xpos": "VB",
+                                "postPunct": [
+                                  "!"
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n16",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "GAP",
+                                "index": "x",
+                                "antecedent": {
+                                  "@id": "urn:cgel:demo_input:Tree%20WhatARemarkableClaim-0#n7"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Sequence
 
 from . import cgel
-from .io_utils import configure_stdio, log, open_read
+from .io_utils import configure_stdio, expand_paths, log, open_read
 
 
 @dataclass
@@ -108,7 +108,7 @@ def main(argv: Sequence[str] | None = None) -> int:
                         help='also check that `text` punctuation is present in the tree')
     args = parser.parse_args(argv)
 
-    report = validate_cgel_files(args.files, punct=args.punct)
+    report = validate_cgel_files(expand_paths(args.files), punct=args.punct)
     log(str(report))
     return 1 if not report.ok else 0
 

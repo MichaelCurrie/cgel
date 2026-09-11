@@ -244,49 +244,6 @@ See also: [STATS.md](STATS.md)
 - `weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029` |5, 0| Zakaria Amara, 20, Mississauga, Ont.;
 - `weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012` |25, 1| After that point, al-Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden, only some of whom were Saudi.
 
-## [trial/ewt-trial.cgel](datasets/trial/ewt-trial.cgel)
-
-- `reviews-329692-0007` |14, 1| Well, not much I can say except I'm very disappointed with this experience.
-- `weblog-blogspot.com_dakbangla_20050311135387_ENG_20050311_135387-0106` |15, 0| Microbiologist Abdul Qadoos Khan was charged along with his son, Ahmed, for harboring the fugitives.
-- `email-enronsent39_01-0060` |18, 0| Pat Wood made a phone call to Tom Noel and told him to get the Texas market fixed.
-- `newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0014` |20, 1| The name started as a joke boasting about the amount of information the search-engine would be able to search.
-- `reviews-079375-0005` |17, 0| lol They where super friendly towards us and treated us like people not walking bags of cash.
-- `answers-20111108104724AAuBUR7_ans-0095` |18, 0| A few hundred out of pocket now will possibly save you thousands once the horse is in your name.
-- `weblog-blogspot.com_dakbangla_20050311135387_ENG_20050311_135387-0001` |17, 0| Zawahiri was associated with a faction of the Egyptian Islamic Jihad known as the Vanguards of Conquest.
-- `reviews-074896-0008` |22, 1| Huge selection and, great suggestions from the staff and they refer you to reliable places if they don't have what you need.
-- `newsgroup-groups.google.com_emails_ec0a1064de05e74b_ENG_20040929_023800-0032` |16, 0| Founder Paul Galvin came up with this name when his company started manufacturing radios for cars.
-- `reviews-035726-0003` |20, 0| Dr. Aster is very kind an gentle with the children, but also positive and to the point with the parents.
-- `email-enronsent26_01-0028` |17, 1| I'm looking for the confidentiality agreement, which may be in Bart's files (haven't checked closely yet).
-- `weblog-blogspot.com_rigorousintuition_20060511134300_ENG_20060511_134300-0289` |17, 1| I just get hung up on 'Christians', as they're the dominant form where I come from.
-- `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0002` |26, 1| The charges that they have put some vets up to making against Kerry are false and can be demonstrated by the historical record to be false .
-- `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022` |12, 0| Over 300 Iraqis are reported dead and 500 wounded in Fallujah alone.
-- `answers-20111108094831AAnOjgr_ans-0003` |20, 3| I love how it really depends on how good a horse your horse really is, not how talented he is.
-- `reviews-211797-0013` |37, 5| Aside from that little *mystery*, one of the sales ladies was quite comfortable telling me how wrong I was about how another dress that I loved compared to one of her dresses that I was trying on.
-- `reviews-206303-0004` |20, 2| She really listens to what it is you would like to achieve, and I am very happy with my results.
-- `reviews-247097-0005` |16, 0| I actually loss 4 pounds after my 1st treatment and 2 pounds after my 2nd treatment.
-- `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0099` |19, 0| Unfortunately, it seems that Europe will understand it only after suicide murders arrive in Europe in a big way.
-- `answers-20111108105520AA73Axw_ans-0055` |26, 0| Some people put in a very dilute Acriflaven solution to slow down the fungus, so one can take white eggs out with a pipette or eyedropper.
-- `email-enronsent16_01-0080` |13, 0| the company is Arco Products, adn their comments are on the attached file.
-- `newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036` |17, 0| Continue to feel the warmth of the sunlight all over your body, warming you deeply and gently.
-- `email-enronsent07_01-0061` |15, 0| With the price caps gone, the generators filed paperwork with federal regulators justifying higher costs.
-- `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0023` |20, 1| $3.7m - Amount the EPA valued each human life when conducting analyses of proposed regulations during the Bush administration.
-- `newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0078` |12, 0| 1584 Lopez's book translated into Italian by Tarsia and published in Venice.
-- `reviews-059005-0003` |21, 0| I go in about every morning to get bagels for myself or my co-workers and the employees at Max's are great!!
-- `answers-20111108065616AAKtL2c_ans-0035` |15, 0| The amusing world of cartoons and stories will be a memorable experience for the children.
-
-## [trial/twitter-etc-trial.cgel](datasets/trial/twitter-etc-trial.cgel)
-
-- `twitter-etc-trial-0001` |48, 3| Andrew Tate was let back on Twitter by Elon Musk so he tweeted at Greta Thurnburg who owned him in a viral tweet to which he responded w a video containing a pizza box confirming his whereabouts to Romanian police who arrested him on charges of sex trafficking.
-- `twitter-etc-trial-0002` |46, 3| Jeremy Renner, the actor who remained in critical but stable condition on Tuesday, was run over by a snow plow weighing more than 14,000 pounds that he had used to tow his car on a snowed-in road near his home in Reno, Nevada, the authorities said.
-- `twitter-etc-trial-0003` |24, 2| We're at start-of-term chaos level where Amazon just delivered something I need tomorrow that I was moping about having forgotten to order.
-- `twitter-etc-trial-0004` |11, 1| Reports are now coming in of trouble at yet another jail.
-- `twitter-etc-trial-0005` |43, 3| Then there's Burning Man, which used to be on Baker Beach but we don't even hold in the state anymore, and the Bay to Breakers race, which for most participants is more of a (barely) mobile drunken costume party than a race.
-- `twitter-etc-trial-0006` |13, 3| Why is there no Deborah Tannen GIF I can respond to this with!
-- `twitter-etc-trial-0007` |21, 0| It may be necessary to ‘sacrifice’ a research question if it cannot be done justice to (see, for example, Sunderland, 1996a).
-- `twitter-etc-trial-0008` |11, 1| It's that he's so self-satisfied that I find offputting.
-- `twitter-etc-trial-0009` |14, 2| Wasn't it rather McIlroy who seemed never to be outdriven when playing in contention?
-- `twitter-etc-trial-0010` |27, 1| Who’s the most recent POTUS one can plausibly dress as and the clothes be sufficiently distinctive that it’s obvious you’re dressed as that POTUS?
-
 ## [oneoff/abortion.cgel](datasets/oneoff/abortion.cgel)
 
 - [abortion](datasets/oneoff/pdf/abortion.pdf) |26, 1| Abortion was so powerful and dominant an issue that it overcame voter frustrations about inflation at a time when inflation was significantly worse than current rates.
@@ -507,19 +464,12 @@ See also: [STATS.md](STATS.md)
 - `Clause` exclamative <small>(`Tree IdidntRealize-0`)</small>
 - `Clause` exclamatory-interrogative <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
 - `Clause` hollow to-infinitival as indirect complement licensed by adjective: see p. 1249 <small>([bakhmut](datasets/oneoff/pdf/bakhmut.pdf))</small>
-- `Clause` imperative <small>(`twitter-etc-trial-0007`)</small>
 - `Clause` impersonal construction (p. 960) <small>(`Tree ItIsntThat-0`)</small>
 - `Clause` interrogative <small>([bedtime](datasets/oneoff/pdf/bedtime.pdf))</small>
 - `Clause` interrogative: cf. p. 1077 29[iii] <small>([dinner](datasets/oneoff/pdf/dinner.pdf))</small>
-- `Clause` it-cleft <small>(`twitter-etc-trial-0008`)</small>
-- `Clause` it-cleft as a question <small>(`twitter-etc-trial-0009`)</small>
-- `Clause` multi-gaps-ok: wh-extraction from an it-cleft <small>(`reviews-206303-0004`)</small>
 - `Clause` passive <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
-- `Clause` prepositional passive: SIEG2 p. 367 <small>(`twitter-etc-trial-0007`)</small>
-- `Clause` surprising coordinate (a relative clause would be expected) <small>(`twitter-etc-trial-0010`)</small>
 - `Clause_rel` Subj-Dep inversion <small>([conferees](datasets/oneoff/pdf/conferees.pdf) `weblog-blogspot.com_dakbangla_20041028153019_ENG_20041028_153019-0027`)</small>
 - `Clause_rel` multi-gaps-ok <small>([leisure](datasets/oneoff/pdf/leisure.pdf))</small>
-- `Clause_rel` multi-gaps-ok: across-the-board extraction from coordinated subject-relative and object-relative <small>(`twitter-etc-trial-0005`)</small>
 - `Coordination` I_x dreamt I_x/y was Beyonce_y and I_x kissed me_y <small>(`Tree IdreamtIwasBeyoncé-0`)</small>
 - `Coordination` X, not Y (pp. 1313-1314) <small>(`answers-20111107164802AAq8nhF_ans-0007`)</small>
 - `Coordination` ambiguous attachment 'of the department...' <small>([usc34-1](datasets/oneoff/pdf/usc34-1.pdf) `Title 34-1`)</small>
@@ -531,7 +481,6 @@ See also: [STATS.md](STATS.md)
 - `D` _all_  predeterminer <small>([mutantfleas](datasets/oneoff/pdf/mutantfleas.pdf))</small>
 - `D` _any_  p. 385: degree modifier in clause structure, AmE (cf. %That wouldn't help us any.) <small>([appetite](datasets/oneoff/pdf/appetite.pdf))</small>
 - `D` _enough_  'enough' as post-head modifier: p. 397 <small>(`reviews-124163-0001`)</small>
-- `DP` more than (number): p. 432 <small>(`twitter-etc-trial-0002`)</small>
 - `DP` post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445) <small>(`newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010`)</small>
 - `DP` predeterminer <small>(`Tree AllYourBase-0`)</small>
 - `DP` predeterminer <small>(`Tree AllYourTreeDiagrams-0`)</small>
@@ -564,18 +513,15 @@ See also: [STATS.md](STATS.md)
 - `P` _over_  can't decide whether transitive or intransitive PP <small>([atonement](datasets/oneoff/pdf/atonement.pdf))</small>
 - `P` _over_  directional preposition modifier in PP (p. 645) <small>(`email-enronsent35_01-0010`)</small>
 - `P` _until_  cf. until later, p. 640 <small>([swingingbed](datasets/oneoff/pdf/swingingbed.pdf))</small>
-- `PP` 'all over': treating 'all' as modifier (see CGEL p. 645) <small>(`newsgroup-groups.google.com_Meditation20052_06390a5f75b2e1f2_ENG_20050316_091700-0036`)</small>
 - `PP` 'only' phrase triggering subj-aux inversion (pp. 95-96) <small>([vaporization](datasets/oneoff/pdf/vaporization.pdf))</small>
 - `PP` Looks like a case where either PP or fused relative analysis is possible (p. 1078); go with PP for simplicity <small>(`reviews-299169-0003`)</small>
 - `PP` PP as subject (pp. 646-647) <small>(`reviews-122564-0002`)</small>
 - `PP` PP in lieu of DP, p. 433 <small>(`newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085`)</small>
-- `PP` TODO: belongs under NP? <small>(`email-enronsent39_01-0060`)</small>
 - `PP` TODO: stative depictive: Comp or PredComp? <small>([uniform](datasets/oneoff/pdf/uniform.pdf))</small>
 - `PP` double-complement PP; cf. 'from Boston to Providence', p. 641. Also a spatial PP taking the place of an object in clause structure <small>([waistup](datasets/oneoff/pdf/waistup.pdf))</small>
 - `PP` fronted partitive PP: p. 903 discusses 'which' + partitives but not with the partitive fronted <small>(`answers-20111107155815AA6LXXJ_ans-0001`)</small>
 - `PP` post-head modifier of compound determinative, p. 423 <small>(`answers-20111108084416AAoPgBv_ans-0004`)</small>
 - `PP` punishment sense of 'for' - an argument could be made for Comp <small>(`Tree DeltaHasBanned-0`)</small>
-- `PP` with-absolute construction; possibly should be considered a verbless clause? <small>(`email-enronsent07_01-0061`)</small>
 - `VP` double preposition stranding <small>([kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf))</small>
 - `VP` fully-gapped-ok <small>([howstupid](datasets/oneoff/pdf/howstupid.pdf))</small>
 - `VP` implied 'is' (headlinese) <small>([xkcd-garden-path](datasets/oneoff/pdf/xkcd-garden-path.pdf))</small>
@@ -583,26 +529,25 @@ See also: [STATS.md](STATS.md)
 
 # Infrequent Categories
 
-Of 299 trees, the following occurred in fewer than 5% (14):
+Of 262 trees, the following occurred in fewer than 5% (14):
 
 - `NP+AdjP` (1): <small>`reviews-101398-0005`</small>
-- `NP+Clause` (4): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `email-enronsent07_01-0061`, `reviews-101398-0005`, `weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0022`</small>
-- `NP+PP` (3): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
-- `PP_strand` (8): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), [kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`, `twitter-etc-trial-0006`, `twitter-etc-trial-0007`</small>
-- `IntP` (8): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
-- `Int` (8): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `reviews-079375-0005`, `reviews-329692-0007`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
+- `NP+Clause` (2): <small>[newlife](datasets/oneoff/pdf/newlife.pdf), `reviews-101398-0005`</small>
+- `NP+PP` (2): <small>`answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`</small>
+- `PP_strand` (6): <small>[dinner](datasets/oneoff/pdf/dinner.pdf), [kindoffriend](datasets/oneoff/pdf/kindoffriend.pdf), `Tree MyFavoritePlaywright-0`, `answers-20111106015552AAj6rCu_ans-0001`, `answers-20111106022931AAwpqXm_ans-0001`, `reviews-180886-0004`</small>
+- `IntP` (6): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
+- `Int` (6): <small>[west-wing-nasa](datasets/oneoff/pdf/west-wing-nasa.pdf), `Tree IMeanYeahOK-0`, `Tree ImLegitWritingIt-0`, `Tree ImPostModerna-0`, `answers-20111108063043AAOhkv9_ans-0003`, `weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063`</small>
 - `NP+AdvP` (1): <small>`Tree ShouldProbably-0`</small>
-- `AdjP+PP` (1): <small>`reviews-035726-0003`</small>
 
 # Infrequent Functions
 
-- `ExtraposedSubj` (12): <small>[atonement](datasets/oneoff/pdf/atonement.pdf), [newlife](datasets/oneoff/pdf/newlife.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `twitter-etc-trial-0007`, `twitter-etc-trial-0010`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
+- `ExtraposedSubj` (10): <small>[atonement](datasets/oneoff/pdf/atonement.pdf), [newlife](datasets/oneoff/pdf/newlife.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree ItBlowsMyMind-0`, `Tree ItsAlrightTo-0`, `answers-20111108103333AA3eSCk_ans-0019`, `answers-20111108104724AAuBUR7_ans-0038`, `reviews-024385-0006`, `reviews-071278-0007`, `weblog-blogspot.com_alaindewitt_20060924104100_ENG_20060924_104100-0217`</small>
 - `Obj+PredComp/Comp` (1): <small>`reviews-101398-0005`</small>
-- `Obj_ind` (12): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
-- `Obj_dir` (12): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `answers-20111108104724AAuBUR7_ans-0095`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Obj_ind` (11): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
+- `Obj_dir` (11): <small>[appetite](datasets/oneoff/pdf/appetite.pdf), [bakhmut](datasets/oneoff/pdf/bakhmut.pdf), [leisure](datasets/oneoff/pdf/leisure.pdf), [oakland](datasets/oneoff/pdf/oakland.pdf), `Tree IsThatWhatYouCall-0`, `Tree Krugman-0`, `Tree NowOutsideInZero-0`, `answers-20111108083754AAEw5Xc_ans-0011`, `newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0036`, `reviews-071278-0007`, `reviews-180886-0004`</small>
 - `Vocative` (4): <small>`Tree IsThatAllYouGot-0`, `answers-20111106022931AAwpqXm_ans-0001`, `newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058`, `reviews-295288-0007`</small>
 - `Mod-Head` (8): <small>[bethebest](datasets/oneoff/pdf/bethebest.pdf), [handup](datasets/oneoff/pdf/handup.pdf) `newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0127`, `answers-20111107155815AA6LXXJ_ans-0001`, `answers-20111108104957AAsMzvU_ans-0006`, `email-enronsent13_01-0092`, `email-enronsent29_02-0045`, `email-enronsent40_01-0006`, `reviews-022461-0002`</small>
-- `Obj+Mod` (4): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`, `reviews-247097-0005`</small>
+- `Obj+Mod` (3): <small>`Tree ShouldProbably-0`, `answers-20111108104724AAuBUR7_ans-0074`, `email-enronsent39_01-0018`</small>
 - `Compounding` (4): <small>[elton](datasets/oneoff/pdf/elton.pdf), `Tree WhyDoTheyCallIt-0`, `newsgroup-groups.google.com_alt.animals_434fe80fb3577e8e_ENG_20031011_200300-0039`, `reviews-397066-0002`</small>
 - `Marker-Head` (3): <small>[bullying](datasets/oneoff/pdf/bullying.pdf), [usc-acreage](datasets/oneoff/pdf/usc-acreage.pdf) `Title 34-2`, `email-enronsent39_01-0031`</small>
 - `ExtraposedObj` (1): <small>[schumer](datasets/oneoff/pdf/schumer.pdf)</small>
