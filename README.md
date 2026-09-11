@@ -2,6 +2,31 @@
 
 This repo contains CGELBank, a human-annotated treebank of English using the syntactic formalism of the *Cambridge Grammar of the English Language* (CGEL). The treebank is described in [Reynolds et al. (2023)](https://people.cs.georgetown.edu/nschneid/p/cgeltrees.pdf), published at the Linguistic Annotation Workshop (LAW).
 
+## Quickstart
+
+From the repo root (requires [uv](https://docs.astral.sh/uv/)):
+
+```sh
+uv sync
+uv run cgel-to-json packages/cgel-json-converter/demo_input.cgel
+```
+
+That prints JSON-LD for two sample trees (`The #futureoflinguistics is integrative…` and `What a remarkable claim to make!`). Write it to a file and check the mapping is lossless with:
+
+```sh
+uv run cgel-to-json packages/cgel-json-converter/demo_input.cgel -o demo.jsonld --round-trip
+```
+
+To walk the gold trees in Python:
+
+```python
+from cgel_json_converter import cgel
+
+with open('datasets/twitter.cgel', encoding='utf-8') as f:
+    for tree in cgel.trees(f, check_format=True):
+        print(tree.sentence())
+```
+
 ![Status](https://github.com/nert-nlp/cgel/actions/workflows/validate.yml/badge.svg) [![CC BY 4.0][cc-by-shield]][cc-by]
 
 This work is licensed under a
@@ -101,19 +126,19 @@ Remaining top-level scripts:
 ## Setup
 
 ```sh
-$ pip install -r requirements.txt
+$ uv sync
 ```
 
-`requirements.txt` installs `packages/cgel-json-converter` in editable mode, so
-edits to the library take effect immediately and there is exactly one copy of
-each module.
+`uv sync` installs `packages/cgel-json-converter` in editable mode, so edits to
+the library take effect immediately and there is exactly one copy of each
+module. Commands then run as `uv run …` (for example `uv run cgel-to-json`).
 
 ## Tests
 
 To run tests locally:
 
 ```sh
-$ python -m pytest
+$ uv run pytest
 ```
 
 This will validate the trees, test distance metrics (Levenshtein and TED), and
@@ -122,8 +147,8 @@ run the converter package's own suite.
 To check tree well-formedness or produce JSON-LD directly:
 
 ```sh
-$ cgel-validate datasets/ewt.cgel datasets/twitter.cgel
-$ cgel-to-json datasets/*.cgel -o cgelbank.jsonld --round-trip
+$ uv run cgel-validate datasets/ewt.cgel datasets/twitter.cgel
+$ uv run cgel-to-json datasets/*.cgel -o cgelbank.jsonld --round-trip
 ```
 
 ## History

@@ -278,8 +278,8 @@ conversion paths plus all 46 tests passed there.
 ## Relationship to the CGELBank repository
 
 This package is the single source of truth for the code below. The parent
-repository does not keep copies; it installs this package in editable mode via
-`-e ./packages/cgel-json-converter` in its `requirements.txt`, and its scripts
+repository does not keep copies; it depends on this package as a local editable
+path (`tool.uv.sources` in the repo-root `pyproject.toml`), and its scripts
 import from it.
 
 | deleted from the repo root | replaced by |
