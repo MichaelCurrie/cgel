@@ -1,0 +1,545 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree NoSocietyCanSurely-0",
+      "sentNum": 62,
+      "text": "No society can surely be flourishing and happy of which the far greater part of the members are poor and miserable.",
+      "sent": "no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree NoSocietyCanSurely-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "62"
+        },
+        {
+          "key": "text",
+          "value": "No society can surely be flourishing and happy of which the far greater part of the members are poor and miserable."
+        },
+        {
+          "key": "sent",
+          "value": "no society can surely be flourishing and happy of which -- the far greater part of the members -- are poor and miserable"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "no",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "index": "x",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "society",
+                    "position": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n6",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "can",
+                "position": 3,
+                "xpos": "MD"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n8",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n9",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "surely",
+                        "position": 4
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n12",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "be",
+                        "position": 5,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n13",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Coordination",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n14",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "flourishing",
+                                    "position": 6,
+                                    "lemma": "flourish",
+                                    "xpos": "VBG"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n17",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "AdjP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n18",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Coordinator",
+                                "text": "and",
+                                "position": 7
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n19",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n20",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adj",
+                                    "text": "happy",
+                                    "position": 8
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n21",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "Clause_rel",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n22",
+                "@type": "Node",
+                "function": "Prenucleus",
+                "category": "PP",
+                "index": "y",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n23",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "of",
+                    "position": 9
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n24",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n25",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n26",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "which",
+                            "position": 10
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n27",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "GAP",
+                        "index": "x",
+                        "antecedent": {
+                          "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n4"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n28",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause_rel",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n29",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n30",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "the",
+                            "position": 11
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n32",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n33",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "AdjP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n34",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "far",
+                                    "position": 12
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n36",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adj",
+                                "text": "greater",
+                                "position": 13
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n37",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n38",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "part",
+                                "position": 14
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n39",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n40",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "of",
+                                    "position": 15
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n41",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n42",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n43",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 16
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n44",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n45",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "members",
+                                            "position": 17,
+                                            "lemma": "member"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n46",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "GAP",
+                                            "index": "y",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n22"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n47",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n48",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "are",
+                        "position": 18,
+                        "lemma": "be",
+                        "xpos": "VBP"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n49",
+                        "@type": "Node",
+                        "function": "PredComp",
+                        "category": "Coordination",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n50",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "AdjP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n51",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adj",
+                                "text": "poor",
+                                "position": 19
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n52",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "AdjP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n53",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Coordinator",
+                                "text": "and",
+                                "position": 20
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n54",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20NoSocietyCanSurely-0#n55",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adj",
+                                    "text": "miserable",
+                                    "position": 21,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

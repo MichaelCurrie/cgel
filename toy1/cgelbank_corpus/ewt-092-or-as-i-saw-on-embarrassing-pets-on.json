@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108111107AAlrzok_ans-0029",
+      "sentNum": 92,
+      "text": "or, as i saw on embarrassing pets on tv, get a clicker type thing and treats as well.",
+      "sent": "or as I saw on embarrassing pets on TV get a clicker type thing and treats as well",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108111107AAlrzok_ans-0029"
+        },
+        {
+          "key": "sent_num",
+          "value": "92"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/094.tex"
+        },
+        {
+          "key": "text",
+          "value": "or, as i saw on embarrassing pets on tv, get a clicker type thing and treats as well."
+        },
+        {
+          "key": "sent",
+          "value": "or as I saw on embarrassing pets on TV get a clicker type thing and treats as well"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n1",
+            "@type": "Node",
+            "function": "Marker",
+            "category": "Coordinator",
+            "text": "or",
+            "position": 1,
+            "postPunct": [
+              ","
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n2",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n3",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "as",
+                "position": 2
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n4",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n5",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n6",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n7",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "I",
+                            "position": 3
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "saw",
+                            "position": 4,
+                            "lemma": "see",
+                            "xpos": "VBD"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n11",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n12",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "on",
+                                "position": 5
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n13",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n15",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "embarrassing",
+                                            "position": 6
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n17",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "pets",
+                                        "position": 7,
+                                        "lemma": "pet"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n18",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n19",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "on",
+                            "position": 8
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n20",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n21",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n22",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "TV",
+                                    "position": 9,
+                                    "postPunct": [
+                                      ","
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n23",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n24",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n25",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "get",
+                    "position": 10,
+                    "xpos": "VB"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n26",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "Coordination",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n27",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n28",
+                            "@type": "Node",
+                            "function": "Det",
+                            "category": "DP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "D",
+                                "text": "a",
+                                "position": 11
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n30",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n31",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n32",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n33",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "clicker",
+                                        "position": 12
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n34",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "type",
+                                    "position": 13
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n35",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "thing",
+                                "position": 14
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n36",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n37",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Coordinator",
+                            "text": "and",
+                            "position": 15
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n38",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n39",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n40",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n41",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "treats",
+                                        "position": 16,
+                                        "lemma": "treat"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n42",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n43",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "AdvP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n44",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adv",
+                                        "text": "as",
+                                        "position": 17
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108111107AAlrzok_ans-0029#n45",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "well",
+                                    "position": 18,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

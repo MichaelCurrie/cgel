@@ -1,0 +1,501 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039",
+      "sentNum": 27,
+      "text": "We recognize that the state may not require religious groups to officiate at, or bless, same-gender marriages.",
+      "sent": "we recognize that the state may not require religious groups to officiate at -- or bless -- same gender marriages",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039"
+        },
+        {
+          "key": "sent_num",
+          "value": "27"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/027.tex"
+        },
+        {
+          "key": "text",
+          "value": "We recognize that the state may not require religious groups to officiate at, or bless, same-gender marriages."
+        },
+        {
+          "key": "sent",
+          "value": "we recognize that the state may not require religious groups to officiate at -- or bless -- same gender marriages"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "we",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "recognize",
+                "position": 2,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n7",
+                    "@type": "Node",
+                    "function": "Marker",
+                    "category": "Sdr",
+                    "text": "that",
+                    "position": 3
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n9",
+                        "@type": "Node",
+                        "function": "Subj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n10",
+                            "@type": "Node",
+                            "function": "Det",
+                            "category": "DP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "D",
+                                "text": "the",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "state",
+                                "position": 5
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n15",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n16",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V_aux",
+                                "text": "may",
+                                "position": 6,
+                                "xpos": "MD"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n17",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "not",
+                                    "position": 7
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n19",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n20",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n21",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "require",
+                                    "position": 8,
+                                    "xpos": "VB"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n22",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n24",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n25",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "religious",
+                                                "position": 9
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n26",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "groups",
+                                            "position": 10,
+                                            "lemma": "group"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n27",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n28",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n29",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "to",
+                                            "position": 11
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n30",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n31",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Coordination",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n32",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n33",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "V",
+                                                        "text": "officiate",
+                                                        "position": 12,
+                                                        "xpos": "VB"
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n34",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "PP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n35",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "P",
+                                                            "text": "at",
+                                                            "position": 13,
+                                                            "postPunct": [
+                                                              ","
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n36",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "GAP",
+                                                            "index": "x",
+                                                            "antecedent": {
+                                                              "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n42"
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n37",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n38",
+                                                        "@type": "Node",
+                                                        "function": "Marker",
+                                                        "category": "Coordinator",
+                                                        "text": "or",
+                                                        "position": 14
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n39",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "VP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n40",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "V",
+                                                            "text": "bless",
+                                                            "position": 15,
+                                                            "xpos": "VB",
+                                                            "postPunct": [
+                                                              ","
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n41",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "GAP",
+                                                            "index": "x",
+                                                            "antecedent": {
+                                                              "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n42"
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n42",
+                                                "@type": "Node",
+                                                "function": "Postnucleus",
+                                                "category": "NP",
+                                                "index": "x",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n43",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n44",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n45",
+                                                            "@type": "Node",
+                                                            "function": "Mod",
+                                                            "category": "AdjP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n46",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Adj",
+                                                                "text": "same",
+                                                                "position": 16,
+                                                                "postPunct": [
+                                                                  "-"
+                                                                ]
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n47",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "gender",
+                                                            "position": 17
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_GayMarriage_0ccbb50b41a5830b_ENG_20050321_181500-0039#n48",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "marriages",
+                                                        "position": 18,
+                                                        "lemma": "marriage",
+                                                        "postPunct": [
+                                                          "."
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

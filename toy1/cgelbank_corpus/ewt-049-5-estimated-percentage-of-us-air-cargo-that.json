@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118",
+      "sentNum": 49,
+      "text": "5 - Estimated Percentage of US air cargo that is screened, including cargo transported on passenger planes.",
+      "sent": "5 estimated percentage of US air cargo that -- is screened including cargo transported on passenger planes",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118"
+        },
+        {
+          "key": "sent_num",
+          "value": "49"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/049.tex"
+        },
+        {
+          "key": "text",
+          "value": "5 - Estimated Percentage of US air cargo that is screened, including cargo transported on passenger planes."
+        },
+        {
+          "key": "sent",
+          "value": "5 estimated percentage of US air cargo that -- is screened including cargo transported on passenger planes"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n2",
+                "@type": "Node",
+                "function": "Det-Head",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "5",
+                    "position": 1,
+                    "xpos": "CD",
+                    "postPunct": [
+                      "-"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n4",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n6",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "estimated",
+                        "position": 2,
+                        "lemma": "estimate",
+                        "xpos": "VBN"
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "index": "x",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "percentage",
+                            "position": 3
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n11",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n12",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "of",
+                                "position": 4
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n13",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n15",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "US",
+                                            "position": 5
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n17",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n18",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n19",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "air",
+                                                "position": 6
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n20",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "cargo",
+                                            "position": 7
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n21",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "Clause_rel",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n22",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Sdr",
+                            "text": "that",
+                            "position": 8
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n23",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause_rel",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n24",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "GAP",
+                                "index": "x",
+                                "antecedent": {
+                                  "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n9"
+                                }
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n25",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n26",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V_aux",
+                                    "text": "is",
+                                    "position": 9,
+                                    "lemma": "be",
+                                    "xpos": "VBZ"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n27",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n28",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n29",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "screened",
+                                            "position": 10,
+                                            "lemma": "screen",
+                                            "xpos": "VBN",
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n30",
+                        "@type": "Node",
+                        "function": "Supplement",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "including",
+                            "position": 11
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n32",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n33",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n34",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "cargo",
+                                    "position": 12
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n35",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n36",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n37",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "transported",
+                                            "position": 13,
+                                            "lemma": "transport",
+                                            "xpos": "VBN"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n38",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n39",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "on",
+                                                "position": 14
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n40",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n41",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n42",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n43",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "passenger",
+                                                            "position": 15
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0118#n44",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "planes",
+                                                        "position": 16,
+                                                        "lemma": "plane",
+                                                        "postPunct": [
+                                                          "."
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

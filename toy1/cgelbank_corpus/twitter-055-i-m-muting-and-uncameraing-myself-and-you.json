@@ -1,0 +1,553 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree I-mMutingMyself-0",
+      "sentNum": 55,
+      "text": "I'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost.",
+      "sent": "I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree I-mMutingMyself-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "55"
+        },
+        {
+          "key": "text",
+          "value": "I'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost."
+        },
+        {
+          "key": "sent",
+          "value": "I 'm muting and uncameraing myself and you all make a tree while I do emoji reacts like a syntax ghost"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n2",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "I",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "'m",
+                    "position": 2,
+                    "lemma": "be",
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n7",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Coordination",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n10",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n11",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "muting",
+                                    "position": 3,
+                                    "lemma": "mute",
+                                    "xpos": "VBG"
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n12",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n13",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Coordinator",
+                                    "text": "and",
+                                    "position": 4
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V",
+                                        "text": "uncameraing",
+                                        "position": 5,
+                                        "lemma": "uncamera",
+                                        "xpos": "VBG"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n16",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n17",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "myself",
+                                    "position": 6,
+                                    "lemma": "I"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n19",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n20",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Coordinator",
+                "text": "and",
+                "position": 7
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n21",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n22",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n23",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n24",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "you all",
+                            "position": 8,
+                            "note": "interpreted as compound pronoun (p. 427)",
+                            "subtokens": [
+                              {
+                                "kind": "subt",
+                                "value": "you"
+                              },
+                              {
+                                "kind": "subt",
+                                "value": "all"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n25",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n26",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n27",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "make",
+                            "position": 9,
+                            "xpos": "VBP"
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n28",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n29",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n30",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "a",
+                                    "position": 10
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n31",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n32",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "tree",
+                                    "position": 11
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n33",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n34",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "while",
+                            "position": 12
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n35",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n36",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n37",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n38",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "I",
+                                        "position": 13
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n39",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n40",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n41",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V",
+                                        "text": "do",
+                                        "position": 14,
+                                        "xpos": "VBP"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n42",
+                                        "@type": "Node",
+                                        "function": "Obj",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n43",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n44",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n45",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "emoji",
+                                                    "position": 15
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n46",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "reacts",
+                                                "position": 16,
+                                                "lemma": "react"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n47",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "PP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n48",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "P",
+                                        "text": "like",
+                                        "position": 17
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n49",
+                                        "@type": "Node",
+                                        "function": "Obj",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n50",
+                                            "@type": "Node",
+                                            "function": "Det",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n51",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "a",
+                                                "position": 18
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n52",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n53",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n54",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "syntax",
+                                                    "position": 19
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20I-mMutingMyself-0#n55",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "ghost",
+                                                "position": 20,
+                                                "postPunct": [
+                                                  "."
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152",
+      "sentNum": 81,
+      "text": "2.3m - Number of Americans who lost their jobs during first three Years of the Bush administration.",
+      "sent": "2.3m number of Americans who -- lost their jobs during first three years of the Bush administration",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152"
+        },
+        {
+          "key": "sent_num",
+          "value": "81"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/083.tex"
+        },
+        {
+          "key": "text",
+          "value": "2.3m - Number of Americans who lost their jobs during first three Years of the Bush administration."
+        },
+        {
+          "key": "sent",
+          "value": "2.3m number of Americans who -- lost their jobs during first three years of the Bush administration"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n2",
+                "@type": "Node",
+                "function": "Det-Head",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "2.3m",
+                    "position": 1,
+                    "lemma": "2.3",
+                    "xpos": "CD",
+                    "postPunct": [
+                      "-"
+                    ],
+                    "subtokens": [
+                      {
+                        "kind": "subt",
+                        "value": "2.3"
+                      },
+                      {
+                        "kind": "subt",
+                        "value": "m"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n4",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "number",
+                    "position": 2
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n7",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "PP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "P",
+                        "text": "of",
+                        "position": 3
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n9",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "Americans",
+                                "position": 4,
+                                "lemma": "American"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n12",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "Clause_rel",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n13",
+                                    "@type": "Node",
+                                    "function": "Prenucleus",
+                                    "category": "NP",
+                                    "index": "x",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n14",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n15",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N_pro",
+                                            "text": "who",
+                                            "position": 5
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Clause_rel",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n17",
+                                        "@type": "Node",
+                                        "function": "Subj",
+                                        "category": "GAP",
+                                        "index": "x",
+                                        "antecedent": {
+                                          "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n13"
+                                        }
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n19",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n20",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "lost",
+                                                "position": 6,
+                                                "lemma": "lose",
+                                                "xpos": "VBD"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n21",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n22",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n23",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n24",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N_pro",
+                                                            "text": "their",
+                                                            "position": 7,
+                                                            "lemma": "they"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n25",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n26",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "jobs",
+                                                        "position": 8,
+                                                        "lemma": "job"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n27",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n28",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "during",
+                                                "position": 9
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n29",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n30",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n31",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n32",
+                                                            "@type": "Node",
+                                                            "function": "Mod",
+                                                            "category": "AdjP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n33",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Adj",
+                                                                "text": "first",
+                                                                "position": 10
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n34",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n35",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "DP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n36",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "D",
+                                                                    "text": "three",
+                                                                    "position": 11,
+                                                                    "xpos": "CD"
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n37",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N",
+                                                                "text": "years",
+                                                                "position": 12,
+                                                                "lemma": "year"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n38",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "PP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n39",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "P",
+                                                            "text": "of",
+                                                            "position": 13
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n40",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n41",
+                                                                "@type": "Node",
+                                                                "function": "Det",
+                                                                "category": "DP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n42",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "D",
+                                                                    "text": "the",
+                                                                    "position": 14
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n43",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n44",
+                                                                    "@type": "Node",
+                                                                    "function": "Mod",
+                                                                    "category": "Nom",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n45",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "N",
+                                                                        "text": "Bush",
+                                                                        "position": 15
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_alt.animals_0084bdc731bfc8d8_ENG_20040905_212000-0152#n46",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "N",
+                                                                    "text": "administration",
+                                                                    "position": 16,
+                                                                    "postPunct": [
+                                                                      "."
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

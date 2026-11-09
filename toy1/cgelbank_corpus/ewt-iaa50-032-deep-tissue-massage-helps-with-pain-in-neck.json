@@ -1,0 +1,292 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "reviews-211933-0001",
+      "sentNum": 32,
+      "text": "Deep tissue massage helps with pain in neck and shoulders",
+      "sent": "deep tissue massage helps with pain in neck and shoulders",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-211933-0001"
+        },
+        {
+          "key": "sent_num",
+          "value": "32"
+        },
+        {
+          "key": "text",
+          "value": "Deep tissue massage helps with pain in neck and shoulders"
+        },
+        {
+          "key": "sent",
+          "value": "deep tissue massage helps with pain in neck and shoulders"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n3",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n4",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n5",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "deep",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n6",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "tissue",
+                        "position": 2
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "massage",
+                    "position": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n8",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n9",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "helps",
+                "position": 4,
+                "lemma": "help",
+                "xpos": "VBZ"
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n10",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "with",
+                    "position": 5
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n12",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n13",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "pain",
+                            "position": 6
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n15",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n16",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "in",
+                                "position": 7
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n17",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "Coordination",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n18",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n19",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n20",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "neck",
+                                            "position": 8
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n21",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n22",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Coordinator",
+                                        "text": "and",
+                                        "position": 9
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:reviews-211933-0001#n25",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "shoulders",
+                                                "position": 10,
+                                                "lemma": "shoulder"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

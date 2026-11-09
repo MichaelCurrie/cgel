@@ -1,0 +1,294 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111107163942AA08rP5_ans-0010",
+      "sentNum": 18,
+      "text": "I like my Monkey Brain on a stick for sure.",
+      "sent": "I like my monkey brain on a stick for sure",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111107163942AA08rP5_ans-0010"
+        },
+        {
+          "key": "sent_num",
+          "value": "18"
+        },
+        {
+          "key": "text",
+          "value": "I like my Monkey Brain on a stick for sure."
+        },
+        {
+          "key": "sent",
+          "value": "I like my monkey brain on a stick for sure"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "like",
+                "position": 2,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n6",
+                "@type": "Node",
+                "function": "Obj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n7",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "my",
+                            "position": 3,
+                            "lemma": "I"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n12",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "monkey",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "brain",
+                            "position": 5
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n15",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "on",
+                            "position": 6
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n17",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n18",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "a",
+                                    "position": 7
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n20",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n21",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "stick",
+                                    "position": 8
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n22",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n23",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "for",
+                "position": 9
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n24",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "AdjP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107163942AA08rP5_ans-0010#n25",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adj",
+                    "text": "sure",
+                    "position": 10,
+                    "postPunct": [
+                      "."
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,650 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012",
+      "sentNum": 50,
+      "text": "After that point, al-Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden, only some of whom were Saudi.",
+      "sent": "after that point al-Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden only some of whom -- were Saudi",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012"
+        },
+        {
+          "key": "sent_num",
+          "value": "50"
+        },
+        {
+          "key": "text",
+          "value": "After that point, al-Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden, only some of whom were Saudi."
+        },
+        {
+          "key": "sent",
+          "value": "after that point al-Qaeda was a joint enterprise between the Egyptian extremists and the polyglot Arabs around Bin Laden only some of whom -- were Saudi"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "after",
+                "position": 1
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n3",
+                "@type": "Node",
+                "function": "Obj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n4",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "that",
+                        "position": 2
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "point",
+                        "position": 3,
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n8",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n9",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "al-Qaeda",
+                        "position": 4,
+                        "lemma": "al",
+                        "subtokens": [
+                          {
+                            "kind": "subt",
+                            "value": "al"
+                          },
+                          {
+                            "kind": "subp",
+                            "value": "-"
+                          },
+                          {
+                            "kind": "subt",
+                            "value": "Qaeda"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n12",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n13",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "was",
+                    "position": 5,
+                    "lemma": "be",
+                    "xpos": "VBD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n14",
+                    "@type": "Node",
+                    "function": "PredComp",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n15",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "a",
+                            "position": 6
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n17",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n18",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n19",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n20",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adj",
+                                    "text": "joint",
+                                    "position": 7
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n21",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "enterprise",
+                                "position": 8
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n22",
+                            "@type": "Node",
+                            "function": "Comp_ind",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n23",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "between",
+                                "position": 9
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n24",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "Coordination",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n25",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n26",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n27",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 10
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n28",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n29",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n30",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "Egyptian",
+                                                "position": 11
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n31",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "extremists",
+                                            "position": 12,
+                                            "lemma": "extremist"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n32",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n33",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Coordinator",
+                                        "text": "and",
+                                        "position": 13
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n34",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n35",
+                                            "@type": "Node",
+                                            "function": "Det",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n36",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "the",
+                                                "position": 14
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n37",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n38",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n39",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n40",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "polyglot",
+                                                        "position": 15
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n41",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "Arabs",
+                                                    "position": 16,
+                                                    "lemma": "Arab"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n42",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n43",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "around",
+                                                    "position": 17
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n44",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n46",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n47",
+                                                                "@type": "Node",
+                                                                "function": "Flat",
+                                                                "category": "N",
+                                                                "text": "Bin",
+                                                                "position": 18
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n48",
+                                                                "@type": "Node",
+                                                                "function": "Flat",
+                                                                "category": "N",
+                                                                "text": "Laden",
+                                                                "position": 19,
+                                                                "postPunct": [
+                                                                  ","
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n49",
+                                            "@type": "Node",
+                                            "function": "Supplement",
+                                            "category": "Clause_rel",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n50",
+                                                "@type": "Node",
+                                                "function": "Prenucleus",
+                                                "category": "NP",
+                                                "index": "x",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n51",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n52",
+                                                        "@type": "Node",
+                                                        "function": "Det-Head",
+                                                        "category": "DP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n53",
+                                                            "@type": "Node",
+                                                            "function": "Mod",
+                                                            "category": "AdvP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n54",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Adv",
+                                                                "text": "only",
+                                                                "position": 20
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n55",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "D",
+                                                            "text": "some",
+                                                            "position": 21
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n56",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "PP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n57",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "P",
+                                                            "text": "of",
+                                                            "position": 22
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n58",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n59",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n60",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "N_pro",
+                                                                    "text": "whom",
+                                                                    "position": 23
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n61",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Clause_rel",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n62",
+                                                    "@type": "Node",
+                                                    "function": "Subj",
+                                                    "category": "GAP",
+                                                    "index": "x",
+                                                    "antecedent": {
+                                                      "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n50"
+                                                    }
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n63",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n64",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "V_aux",
+                                                        "text": "were",
+                                                        "position": 24,
+                                                        "lemma": "be",
+                                                        "xpos": "VBD"
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n65",
+                                                        "@type": "Node",
+                                                        "function": "PredComp",
+                                                        "category": "AdjP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:weblog-juancole.com_juancole_20041018060600_ENG_20041018_060600-0012#n66",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Adj",
+                                                            "text": "Saudi",
+                                                            "position": 25,
+                                                            "postPunct": [
+                                                              "."
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

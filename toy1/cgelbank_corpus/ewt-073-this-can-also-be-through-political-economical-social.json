@@ -1,0 +1,331 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006",
+      "sentNum": 73,
+      "text": "This can also be through political, economical, social, and technological influence.",
+      "sent": "this can also be through political economical social and technological influence",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006"
+        },
+        {
+          "key": "sent_num",
+          "value": "73"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/075.tex"
+        },
+        {
+          "key": "text",
+          "value": "This can also be through political, economical, social, and technological influence."
+        },
+        {
+          "key": "sent",
+          "value": "this can also be through political economical social and technological influence"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n3",
+                    "@type": "Node",
+                    "function": "Det-Head",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "this",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n5",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "can",
+                    "position": 2,
+                    "xpos": "MD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n8",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "also",
+                        "position": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n10",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n12",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "be",
+                        "position": 4,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n13",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "through",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n15",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n16",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n17",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Coordination",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n18",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n19",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "political",
+                                            "position": 6,
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n20",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n21",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "economical",
+                                            "position": 7,
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n22",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n23",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "social",
+                                            "position": 8,
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n24",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n25",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Coordinator",
+                                            "text": "and",
+                                            "position": 9
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n26",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n27",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "technological",
+                                                "position": 10
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0006#n28",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "influence",
+                                    "position": 11,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

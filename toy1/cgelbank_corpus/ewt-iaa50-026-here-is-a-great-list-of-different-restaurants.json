@@ -1,0 +1,346 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111107221352AAlIioO_ans-0005",
+      "sentNum": 26,
+      "text": "Here is a great list of different restaurants in San Francisco",
+      "sent": "here -- is -- a great list of different restaurants in San Francisco",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111107221352AAlIioO_ans-0005"
+        },
+        {
+          "key": "sent_num",
+          "value": "26"
+        },
+        {
+          "key": "text",
+          "value": "Here is a great list of different restaurants in San Francisco"
+        },
+        {
+          "key": "sent",
+          "value": "here -- is -- a great list of different restaurants in San Francisco"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n1",
+            "@type": "Node",
+            "function": "Prenucleus",
+            "category": "PP",
+            "index": "x",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "here",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n5",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "GAP",
+                    "index": "y",
+                    "antecedent": {
+                      "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n9"
+                    }
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "is",
+                        "position": 2,
+                        "lemma": "be",
+                        "xpos": "VBZ"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n8",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "GAP",
+                        "index": "x",
+                        "antecedent": {
+                          "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n9",
+                "@type": "Node",
+                "function": "Postnucleus",
+                "category": "NP",
+                "index": "y",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n10",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "a",
+                        "position": 3
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n12",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n13",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "great",
+                            "position": 4
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n15",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "list",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n17",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "of",
+                                "position": 6
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n19",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n20",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n21",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n22",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "different",
+                                            "position": 7
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "restaurants",
+                                            "position": 8,
+                                            "lemma": "restaurant"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n25",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n26",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "in",
+                                                "position": 9
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n27",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n28",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n29",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n30",
+                                                            "@type": "Node",
+                                                            "function": "Flat",
+                                                            "category": "N",
+                                                            "text": "San",
+                                                            "position": 10
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111107221352AAlIioO_ans-0005#n31",
+                                                            "@type": "Node",
+                                                            "function": "Flat",
+                                                            "category": "N",
+                                                            "text": "Francisco",
+                                                            "position": 11
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

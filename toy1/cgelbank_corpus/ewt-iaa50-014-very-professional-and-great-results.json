@@ -1,0 +1,181 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "reviews-014764-0002",
+      "sentNum": 14,
+      "text": "Very professional and great results.",
+      "sent": "very professional and great results",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-014764-0002"
+        },
+        {
+          "key": "sent_num",
+          "value": "14"
+        },
+        {
+          "key": "text",
+          "value": "Very professional and great results."
+        },
+        {
+          "key": "sent",
+          "value": "very professional and great results"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "AdjP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n2",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "AdvP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adv",
+                    "text": "very",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Adj",
+                "text": "professional",
+                "position": 2
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n5",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n6",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Coordinator",
+                "text": "and",
+                "position": 3
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n9",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "great",
+                            "position": 4
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-014764-0002#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "results",
+                        "position": 5,
+                        "lemma": "result",
+                        "postPunct": [
+                          "."
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

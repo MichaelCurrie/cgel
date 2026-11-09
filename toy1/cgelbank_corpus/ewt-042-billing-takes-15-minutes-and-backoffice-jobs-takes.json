@@ -1,0 +1,356 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:reviews-275919-0010",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "reviews-275919-0010",
+      "sentNum": 42,
+      "text": "Billing takes 15 minutes and backoffice jobs takes 1 day's training",
+      "sent": "billing takes 15 minutes and backoffice jobs takes 1 day's training",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-275919-0010"
+        },
+        {
+          "key": "sent_num",
+          "value": "42"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/042.tex"
+        },
+        {
+          "key": "text",
+          "value": "Billing takes 15 minutes and backoffice jobs takes 1 day's training"
+        },
+        {
+          "key": "sent",
+          "value": "billing takes 15 minutes and backoffice jobs takes 1 day's training"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:reviews-275919-0010#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:reviews-275919-0010#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-275919-0010#n2",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-275919-0010#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "billing",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-275919-0010#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-275919-0010#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "takes",
+                    "position": 2,
+                    "lemma": "take",
+                    "xpos": "VBZ"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-275919-0010#n7",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n8",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "15",
+                            "position": 3,
+                            "xpos": "CD"
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n11",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "minutes",
+                            "position": 4,
+                            "lemma": "minute"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:reviews-275919-0010#n12",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-275919-0010#n13",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Coordinator",
+                "text": "and",
+                "position": 5
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-275919-0010#n14",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-275919-0010#n15",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n16",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n17",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-275919-0010#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "backoffice",
+                                "position": 6,
+                                "lemma": "back",
+                                "subtokens": [
+                                  {
+                                    "kind": "subt",
+                                    "value": "back"
+                                  },
+                                  {
+                                    "kind": "subt",
+                                    "value": "office"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n19",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "jobs",
+                            "position": 7,
+                            "lemma": "job"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-275919-0010#n20",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n21",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "takes",
+                        "position": 8,
+                        "lemma": "take",
+                        "xpos": "VBZ",
+                        "correct": "take"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-275919-0010#n22",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n23",
+                            "@type": "Node",
+                            "function": "Det",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-275919-0010#n24",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-275919-0010#n25",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "1",
+                                    "position": 9,
+                                    "xpos": "CD"
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:reviews-275919-0010#n26",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-275919-0010#n27",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "day's",
+                                    "position": 10,
+                                    "lemma": "day",
+                                    "subtokens": [
+                                      {
+                                        "kind": "subt",
+                                        "value": "day"
+                                      },
+                                      {
+                                        "kind": "subt",
+                                        "value": "'s"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-275919-0010#n28",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-275919-0010#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "training",
+                                "position": 11
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

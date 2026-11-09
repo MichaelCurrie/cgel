@@ -1,0 +1,237 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015",
+      "sentNum": 2,
+      "text": "Visit people only once a year.",
+      "sent": "visit people only once a year",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015"
+        },
+        {
+          "key": "sent_num",
+          "value": "2"
+        },
+        {
+          "key": "text",
+          "value": "Visit people only once a year."
+        },
+        {
+          "key": "sent",
+          "value": "visit people only once a year"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "visit",
+                    "position": 1,
+                    "xpos": "VB"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n4",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n6",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "people",
+                            "position": 2
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n7",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n8",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "only",
+                        "position": 3
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n12",
+                            "@type": "Node",
+                            "function": "Det-Head",
+                            "category": "DP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "D",
+                                "text": "once",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n14",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n16",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n17",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "a",
+                                        "position": 5
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_JokeEruption_df151b356f94881c_ENG_20050819_155700-0015#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "year",
+                                    "position": 6,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

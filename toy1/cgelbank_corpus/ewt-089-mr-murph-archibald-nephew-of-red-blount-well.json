@@ -1,0 +1,521 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063",
+      "sentNum": 89,
+      "text": "Mr. MURPH ARCHIBALD (Nephew of Red Blount): Well, I was coming in early in the morning and leaving in mid-evenings.",
+      "sent": "Mr. Murph Archibald nephew of Red Blount well I was coming in early in the morning and leaving in mid-evenings",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063"
+        },
+        {
+          "key": "sent_num",
+          "value": "89"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/091.tex"
+        },
+        {
+          "key": "text",
+          "value": "Mr. MURPH ARCHIBALD (Nephew of Red Blount): Well, I was coming in early in the morning and leaving in mid-evenings."
+        },
+        {
+          "key": "sent",
+          "value": "Mr. Murph Archibald nephew of Red Blount well I was coming in early in the morning and leaving in mid-evenings"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n1",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n3",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "Mr.",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n6",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "Murph",
+                        "position": 2
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n7",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "Archibald",
+                        "position": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n8",
+                "@type": "Node",
+                "function": "Supplement",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "nephew",
+                        "position": 4,
+                        "prePunct": [
+                          "("
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n11",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "of",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n13",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n14",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n15",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n16",
+                                        "@type": "Node",
+                                        "function": "Flat",
+                                        "category": "N",
+                                        "text": "Red",
+                                        "position": 6
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n17",
+                                        "@type": "Node",
+                                        "function": "Flat",
+                                        "category": "N",
+                                        "text": "Blount",
+                                        "position": 7,
+                                        "postPunct": [
+                                          ")",
+                                          ":"
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n18",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "IntP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n19",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Int",
+                "text": "well",
+                "position": 8,
+                "postPunct": [
+                  ","
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n20",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n21",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n22",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 9
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n23",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n24",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "was",
+                "position": 10,
+                "lemma": "be",
+                "xpos": "VBD"
+              },
+              {
+                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n25",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Coordination",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n26",
+                    "@type": "Node",
+                    "function": "Coordinate",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n27",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n28",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "coming",
+                                "position": 11,
+                                "lemma": "come",
+                                "xpos": "VBG"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n30",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n31",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "in",
+                                    "position": 12
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n32",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n33",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n34",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "early",
+                                    "position": 13
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n35",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n36",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "in",
+                                    "position": 14
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n37",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n38",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n39",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 15
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n40",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n41",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "morning",
+                                            "position": 16
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n42",
+                    "@type": "Node",
+                    "function": "Coordinate",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n43",
+                        "@type": "Node",
+                        "function": "Marker",
+                        "category": "Coordinator",
+                        "text": "and",
+                        "position": 17
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n44",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n45",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n46",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "leaving",
+                                "position": 18,
+                                "lemma": "leave",
+                                "xpos": "VBG"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n47",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n48",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "in",
+                                    "position": 19
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n49",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n50",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-juancole.com_juancole_20040823064025_ENG_20040823_064025-0063#n51",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "mid-evenings",
+                                            "position": 20,
+                                            "lemma": "mid-evening",
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111106015552AAj6rCu_ans-0003",
+      "sentNum": 34,
+      "text": "Fast food chains, supermarkets, dairies",
+      "sent": "fast food chains supermarkets dairies",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111106015552AAj6rCu_ans-0003"
+        },
+        {
+          "key": "sent_num",
+          "value": "34"
+        },
+        {
+          "key": "text",
+          "value": "Fast food chains, supermarkets, dairies"
+        },
+        {
+          "key": "sent",
+          "value": "fast food chains supermarkets dairies"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n3",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n4",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n5",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "fast",
+                            "position": 1
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n6",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "food",
+                        "position": 2
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "chains",
+                    "position": 3,
+                    "lemma": "chain",
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n8",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n9",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "supermarkets",
+                    "position": 4,
+                    "lemma": "supermarket",
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n11",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n12",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0003#n13",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "dairies",
+                    "position": 5,
+                    "lemma": "dairy"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

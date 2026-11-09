@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085",
+      "sentNum": 5,
+      "text": "About 30 seconds into his address, he started flogging the terrorist issue just one more time.",
+      "sent": "about 30 seconds into his address he started flogging the terrorist issue just one more time",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085"
+        },
+        {
+          "key": "sent_num",
+          "value": "5"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/005.tex"
+        },
+        {
+          "key": "text",
+          "value": "About 30 seconds into his address, he started flogging the terrorist issue just one more time."
+        },
+        {
+          "key": "sent",
+          "value": "about 30 seconds into his address he started flogging the terrorist issue just one more time"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n2",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n3",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "PP",
+                    "note": "PP in lieu of DP, p. 433",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "P",
+                        "text": "about",
+                        "position": 1
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n5",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n6",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n7",
+                                "@type": "Node",
+                                "function": "Det-Head",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n8",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "30",
+                                    "position": 2,
+                                    "xpos": "CD"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "seconds",
+                        "position": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n11",
+                "@type": "Node",
+                "function": "Head",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n12",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "into",
+                    "position": 4
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n13",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n14",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n15",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n16",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N_pro",
+                                "text": "his",
+                                "position": 5,
+                                "lemma": "he"
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n17",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n18",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "address",
+                            "position": 6,
+                            "postPunct": [
+                              ","
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n19",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n20",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n21",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n22",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "he",
+                        "position": 7
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n23",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n24",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "started",
+                    "position": 8,
+                    "lemma": "start",
+                    "xpos": "VBD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n25",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n26",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n27",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n28",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "flogging",
+                                "position": 9,
+                                "lemma": "flog",
+                                "xpos": "VBG"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n29",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n30",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n31",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "the",
+                                        "position": 10
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n32",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n33",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n34",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "terrorist",
+                                            "position": 11
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n35",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "issue",
+                                        "position": 12
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n36",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n37",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n38",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "just",
+                                    "position": 13
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n39",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n40",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n41",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "one",
+                                        "position": 14,
+                                        "xpos": "CD"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n42",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n43",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n44",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "more",
+                                            "position": 15
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_INTPunderground_b2c62e87877e4a22_ENG_20050906_165900-0085#n45",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "time",
+                                        "position": 16,
+                                        "postPunct": [
+                                          "."
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

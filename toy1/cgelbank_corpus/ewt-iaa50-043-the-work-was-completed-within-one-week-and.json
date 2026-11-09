@@ -1,0 +1,408 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "reviews-085009-0003",
+      "sentNum": 43,
+      "text": "The work was completed within one week, and everything was cleaned up on completion.",
+      "sent": "the work was completed within one week and everything was cleaned up on completion",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-085009-0003"
+        },
+        {
+          "key": "sent_num",
+          "value": "43"
+        },
+        {
+          "key": "text",
+          "value": "The work was completed within one week, and everything was cleaned up on completion."
+        },
+        {
+          "key": "sent",
+          "value": "the work was completed within one week and everything was cleaned up on completion"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n2",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n3",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "the",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n6",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "work",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "was",
+                    "position": 3,
+                    "lemma": "be",
+                    "xpos": "VBD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n9",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n11",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "completed",
+                            "position": 4,
+                            "lemma": "complete",
+                            "xpos": "VBN"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n12",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "within",
+                                "position": 5
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n14",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n15",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n16",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "one",
+                                        "position": 6,
+                                        "xpos": "CD"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n17",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "week",
+                                        "position": 7,
+                                        "postPunct": [
+                                          ","
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n19",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n20",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Coordinator",
+                "text": "and",
+                "position": 8
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n21",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n22",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n23",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n24",
+                            "@type": "Node",
+                            "function": "Det-Head",
+                            "category": "DP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n25",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "D",
+                                "text": "everything",
+                                "position": 9
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n26",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n27",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "was",
+                        "position": 10,
+                        "lemma": "be",
+                        "xpos": "VBD"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n28",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n29",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n30",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n31",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "cleaned",
+                                    "position": 11,
+                                    "lemma": "clean",
+                                    "xpos": "VBN"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n32",
+                                    "@type": "Node",
+                                    "function": "Particle",
+                                    "category": "PP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n33",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "P",
+                                        "text": "up",
+                                        "position": 12
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n34",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "on",
+                                    "position": 13
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n36",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n37",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:reviews-085009-0003#n38",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "completion",
+                                            "position": 14,
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

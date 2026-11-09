@@ -1,0 +1,561 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058",
+      "sentNum": 20,
+      "text": "Scorpio, you can still expect changes - perhaps major ones - in your life this year, almost to the point of total transformation.",
+      "sent": "Scorpio you can still expect changes perhaps major ones in your life this year almost to the point of total transformation",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058"
+        },
+        {
+          "key": "sent_num",
+          "value": "20"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/020.tex"
+        },
+        {
+          "key": "text",
+          "value": "Scorpio, you can still expect changes - perhaps major ones - in your life this year, almost to the point of total transformation."
+        },
+        {
+          "key": "sent",
+          "value": "Scorpio you can still expect changes perhaps major ones in your life this year almost to the point of total transformation"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n1",
+            "@type": "Node",
+            "function": "Vocative",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "Scorpio",
+                    "position": 1,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n5",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "you",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n8",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "can",
+                    "position": 3,
+                    "xpos": "MD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n10",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n12",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "AdvP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adv",
+                                "text": "still",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "expect",
+                                "position": 5,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n16",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n17",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "changes",
+                                        "position": 6,
+                                        "lemma": "change",
+                                        "postPunct": [
+                                          "-"
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n19",
+                                        "@type": "Node",
+                                        "function": "Supplement",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n20",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdvP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n21",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adv",
+                                                "text": "perhaps",
+                                                "position": 7
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n22",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n23",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n24",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "AdjP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n25",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adj",
+                                                        "text": "major",
+                                                        "position": 8
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n26",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "ones",
+                                                    "position": 9,
+                                                    "lemma": "one",
+                                                    "postPunct": [
+                                                      "-"
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n27",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "PP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n28",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "P",
+                                            "text": "in",
+                                            "position": 10
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n29",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n30",
+                                                "@type": "Node",
+                                                "function": "Det",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n31",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n32",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N_pro",
+                                                        "text": "your",
+                                                        "position": 11,
+                                                        "lemma": "you"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n33",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n34",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "life",
+                                                    "position": 12
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n35",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n36",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n37",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "this",
+                    "position": 13
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n38",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n39",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "year",
+                    "position": 14,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n40",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n41",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "AdvP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n42",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adv",
+                    "text": "almost",
+                    "position": 15
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n43",
+                "@type": "Node",
+                "function": "Head",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n44",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "to",
+                    "position": 16
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n45",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n46",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n47",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "the",
+                            "position": 17
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n48",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n49",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "point",
+                            "position": 18
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n50",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n51",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "of",
+                                "position": 19
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n52",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n53",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n54",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n55",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "total",
+                                            "position": 20
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_magicworld_04c89d43ff4fd6ea_ENG_20050104_152000-0058#n56",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "transformation",
+                                        "position": 21,
+                                        "postPunct": [
+                                          "."
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

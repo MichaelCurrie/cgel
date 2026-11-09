@@ -1,0 +1,672 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092",
+      "sentNum": 82,
+      "text": "He could bear no longer that expressionless and motionless stare, which seemed to have a sort of impenetrable emptiness like the black depth of an abyss.",
+      "sent": "he could bear -- no longer that expressionless and motionless stare which -- seemed to have a sort of impenetrable emptiness like the black depth of an abyss",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092"
+        },
+        {
+          "key": "sent_num",
+          "value": "82"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/084.tex"
+        },
+        {
+          "key": "text",
+          "value": "He could bear no longer that expressionless and motionless stare, which seemed to have a sort of impenetrable emptiness like the black depth of an abyss."
+        },
+        {
+          "key": "sent",
+          "value": "he could bear -- no longer that expressionless and motionless stare which -- seemed to have a sort of impenetrable emptiness like the black depth of an abyss"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "he",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "could",
+                "position": 2,
+                "xpos": "MD"
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n10",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "bear",
+                                "position": 3,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n11",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "GAP",
+                                "index": "x",
+                                "antecedent": {
+                                  "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n16"
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n12",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "AdvP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n13",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "no",
+                                    "position": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adv",
+                                "text": "longer",
+                                "position": 5,
+                                "lemma": "long"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n16",
+                    "@type": "Node",
+                    "function": "Postnucleus",
+                    "category": "NP",
+                    "index": "x",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n17",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n18",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "that",
+                            "position": 6
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n19",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n20",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "Coordination",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n21",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n22",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adj",
+                                    "text": "expressionless",
+                                    "position": 7
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n23",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n24",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Coordinator",
+                                    "text": "and",
+                                    "position": 8
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n25",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "AdjP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n26",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adj",
+                                        "text": "motionless",
+                                        "position": 9
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n27",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "stare",
+                            "position": 10,
+                            "postPunct": [
+                              ","
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n28",
+                        "@type": "Node",
+                        "function": "Supplement",
+                        "category": "Clause_rel",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n29",
+                            "@type": "Node",
+                            "function": "Prenucleus",
+                            "category": "NP",
+                            "index": "y",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n30",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n31",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N_pro",
+                                    "text": "which",
+                                    "position": 11
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n32",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause_rel",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n33",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "GAP",
+                                "index": "y",
+                                "antecedent": {
+                                  "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n29"
+                                }
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n34",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "seemed",
+                                    "position": 12,
+                                    "lemma": "seem",
+                                    "xpos": "VBD"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n36",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n37",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n38",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "to",
+                                            "position": 13
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n39",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n40",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "have",
+                                                "position": 14,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n41",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n42",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "DP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n43",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "D",
+                                                        "text": "a",
+                                                        "position": 15
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n44",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "sort",
+                                                        "position": 16
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n46",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "PP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n47",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "P",
+                                                            "text": "of",
+                                                            "position": 17
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n48",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n49",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n50",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Nom",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n51",
+                                                                        "@type": "Node",
+                                                                        "function": "Mod",
+                                                                        "category": "AdjP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n52",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "Adj",
+                                                                            "text": "impenetrable",
+                                                                            "position": 18
+                                                                          }
+                                                                        ]
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n53",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "N",
+                                                                        "text": "emptiness",
+                                                                        "position": 19
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n54",
+                                                                    "@type": "Node",
+                                                                    "function": "Mod",
+                                                                    "category": "PP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n55",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "P",
+                                                                        "text": "like",
+                                                                        "position": 20
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n56",
+                                                                        "@type": "Node",
+                                                                        "function": "Obj",
+                                                                        "category": "NP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n57",
+                                                                            "@type": "Node",
+                                                                            "function": "Det",
+                                                                            "category": "DP",
+                                                                            "children": [
+                                                                              {
+                                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n58",
+                                                                                "@type": "Node",
+                                                                                "function": "Head",
+                                                                                "category": "D",
+                                                                                "text": "the",
+                                                                                "position": 21
+                                                                              }
+                                                                            ]
+                                                                          },
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n59",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "Nom",
+                                                                            "children": [
+                                                                              {
+                                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n60",
+                                                                                "@type": "Node",
+                                                                                "function": "Mod",
+                                                                                "category": "AdjP",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n61",
+                                                                                    "@type": "Node",
+                                                                                    "function": "Head",
+                                                                                    "category": "Adj",
+                                                                                    "text": "black",
+                                                                                    "position": 22
+                                                                                  }
+                                                                                ]
+                                                                              },
+                                                                              {
+                                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n62",
+                                                                                "@type": "Node",
+                                                                                "function": "Head",
+                                                                                "category": "Nom",
+                                                                                "children": [
+                                                                                  {
+                                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n63",
+                                                                                    "@type": "Node",
+                                                                                    "function": "Head",
+                                                                                    "category": "N",
+                                                                                    "text": "depth",
+                                                                                    "position": 23
+                                                                                  },
+                                                                                  {
+                                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n64",
+                                                                                    "@type": "Node",
+                                                                                    "function": "Mod",
+                                                                                    "category": "PP",
+                                                                                    "children": [
+                                                                                      {
+                                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n65",
+                                                                                        "@type": "Node",
+                                                                                        "function": "Head",
+                                                                                        "category": "P",
+                                                                                        "text": "of",
+                                                                                        "position": 24
+                                                                                      },
+                                                                                      {
+                                                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n66",
+                                                                                        "@type": "Node",
+                                                                                        "function": "Obj",
+                                                                                        "category": "NP",
+                                                                                        "children": [
+                                                                                          {
+                                                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n67",
+                                                                                            "@type": "Node",
+                                                                                            "function": "Det",
+                                                                                            "category": "DP",
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n68",
+                                                                                                "@type": "Node",
+                                                                                                "function": "Head",
+                                                                                                "category": "D",
+                                                                                                "text": "an",
+                                                                                                "position": 25,
+                                                                                                "lemma": "a"
+                                                                                              }
+                                                                                            ]
+                                                                                          },
+                                                                                          {
+                                                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n69",
+                                                                                            "@type": "Node",
+                                                                                            "function": "Head",
+                                                                                            "category": "Nom",
+                                                                                            "children": [
+                                                                                              {
+                                                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_humanities.lit.authors.shakespeare_0018a7697318f71f_ENG_20031006_163200-0092#n70",
+                                                                                                "@type": "Node",
+                                                                                                "function": "Head",
+                                                                                                "category": "N",
+                                                                                                "text": "abyss",
+                                                                                                "position": 26,
+                                                                                                "postPunct": [
+                                                                                                  "."
+                                                                                                ]
+                                                                                              }
+                                                                                            ]
+                                                                                          }
+                                                                                        ]
+                                                                                      }
+                                                                                    ]
+                                                                                  }
+                                                                                ]
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

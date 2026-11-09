@@ -1,0 +1,272 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024",
+      "sentNum": 42,
+      "text": "Umar Islam, 28, (born Brian Young) High Wycombe",
+      "sent": "Umar Islam 28 born Brian Young High Wycombe",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024"
+        },
+        {
+          "key": "sent_num",
+          "value": "42"
+        },
+        {
+          "key": "text",
+          "value": "Umar Islam, 28, (born Brian Young) High Wycombe"
+        },
+        {
+          "key": "sent",
+          "value": "Umar Islam 28 born Brian Young High Wycombe"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "N",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n3",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Umar",
+                    "position": 1
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n4",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Islam",
+                    "position": 2,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n5",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n7",
+                    "@type": "Node",
+                    "function": "Det-Head",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "28",
+                        "position": 3,
+                        "xpos": "CD",
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n9",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n10",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "born",
+                    "position": 4,
+                    "lemma": "bear",
+                    "xpos": "VBN",
+                    "prePunct": [
+                      "("
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n12",
+                    "@type": "Node",
+                    "function": "PredComp",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n13",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n15",
+                                "@type": "Node",
+                                "function": "Flat",
+                                "category": "N",
+                                "text": "Brian",
+                                "position": 5
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n16",
+                                "@type": "Node",
+                                "function": "Flat",
+                                "category": "N",
+                                "text": "Young",
+                                "position": 6,
+                                "postPunct": [
+                                  ")"
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n17",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n18",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n19",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n20",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "High",
+                        "position": 7
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0024#n21",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "Wycombe",
+                        "position": 8
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

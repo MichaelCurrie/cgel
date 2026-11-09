@@ -1,0 +1,217 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111108063043AAOhkv9_ans-0003",
+      "sentNum": 28,
+      "text": "lol... Kolkata is not for sale!!!!!!",
+      "sent": "lol Kolkata is not for sale",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108063043AAOhkv9_ans-0003"
+        },
+        {
+          "key": "sent_num",
+          "value": "28"
+        },
+        {
+          "key": "text",
+          "value": "lol... Kolkata is not for sale!!!!!!"
+        },
+        {
+          "key": "sent",
+          "value": "lol Kolkata is not for sale"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n1",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "IntP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Int",
+                "text": "lol",
+                "position": 1,
+                "postPunct": [
+                  "..."
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n3",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "Kolkata",
+                    "position": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n6",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "is",
+                    "position": 3,
+                    "lemma": "be",
+                    "xpos": "VBZ"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n9",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "not",
+                        "position": 4
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n11",
+                "@type": "Node",
+                "function": "PredComp",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n12",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "for",
+                    "position": 5
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n13",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111108063043AAOhkv9_ans-0003#n15",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "sale",
+                            "position": 6,
+                            "postPunct": [
+                              "!!!!!!"
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

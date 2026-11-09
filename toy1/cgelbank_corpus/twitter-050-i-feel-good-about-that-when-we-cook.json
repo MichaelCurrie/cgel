@@ -1,0 +1,317 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree IFeelGoodAboutThat-0",
+      "sentNum": 50,
+      "text": "I feel good about that when we cook it tastes good",
+      "sent": "I feel good about that when we cook it tastes good",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree IFeelGoodAboutThat-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "50"
+        },
+        {
+          "key": "text",
+          "value": "I feel good about that when we cook it tastes good"
+        },
+        {
+          "key": "sent",
+          "value": "I feel good about that when we cook it tastes good"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "feel",
+                "position": 2,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n6",
+                "@type": "Node",
+                "function": "PredComp",
+                "category": "AdjP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adj",
+                    "text": "good",
+                    "position": 3
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n8",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "PP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "P",
+                        "text": "about",
+                        "position": 4
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n10",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n11",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Sdr",
+                            "text": "that",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n13",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "when",
+                                    "position": 6
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n15",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n16",
+                                        "@type": "Node",
+                                        "function": "Subj",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n17",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n18",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N_pro",
+                                                "text": "we",
+                                                "position": 7
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n19",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n20",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "cook",
+                                            "position": 8,
+                                            "xpos": "VBP"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n21",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n22",
+                                    "@type": "Node",
+                                    "function": "Subj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N_pro",
+                                            "text": "it",
+                                            "position": 9
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n25",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n26",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V",
+                                        "text": "tastes",
+                                        "position": 10,
+                                        "lemma": "taste",
+                                        "xpos": "VBZ"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n27",
+                                        "@type": "Node",
+                                        "function": "PredComp",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IFeelGoodAboutThat-0#n28",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "good",
+                                            "position": 11
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

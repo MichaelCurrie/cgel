@@ -1,0 +1,529 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108104724AAuBUR7_ans-0038",
+      "sentNum": 69,
+      "text": "I don't think it will be hard to keep his weight up so long as he can eat the grain.",
+      "sent": "I don't think it will be hard to keep his weight up so long as he can eat the grain",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108104724AAuBUR7_ans-0038"
+        },
+        {
+          "key": "sent_num",
+          "value": "69"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/069.tex"
+        },
+        {
+          "key": "text",
+          "value": "I don't think it will be hard to keep his weight up so long as he can eat the grain."
+        },
+        {
+          "key": "sent",
+          "value": "I don't think it will be hard to keep his weight up so long as he can eat the grain"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n2",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "I",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "don't",
+                    "position": 2,
+                    "lemma": "do",
+                    "xpos": "VBP",
+                    "subtokens": [
+                      {
+                        "kind": "subt",
+                        "value": "do"
+                      },
+                      {
+                        "kind": "subt",
+                        "value": "n't"
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n7",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "think",
+                            "position": 3,
+                            "xpos": "VB"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n10",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n11",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n12",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n13",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "it",
+                                        "position": 4
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n14",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n15",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n16",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V_aux",
+                                        "text": "will",
+                                        "position": 5,
+                                        "xpos": "MD"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n17",
+                                        "@type": "Node",
+                                        "function": "Comp",
+                                        "category": "Clause",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n18",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n19",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V_aux",
+                                                "text": "be",
+                                                "position": 6,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n20",
+                                                "@type": "Node",
+                                                "function": "PredComp",
+                                                "category": "AdjP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n21",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Adj",
+                                                    "text": "hard",
+                                                    "position": 7
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n22",
+                                    "@type": "Node",
+                                    "function": "ExtraposedSubj",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n24",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "to",
+                                            "position": 8
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n25",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n26",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "keep",
+                                                "position": 9,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n27",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n28",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n29",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n30",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N_pro",
+                                                            "text": "his",
+                                                            "position": 10,
+                                                            "lemma": "he"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n31",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n32",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "weight",
+                                                        "position": 11
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n33",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n34",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "up",
+                                                    "position": 12
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n35",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n36",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "so long as",
+                "position": 13,
+                "subtokens": [
+                  {
+                    "kind": "subt",
+                    "value": "so"
+                  },
+                  {
+                    "kind": "subt",
+                    "value": "long"
+                  },
+                  {
+                    "kind": "subt",
+                    "value": "as"
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n37",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n38",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n39",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n40",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "he",
+                            "position": 14
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n41",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n42",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "can",
+                        "position": 15,
+                        "xpos": "MD"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n43",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n44",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n45",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "eat",
+                                "position": 16,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n46",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n47",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n48",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "the",
+                                        "position": 17
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n49",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0038#n50",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "grain",
+                                        "position": 18,
+                                        "postPunct": [
+                                          "."
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

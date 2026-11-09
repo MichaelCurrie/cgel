@@ -1,0 +1,209 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015",
+      "sentNum": 19,
+      "text": "But we can't prove it.",
+      "sent": "but we can't prove it",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015"
+        },
+        {
+          "key": "sent_num",
+          "value": "19"
+        },
+        {
+          "key": "text",
+          "value": "But we can't prove it."
+        },
+        {
+          "key": "sent",
+          "value": "but we can't prove it"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n1",
+            "@type": "Node",
+            "function": "Marker",
+            "category": "Coordinator",
+            "text": "but",
+            "position": 1
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n2",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n3",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "we",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "can't",
+                    "position": 3,
+                    "lemma": "can",
+                    "xpos": "MD",
+                    "subtokens": [
+                      {
+                        "kind": "subt",
+                        "value": "ca"
+                      },
+                      {
+                        "kind": "subt",
+                        "value": "n't"
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n8",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "prove",
+                            "position": 4,
+                            "xpos": "VB"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n11",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n12",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_grandpasgripes_20060413051000_ENG_20060413_051000-0015#n13",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N_pro",
+                                    "text": "it",
+                                    "position": 5,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

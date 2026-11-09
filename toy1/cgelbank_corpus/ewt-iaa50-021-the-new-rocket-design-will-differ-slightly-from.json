@@ -1,0 +1,795 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010",
+      "sentNum": 21,
+      "text": "The new rocket design will differ slightly from it's predecessors, in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on.",
+      "sent": "the new rocket design will differ slightly from it's predecessors in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010"
+        },
+        {
+          "key": "sent_num",
+          "value": "21"
+        },
+        {
+          "key": "text",
+          "value": "The new rocket design will differ slightly from it's predecessors, in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on."
+        },
+        {
+          "key": "sent",
+          "value": "the new rocket design will differ slightly from it's predecessors in the fact that the crew and cargo would launch separately from two different rockets each and join up in space later on"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "the",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n5",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdjP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n6",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adj",
+                        "text": "new",
+                        "position": 2
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n8",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "rocket",
+                            "position": 3
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "design",
+                        "position": 4
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n11",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n12",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "will",
+                "position": 5,
+                "xpos": "MD"
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n13",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n14",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n15",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n17",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "differ",
+                                "position": 6,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n18",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "slightly",
+                                    "position": 7
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n20",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n21",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "from",
+                                "position": 8
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n22",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n23",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n24",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n25",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N_pro",
+                                            "text": "it's",
+                                            "position": 9,
+                                            "lemma": "it",
+                                            "correct": "its"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n26",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n27",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "predecessors",
+                                        "position": 10,
+                                        "lemma": "predecessor",
+                                        "postPunct": [
+                                          ","
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n28",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n29",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "in",
+                            "position": 11
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n30",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n31",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n32",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "the",
+                                    "position": 12
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n33",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n34",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "fact",
+                                    "position": 13
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n35",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n36",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "that",
+                                        "position": 14
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n37",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Clause",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n38",
+                                            "@type": "Node",
+                                            "function": "Subj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n39",
+                                                "@type": "Node",
+                                                "function": "Det",
+                                                "category": "DP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n40",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "D",
+                                                    "text": "the",
+                                                    "position": 15
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n41",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Coordination",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n42",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n43",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "crew",
+                                                        "position": 16
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n44",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n45",
+                                                        "@type": "Node",
+                                                        "function": "Marker",
+                                                        "category": "Coordinator",
+                                                        "text": "and",
+                                                        "position": 17
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n46",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n47",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "cargo",
+                                                            "position": 18
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n48",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n49",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V_aux",
+                                                "text": "would",
+                                                "position": 19,
+                                                "xpos": "MD"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n50",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "Coordination",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n51",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Clause",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n52",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "VP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n53",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "VP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n54",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "V",
+                                                                "text": "launch",
+                                                                "position": 20,
+                                                                "xpos": "VB"
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n55",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "AdvP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n56",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Adv",
+                                                                    "text": "separately",
+                                                                    "position": 21
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n57",
+                                                            "@type": "Node",
+                                                            "function": "Comp",
+                                                            "category": "PP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n58",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "P",
+                                                                "text": "from",
+                                                                "position": 22
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n59",
+                                                                "@type": "Node",
+                                                                "function": "Obj",
+                                                                "category": "NP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n60",
+                                                                    "@type": "Node",
+                                                                    "function": "Det",
+                                                                    "category": "DP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n61",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "D",
+                                                                        "text": "two",
+                                                                        "position": 23,
+                                                                        "xpos": "CD"
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n62",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Nom",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n63",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "Nom",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n64",
+                                                                            "@type": "Node",
+                                                                            "function": "Mod",
+                                                                            "category": "AdjP",
+                                                                            "children": [
+                                                                              {
+                                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n65",
+                                                                                "@type": "Node",
+                                                                                "function": "Head",
+                                                                                "category": "Adj",
+                                                                                "text": "different",
+                                                                                "position": 24
+                                                                              }
+                                                                            ]
+                                                                          },
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n66",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "N",
+                                                                            "text": "rockets",
+                                                                            "position": 25,
+                                                                            "lemma": "rocket"
+                                                                          }
+                                                                        ]
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n67",
+                                                                        "@type": "Node",
+                                                                        "function": "Mod",
+                                                                        "category": "DP",
+                                                                        "note": "post-head 'each' meaning 'apiece': akin to post-head internal modifier 'one day more' (p. 445)",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n68",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "D",
+                                                                            "text": "each",
+                                                                            "position": 26
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n69",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Clause",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n70",
+                                                        "@type": "Node",
+                                                        "function": "Marker",
+                                                        "category": "Coordinator",
+                                                        "text": "and",
+                                                        "position": 27
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n71",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Clause",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n72",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "VP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n73",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "VP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n74",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "VP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n75",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "V",
+                                                                        "text": "join",
+                                                                        "position": 28,
+                                                                        "xpos": "VB"
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n76",
+                                                                        "@type": "Node",
+                                                                        "function": "Mod",
+                                                                        "category": "PP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n77",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "P",
+                                                                            "text": "up",
+                                                                            "position": 29
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n78",
+                                                                    "@type": "Node",
+                                                                    "function": "Mod",
+                                                                    "category": "PP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n79",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "P",
+                                                                        "text": "in",
+                                                                        "position": 30
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n80",
+                                                                        "@type": "Node",
+                                                                        "function": "Obj",
+                                                                        "category": "NP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n81",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "Nom",
+                                                                            "children": [
+                                                                              {
+                                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n82",
+                                                                                "@type": "Node",
+                                                                                "function": "Head",
+                                                                                "category": "N",
+                                                                                "text": "space",
+                                                                                "position": 31
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n83",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "AdvP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n84",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Adv",
+                                                                    "text": "later",
+                                                                    "position": 32,
+                                                                    "lemma": "late"
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n85",
+                                                                    "@type": "Node",
+                                                                    "function": "Mod",
+                                                                    "category": "PP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_e21e429b3ad58235_ENG_20050830_214700-0010#n86",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "P",
+                                                                        "text": "on",
+                                                                        "position": 33,
+                                                                        "postPunct": [
+                                                                          "."
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

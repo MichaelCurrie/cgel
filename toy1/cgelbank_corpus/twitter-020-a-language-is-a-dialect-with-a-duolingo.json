@@ -1,0 +1,262 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree ALanguageIsADialect-0",
+      "sentNum": 20,
+      "text": "A language is a dialect with a Duolingo course.",
+      "sent": "a language is a dialect with a Duolingo course",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree ALanguageIsADialect-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "20"
+        },
+        {
+          "key": "text",
+          "value": "A language is a dialect with a Duolingo course."
+        },
+        {
+          "key": "sent",
+          "value": "a language is a dialect with a Duolingo course"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "a",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "language",
+                    "position": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n6",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n7",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "is",
+                "position": 3,
+                "lemma": "be",
+                "xpos": "VBZ"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n8",
+                "@type": "Node",
+                "function": "PredComp",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n9",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "a",
+                        "position": 4
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n12",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "dialect",
+                        "position": 5
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n13",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n14",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "with",
+                            "position": 6
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n15",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n16",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n17",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "a",
+                                    "position": 7
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n19",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n20",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "Duolingo",
+                                        "position": 8
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20ALanguageIsADialect-0#n21",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "course",
+                                    "position": 9,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,396 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111103205154AAOod9K_ans-0003",
+      "sentNum": 11,
+      "text": "I don't want to have to deal with those deal-a-day websites like Groupon.",
+      "sent": "I don't want to have to deal with those deal-a-day websites like Groupon",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111103205154AAOod9K_ans-0003"
+        },
+        {
+          "key": "sent_num",
+          "value": "11"
+        },
+        {
+          "key": "text",
+          "value": "I don't want to have to deal with those deal-a-day websites like Groupon."
+        },
+        {
+          "key": "sent",
+          "value": "I don't want to have to deal with those deal-a-day websites like Groupon"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "don't",
+                "position": 2,
+                "lemma": "do",
+                "xpos": "VBP",
+                "subtokens": [
+                  {
+                    "kind": "subt",
+                    "value": "do"
+                  },
+                  {
+                    "kind": "subt",
+                    "value": "n't"
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "want",
+                        "position": 3,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n9",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n11",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Sdr",
+                                "text": "to",
+                                "position": 4
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n12",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n13",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "have",
+                                    "position": 5,
+                                    "xpos": "VB"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n14",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n16",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "to",
+                                            "position": 6
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n17",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n18",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "deal",
+                                                "position": 7,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n19",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n20",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "with",
+                                                    "position": 8
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n21",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n22",
+                                                        "@type": "Node",
+                                                        "function": "Det",
+                                                        "category": "DP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n23",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "D",
+                                                            "text": "those",
+                                                            "position": 9,
+                                                            "lemma": "that"
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n24",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n25",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n26",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "AdjP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n27",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Adj",
+                                                                    "text": "deal-a-day",
+                                                                    "position": 10,
+                                                                    "lemma": "deal",
+                                                                    "subtokens": [
+                                                                      {
+                                                                        "kind": "subt",
+                                                                        "value": "deal"
+                                                                      },
+                                                                      {
+                                                                        "kind": "subp",
+                                                                        "value": "-"
+                                                                      },
+                                                                      {
+                                                                        "kind": "subt",
+                                                                        "value": "a"
+                                                                      },
+                                                                      {
+                                                                        "kind": "subp",
+                                                                        "value": "-"
+                                                                      },
+                                                                      {
+                                                                        "kind": "subt",
+                                                                        "value": "day"
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n28",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N",
+                                                                "text": "websites",
+                                                                "position": 11,
+                                                                "lemma": "website"
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n29",
+                                                            "@type": "Node",
+                                                            "function": "Mod",
+                                                            "category": "PP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n30",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "P",
+                                                                "text": "like",
+                                                                "position": 12
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n31",
+                                                                "@type": "Node",
+                                                                "function": "Obj",
+                                                                "category": "NP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n32",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Nom",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111103205154AAOod9K_ans-0003#n33",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "N",
+                                                                        "text": "Groupon",
+                                                                        "position": 13,
+                                                                        "postPunct": [
+                                                                          "."
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

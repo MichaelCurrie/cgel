@@ -1,0 +1,362 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:email-enronsent05_02-0056",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "email-enronsent05_02-0056",
+      "sentNum": 61,
+      "text": "Mike Day, our outside counsel, will make the presentation on our behalf.",
+      "sent": "Mike Day our outside counsel will make the presentation on our behalf",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "email-enronsent05_02-0056"
+        },
+        {
+          "key": "sent_num",
+          "value": "61"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/061.tex"
+        },
+        {
+          "key": "text",
+          "value": "Mike Day, our outside counsel, will make the presentation on our behalf."
+        },
+        {
+          "key": "sent",
+          "value": "Mike Day our outside counsel will make the presentation on our behalf"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n4",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "Mike",
+                        "position": 1
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n5",
+                        "@type": "Node",
+                        "function": "Flat",
+                        "category": "N",
+                        "text": "Day",
+                        "position": 2,
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n6",
+                "@type": "Node",
+                "function": "Supplement",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n7",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "our",
+                            "position": 3,
+                            "lemma": "we"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n11",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "outside",
+                            "position": 4
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n13",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "counsel",
+                        "position": 5,
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n14",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n15",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "will",
+                "position": 6,
+                "xpos": "MD"
+              },
+              {
+                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n16",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n17",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n18",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n19",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "make",
+                            "position": 7,
+                            "xpos": "VB"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n20",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n21",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n22",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "the",
+                                    "position": 8
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n23",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n24",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "presentation",
+                                    "position": 9
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n25",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n26",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "P",
+                            "text": "on",
+                            "position": 10
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n27",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n28",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n29",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n30",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "our",
+                                        "position": 11,
+                                        "lemma": "we"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n31",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent05_02-0056#n32",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "behalf",
+                                    "position": 12,
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,385 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108104724AAuBUR7_ans-0087",
+      "sentNum": 93,
+      "text": "West Nile can cause EPM like symptoms and doesn't always include a fever.",
+      "sent": "West Nile can cause EPM like symptoms and doesn't always include a fever",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108104724AAuBUR7_ans-0087"
+        },
+        {
+          "key": "sent_num",
+          "value": "93"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/095.tex"
+        },
+        {
+          "key": "text",
+          "value": "West Nile can cause EPM like symptoms and doesn't always include a fever."
+        },
+        {
+          "key": "sent",
+          "value": "West Nile can cause EPM like symptoms and doesn't always include a fever"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n3",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "West",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "Nile",
+                    "position": 2
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n6",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Coordination",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n7",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "can",
+                    "position": 3,
+                    "xpos": "MD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n9",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n11",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "cause",
+                            "position": 4,
+                            "xpos": "VB"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n12",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n14",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "AdjP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n15",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n17",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "EPM",
+                                                "position": 5
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adj",
+                                        "text": "like",
+                                        "position": 6,
+                                        "note": "This is the combining form -like, which is fairly productive (p. 1711). An argument could be made for :Mod as Nom not NP as this resembles attributive modification in the N-N compound construction: 'anchovy(-like) pizza' > 'anchovies(-like) pizza'"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "symptoms",
+                                    "position": 7,
+                                    "lemma": "symptom"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n20",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n21",
+                    "@type": "Node",
+                    "function": "Marker",
+                    "category": "Coordinator",
+                    "text": "and",
+                    "position": 8
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n22",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n23",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n24",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V_aux",
+                            "text": "doesn't",
+                            "position": 9,
+                            "lemma": "do",
+                            "xpos": "VBZ",
+                            "subtokens": [
+                              {
+                                "kind": "subt",
+                                "value": "does"
+                              },
+                              {
+                                "kind": "subt",
+                                "value": "n't"
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n25",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "AdvP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n26",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adv",
+                                "text": "always",
+                                "position": 10
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n27",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n28",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "include",
+                                "position": 11,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n30",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n31",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n32",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "a",
+                                        "position": 12
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n33",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108104724AAuBUR7_ans-0087#n34",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "fever",
+                                        "position": 13,
+                                        "postPunct": [
+                                          "."
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

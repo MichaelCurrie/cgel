@@ -1,0 +1,466 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:reviews-118718-0004",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "reviews-118718-0004",
+      "sentNum": 60,
+      "text": "They were accomdating with my scheduled and work with my insurance to get payment for the surgery.",
+      "sent": "they were accomdating with my scheduled and work with my insurance to get payment for the surgery",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-118718-0004"
+        },
+        {
+          "key": "sent_num",
+          "value": "60"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/060.tex"
+        },
+        {
+          "key": "text",
+          "value": "They were accomdating with my scheduled and work with my insurance to get payment for the surgery."
+        },
+        {
+          "key": "sent",
+          "value": "they were accomdating with my scheduled and work with my insurance to get payment for the surgery"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:reviews-118718-0004#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:reviews-118718-0004#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-118718-0004#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-118718-0004#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "they",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:reviews-118718-0004#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Coordination",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-118718-0004#n5",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-118718-0004#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "were",
+                        "position": 2,
+                        "lemma": "be",
+                        "xpos": "VBD"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n8",
+                        "@type": "Node",
+                        "function": "PredComp",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "accomdating",
+                            "position": 3,
+                            "lemma": "accommodating",
+                            "correct": "accommodating"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-118718-0004#n10",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "PP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "P",
+                        "text": "with",
+                        "position": 4
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n12",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n13",
+                            "@type": "Node",
+                            "function": "Det",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n14",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n15",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N_pro",
+                                    "text": "my",
+                                    "position": 5,
+                                    "lemma": "I"
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n17",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "scheduled",
+                                "position": 6,
+                                "lemma": "schedule",
+                                "correct": "schedule"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-118718-0004#n18",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-118718-0004#n19",
+                    "@type": "Node",
+                    "function": "Marker",
+                    "category": "Coordinator",
+                    "text": "and",
+                    "position": 7
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-118718-0004#n20",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n21",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n22",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "work",
+                            "position": 8,
+                            "xpos": "VBP"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n23",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n24",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "with",
+                                "position": 9
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n25",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n26",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-118718-0004#n27",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-118718-0004#n28",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N_pro",
+                                            "text": "my",
+                                            "position": 10,
+                                            "lemma": "I"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n29",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-118718-0004#n30",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "insurance",
+                                        "position": 11
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-118718-0004#n31",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-118718-0004#n32",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n33",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Sdr",
+                                "text": "to",
+                                "position": 12
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:reviews-118718-0004#n34",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "get",
+                                    "position": 13,
+                                    "xpos": "VB"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n36",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-118718-0004#n37",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-118718-0004#n38",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "payment",
+                                            "position": 14
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-118718-0004#n39",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-118718-0004#n40",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "for",
+                                                "position": 15
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-118718-0004#n41",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n42",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "DP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-118718-0004#n43",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "D",
+                                                        "text": "the",
+                                                        "position": 16
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-118718-0004#n44",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-118718-0004#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "surgery",
+                                                        "position": 17,
+                                                        "postPunct": [
+                                                          "."
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

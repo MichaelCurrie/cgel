@@ -1,0 +1,451 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111106015552AAj6rCu_ans-0001",
+      "sentNum": 39,
+      "text": "is there any good places to get an ice-cream sundae from in Invercargill New Zealand?",
+      "sent": "is there -- any good places to get an ice cream sundae from -- in Invercargill New Zealand",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111106015552AAj6rCu_ans-0001"
+        },
+        {
+          "key": "sent_num",
+          "value": "39"
+        },
+        {
+          "key": "text",
+          "value": "is there any good places to get an ice-cream sundae from in Invercargill New Zealand?"
+        },
+        {
+          "key": "sent",
+          "value": "is there -- any good places to get an ice cream sundae from -- in Invercargill New Zealand"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n1",
+            "@type": "Node",
+            "function": "Prenucleus",
+            "category": "V_aux",
+            "index": "y",
+            "text": "is",
+            "position": 1,
+            "lemma": "be",
+            "xpos": "VBZ"
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n2",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n3",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "there",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "GAP",
+                    "index": "y",
+                    "antecedent": {
+                      "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n1"
+                    }
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n8",
+                    "@type": "Node",
+                    "function": "DisplacedSubj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n9",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "any",
+                            "position": 3
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "index": "x",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n14",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "AdjP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adj",
+                                        "text": "good",
+                                        "position": 4,
+                                        "note": "tough-adjective with hollow to-infinitival as indirect complement (pp. 1248-1249)"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "places",
+                                    "position": 5,
+                                    "lemma": "place"
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n17",
+                                "@type": "Node",
+                                "function": "Comp_ind",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n19",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "to",
+                                        "position": 6
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n20",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n21",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "get",
+                                            "position": 7,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n22",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n23",
+                                                "@type": "Node",
+                                                "function": "Det",
+                                                "category": "DP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n24",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "D",
+                                                    "text": "an",
+                                                    "position": 8,
+                                                    "lemma": "a"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n25",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n26",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n27",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n28",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "ice",
+                                                            "position": 9,
+                                                            "postPunct": [
+                                                              "-"
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n29",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "cream",
+                                                        "position": 10
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n30",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "sundae",
+                                                    "position": 11
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n31",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP_strand",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n32",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "from",
+                                                "position": 12
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n33",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "GAP",
+                                                "index": "x",
+                                                "antecedent": {
+                                                  "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n13"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n34",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n35",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "in",
+                                "position": 13
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n36",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n37",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n38",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "Invercargill",
+                                        "position": 14
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n39",
+                                    "@type": "Node",
+                                    "function": "Supplement",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n40",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n41",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n42",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "New",
+                                                "position": 15
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106015552AAj6rCu_ans-0001#n43",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "Zealand",
+                                            "position": 16,
+                                            "postPunct": [
+                                              "?"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

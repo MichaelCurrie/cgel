@@ -1,0 +1,568 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033",
+      "sentNum": 51,
+      "text": "But there are strong hints in the country that a new Indo-Sri Lanka defense deal could be in the making.",
+      "sent": "but there are strong hints -- in the country that a new Indo - Sri Lanka defense deal could be in the making",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033"
+        },
+        {
+          "key": "sent_num",
+          "value": "51"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/051.tex"
+        },
+        {
+          "key": "text",
+          "value": "But there are strong hints in the country that a new Indo-Sri Lanka defense deal could be in the making."
+        },
+        {
+          "key": "sent",
+          "value": "but there are strong hints -- in the country that a new Indo - Sri Lanka defense deal could be in the making"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n1",
+            "@type": "Node",
+            "function": "Marker",
+            "category": "Coordinator",
+            "text": "but",
+            "position": 1
+          },
+          {
+            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n2",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n3",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "there",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "are",
+                    "position": 3,
+                    "lemma": "be",
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n8",
+                    "@type": "Node",
+                    "function": "DisplacedSubj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n12",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n13",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n14",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "strong",
+                                            "position": 4
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "hints",
+                                        "position": 5,
+                                        "lemma": "hint"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n16",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "GAP",
+                                    "index": "x",
+                                    "antecedent": {
+                                      "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n24"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n17",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "in",
+                                    "position": 6
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n19",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n20",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n21",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 7
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n22",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n23",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "country",
+                                            "position": 8
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n24",
+                            "@type": "Node",
+                            "function": "Postnucleus",
+                            "category": "Clause",
+                            "index": "x",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n25",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Sdr",
+                                "text": "that",
+                                "position": 9
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n26",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n27",
+                                    "@type": "Node",
+                                    "function": "Subj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n28",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n29",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "a",
+                                            "position": 10
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n30",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n31",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n32",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "new",
+                                                "position": 11
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n33",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n34",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "Coordination",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n35",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n36",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "Indo",
+                                                        "position": 12
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n37",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n38",
+                                                        "@type": "Node",
+                                                        "function": "Marker",
+                                                        "category": "Coordinator",
+                                                        "text": "-",
+                                                        "position": 13
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n39",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n40",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n41",
+                                                                "@type": "Node",
+                                                                "function": "Flat",
+                                                                "category": "N",
+                                                                "text": "Sri",
+                                                                "position": 14
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n42",
+                                                                "@type": "Node",
+                                                                "function": "Flat",
+                                                                "category": "N",
+                                                                "text": "Lanka",
+                                                                "position": 15
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n43",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n44",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "defense",
+                                                        "position": 16
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n46",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "deal",
+                                                    "position": 17
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n47",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n48",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V_aux",
+                                        "text": "could",
+                                        "position": 18,
+                                        "xpos": "MD"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n49",
+                                        "@type": "Node",
+                                        "function": "Comp",
+                                        "category": "Clause",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n50",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n51",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V_aux",
+                                                "text": "be",
+                                                "position": 19,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n52",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n53",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "in",
+                                                    "position": 20
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n54",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n55",
+                                                        "@type": "Node",
+                                                        "function": "Det",
+                                                        "category": "DP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n56",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "D",
+                                                            "text": "the",
+                                                            "position": 21
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n57",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_dakbangla_20041119231111_ENG_20041119_231111-0033#n58",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "making",
+                                                            "position": 22,
+                                                            "postPunct": [
+                                                              "."
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

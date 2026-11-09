@@ -1,0 +1,561 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:reviews-371300-0007",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "reviews-371300-0007",
+      "sentNum": 44,
+      "text": "Plus the drinks are self service, have fun trying to negotiate the small cafeteria space to get your coffee, juice or water.",
+      "sent": "plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-371300-0007"
+        },
+        {
+          "key": "sent_num",
+          "value": "44"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/044.tex"
+        },
+        {
+          "key": "text",
+          "value": "Plus the drinks are self service, have fun trying to negotiate the small cafeteria space to get your coffee, juice or water."
+        },
+        {
+          "key": "sent",
+          "value": "plus the drinks are self-service have fun trying to negotiate the small cafeteria space to get your coffee juice or water"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:reviews-371300-0007#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:reviews-371300-0007#n1",
+            "@type": "Node",
+            "function": "Marker",
+            "category": "Coordinator",
+            "text": "plus",
+            "position": 1
+          },
+          {
+            "@id": "urn:cgel:ewt:reviews-371300-0007#n2",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-371300-0007#n3",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n4",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-371300-0007#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "the",
+                        "position": 2
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-371300-0007#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "drinks",
+                        "position": 3,
+                        "lemma": "drink"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-371300-0007#n8",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "are",
+                    "position": 4,
+                    "lemma": "be",
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n10",
+                    "@type": "Node",
+                    "function": "PredComp",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-371300-0007#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-371300-0007#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "self-service",
+                            "position": 5,
+                            "postPunct": [
+                              ","
+                            ],
+                            "subtokens": [
+                              {
+                                "kind": "subt",
+                                "value": "self"
+                              },
+                              {
+                                "kind": "subt",
+                                "value": "service"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:reviews-371300-0007#n13",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-371300-0007#n14",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n15",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "have",
+                    "position": 6,
+                    "xpos": "VB"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n16",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-371300-0007#n17",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-371300-0007#n18",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "fun",
+                            "position": 7
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-371300-0007#n19",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-371300-0007#n20",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-371300-0007#n21",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "trying",
+                            "position": 8,
+                            "lemma": "try",
+                            "xpos": "VBG"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-371300-0007#n22",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-371300-0007#n23",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n24",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n25",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "to",
+                                        "position": 9
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n26",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n27",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "negotiate",
+                                            "position": 10,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n28",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-371300-0007#n29",
+                                                "@type": "Node",
+                                                "function": "Det",
+                                                "category": "DP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n30",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "D",
+                                                    "text": "the",
+                                                    "position": 11
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-371300-0007#n31",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n32",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "AdjP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n33",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adj",
+                                                        "text": "small",
+                                                        "position": 12
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n34",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n35",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n36",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "cafeteria",
+                                                            "position": 13
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n37",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "space",
+                                                        "position": 14
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n38",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n39",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n40",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "to",
+                                            "position": 15
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n41",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-371300-0007#n42",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "get",
+                                                "position": 16,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-371300-0007#n43",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n44",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n46",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N_pro",
+                                                            "text": "your",
+                                                            "position": 17,
+                                                            "lemma": "you"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-371300-0007#n47",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Coordination",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n48",
+                                                        "@type": "Node",
+                                                        "function": "Coordinate",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n49",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "coffee",
+                                                            "position": 18,
+                                                            "postPunct": [
+                                                              ","
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n50",
+                                                        "@type": "Node",
+                                                        "function": "Coordinate",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n51",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "juice",
+                                                            "position": 19
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-371300-0007#n52",
+                                                        "@type": "Node",
+                                                        "function": "Coordinate",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n53",
+                                                            "@type": "Node",
+                                                            "function": "Marker",
+                                                            "category": "Coordinator",
+                                                            "text": "or",
+                                                            "position": 20
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-371300-0007#n54",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:reviews-371300-0007#n55",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N",
+                                                                "text": "water",
+                                                                "position": 21,
+                                                                "postPunct": [
+                                                                  "."
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

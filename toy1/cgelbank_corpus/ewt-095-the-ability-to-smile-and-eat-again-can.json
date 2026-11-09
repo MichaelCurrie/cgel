@@ -1,0 +1,470 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:reviews-170650-0011",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "reviews-170650-0011",
+      "sentNum": 95,
+      "text": "The ability to smile and eat again can only be described as a whole new lease on life.",
+      "sent": "the ability to smile and eat again can only be described as a whole new lease on life",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "reviews-170650-0011"
+        },
+        {
+          "key": "sent_num",
+          "value": "95"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/097.tex"
+        },
+        {
+          "key": "text",
+          "value": "The ability to smile and eat again can only be described as a whole new lease on life."
+        },
+        {
+          "key": "sent",
+          "value": "the ability to smile and eat again can only be described as a whole new lease on life"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:reviews-170650-0011#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:reviews-170650-0011#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-170650-0011#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "DP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "D",
+                    "text": "the",
+                    "position": 1
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-170650-0011#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "ability",
+                    "position": 2
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n6",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-170650-0011#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-170650-0011#n8",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Sdr",
+                            "text": "to",
+                            "position": 3
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:reviews-170650-0011#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-170650-0011#n10",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Coordination",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n11",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n12",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V",
+                                        "text": "smile",
+                                        "position": 4,
+                                        "xpos": "VB"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n13",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n14",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Coordinator",
+                                        "text": "and",
+                                        "position": 5
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-170650-0011#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "eat",
+                                            "position": 6,
+                                            "xpos": "VB"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:reviews-170650-0011#n17",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "again",
+                                    "position": 7
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:reviews-170650-0011#n19",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:reviews-170650-0011#n20",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n21",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "can",
+                    "position": 8,
+                    "xpos": "MD"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n22",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-170650-0011#n23",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "only",
+                        "position": 9
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:reviews-170650-0011#n24",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:reviews-170650-0011#n25",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:reviews-170650-0011#n26",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "be",
+                        "position": 10,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:reviews-170650-0011#n27",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:reviews-170650-0011#n28",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:reviews-170650-0011#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "described",
+                                "position": 11,
+                                "lemma": "describe",
+                                "xpos": "VBN"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:reviews-170650-0011#n30",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n31",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "as",
+                                    "position": 12
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n32",
+                                    "@type": "Node",
+                                    "function": "PredComp",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n33",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-170650-0011#n34",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "a",
+                                            "position": 13
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n35",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-170650-0011#n36",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdjP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-170650-0011#n37",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "AdvP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n38",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Adv",
+                                                    "text": "whole",
+                                                    "position": 14
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-170650-0011#n39",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adj",
+                                                "text": "new",
+                                                "position": 15
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:reviews-170650-0011#n40",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-170650-0011#n41",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "lease",
+                                                "position": 16
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:reviews-170650-0011#n42",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n43",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "on",
+                                                    "position": 17
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:reviews-170650-0011#n44",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:reviews-170650-0011#n45",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:reviews-170650-0011#n46",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "life",
+                                                            "position": 18,
+                                                            "postPunct": [
+                                                              "."
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

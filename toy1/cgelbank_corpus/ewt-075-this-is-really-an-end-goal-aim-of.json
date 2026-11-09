@@ -1,0 +1,584 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008",
+      "sentNum": 75,
+      "text": "This is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax.",
+      "sent": "this is really an end goal aim of NASA & company and also does not allow anyone challenging the moon landing hoax",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008"
+        },
+        {
+          "key": "sent_num",
+          "value": "75"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/077.tex"
+        },
+        {
+          "key": "text",
+          "value": "This is really an end goal aim of NASA & Company and also does not allow anyone challenging the moon landing hoax."
+        },
+        {
+          "key": "sent",
+          "value": "this is really an end goal aim of NASA & company and also does not allow anyone challenging the moon landing hoax"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n3",
+                    "@type": "Node",
+                    "function": "Det-Head",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "this",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n5",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Coordination",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n6",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "is",
+                        "position": 2,
+                        "lemma": "be",
+                        "xpos": "VBZ"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n9",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdvP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adv",
+                            "text": "really",
+                            "position": 3
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n11",
+                    "@type": "Node",
+                    "function": "PredComp",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n12",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n13",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "an",
+                            "position": 4,
+                            "lemma": "a"
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n15",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n16",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n17",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "end",
+                                        "position": 5
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "goal",
+                                    "position": 6
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n20",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "aim",
+                                "position": 7
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n21",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n22",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "of",
+                                "position": 8
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n23",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "Coordination",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n24",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n25",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n26",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "NASA",
+                                            "position": 9
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n27",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n28",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Coordinator",
+                                        "text": "&",
+                                        "position": 10
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n29",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n30",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n31",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "company",
+                                                "position": 11
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n32",
+                "@type": "Node",
+                "function": "Coordinate",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n33",
+                    "@type": "Node",
+                    "function": "Marker",
+                    "category": "Coordinator",
+                    "text": "and",
+                    "position": 12
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n34",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n35",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdvP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n36",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adv",
+                            "text": "also",
+                            "position": 13
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n37",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n38",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n39",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V_aux",
+                                "text": "does",
+                                "position": 14,
+                                "lemma": "do",
+                                "xpos": "VBZ"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n40",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n41",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "not",
+                                    "position": 15
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n42",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n43",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n44",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "allow",
+                                    "position": 16,
+                                    "xpos": "VB"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n45",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n46",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n47",
+                                            "@type": "Node",
+                                            "function": "Det-Head",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n48",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "anyone",
+                                                "position": 17
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n49",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n50",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n51",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "challenging",
+                                            "position": 18,
+                                            "lemma": "challenge",
+                                            "xpos": "VBG"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n52",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n53",
+                                                "@type": "Node",
+                                                "function": "Det",
+                                                "category": "DP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n54",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "D",
+                                                    "text": "the",
+                                                    "position": 19
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n55",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n56",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n57",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n58",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "moon",
+                                                            "position": 20
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n59",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "landing",
+                                                        "position": 21
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_FOOLED_7554c5ce34a5a49e_ENG_20051012_144800-0008#n60",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "hoax",
+                                                    "position": 22,
+                                                    "postPunct": [
+                                                      "."
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

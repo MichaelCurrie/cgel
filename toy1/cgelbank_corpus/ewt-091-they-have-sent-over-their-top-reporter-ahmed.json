@@ -1,0 +1,653 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018",
+      "sentNum": 91,
+      "text": "They have sent over their top reporter Ahmed Mansour to the town, and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf.",
+      "sent": "they have sent over their top reporter Ahmed Mansour to the town and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018"
+        },
+        {
+          "key": "sent_num",
+          "value": "91"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/093.tex"
+        },
+        {
+          "key": "text",
+          "value": "They have sent over their top reporter Ahmed Mansour to the town, and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf."
+        },
+        {
+          "key": "sent",
+          "value": "they have sent over their top reporter Ahmed Mansour to the town and he is spouting all kinds of propaganda hourly reminding me of Al-Sahhaf"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n0",
+        "@type": "Node",
+        "category": "Coordination",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n1",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n2",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "they",
+                        "position": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "have",
+                    "position": 2,
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n7",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "sent",
+                            "position": 3,
+                            "lemma": "send",
+                            "xpos": "VBN"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n10",
+                            "@type": "Node",
+                            "function": "Particle",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "over",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n12",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n13",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "their",
+                                        "position": 5,
+                                        "lemma": "they"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n16",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n17",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "top",
+                                        "position": 6
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "reporter",
+                                    "position": 7
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n20",
+                                "@type": "Node",
+                                "function": "Supplement",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n21",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n22",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n23",
+                                            "@type": "Node",
+                                            "function": "Flat",
+                                            "category": "N",
+                                            "text": "Ahmed",
+                                            "position": 8
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n24",
+                                            "@type": "Node",
+                                            "function": "Flat",
+                                            "category": "N",
+                                            "text": "Mansour",
+                                            "position": 9
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n25",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n26",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "to",
+                                "position": 10
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n27",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n28",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n29",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "the",
+                                        "position": 11
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n30",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n31",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "town",
+                                        "position": 12,
+                                        "postPunct": [
+                                          ","
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n32",
+            "@type": "Node",
+            "function": "Coordinate",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n33",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Coordinator",
+                "text": "and",
+                "position": 13
+              },
+              {
+                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n34",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n35",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n36",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n37",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "he",
+                            "position": 14
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n38",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n39",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n40",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V_aux",
+                            "text": "is",
+                            "position": 15,
+                            "lemma": "be",
+                            "xpos": "VBZ"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n41",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n42",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n43",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "spouting",
+                                    "position": 16,
+                                    "lemma": "spout",
+                                    "xpos": "VBG"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n44",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n45",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n46",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "all",
+                                            "position": 17
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n47",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n48",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "kinds",
+                                            "position": 18,
+                                            "lemma": "kind"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n49",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n50",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "of",
+                                                "position": 19
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n51",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n52",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n53",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "propaganda",
+                                                        "position": 20
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n54",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdvP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n55",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adv",
+                            "text": "hourly",
+                            "position": 21
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n56",
+                        "@type": "Node",
+                        "function": "Supplement",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n57",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n58",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "reminding",
+                                "position": 22,
+                                "lemma": "remind",
+                                "xpos": "VBG"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n59",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n60",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n61",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "me",
+                                        "position": 23,
+                                        "lemma": "I"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n62",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n63",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "of",
+                                    "position": 24
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n64",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n65",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:weblog-blogspot.com_healingiraq_20040409053012_ENG_20040409_053012-0018#n66",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "Al-Sahhaf",
+                                            "position": 25,
+                                            "postPunct": [
+                                              "."
+                                            ],
+                                            "subtokens": [
+                                              {
+                                                "kind": "subt",
+                                                "value": "Al"
+                                              },
+                                              {
+                                                "kind": "subp",
+                                                "value": "-"
+                                              },
+                                              {
+                                                "kind": "subt",
+                                                "value": "Sahhaf"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

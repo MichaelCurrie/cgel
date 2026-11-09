@@ -1,0 +1,402 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108105629AAiZUDY_ans-0008",
+      "sentNum": 66,
+      "text": "(i know that snakes that have problems going to the bathroom won't eat.)",
+      "sent": "I know that snakes that -- have problems going to the bathroom won't eat",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108105629AAiZUDY_ans-0008"
+        },
+        {
+          "key": "sent_num",
+          "value": "66"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/066.tex"
+        },
+        {
+          "key": "text",
+          "value": "(i know that snakes that have problems going to the bathroom won't eat.)"
+        },
+        {
+          "key": "sent",
+          "value": "I know that snakes that -- have problems going to the bathroom won't eat"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1,
+                    "prePunct": [
+                      "("
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "know",
+                "position": 2,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n7",
+                    "@type": "Node",
+                    "function": "Marker",
+                    "category": "Sdr",
+                    "text": "that",
+                    "position": 3
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n8",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n9",
+                        "@type": "Node",
+                        "function": "Subj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "index": "x",
+                                "text": "snakes",
+                                "position": 4,
+                                "lemma": "snake"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n12",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "Clause_rel",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n13",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Sdr",
+                                    "text": "that",
+                                    "position": 5
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Clause_rel",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n15",
+                                        "@type": "Node",
+                                        "function": "Subj",
+                                        "category": "GAP",
+                                        "index": "x",
+                                        "antecedent": {
+                                          "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n11"
+                                        }
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n16",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n17",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "have",
+                                            "position": 6,
+                                            "xpos": "VBP"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n18",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n19",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n20",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "problems",
+                                                    "position": 7,
+                                                    "lemma": "problem"
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n21",
+                                                    "@type": "Node",
+                                                    "function": "Comp",
+                                                    "category": "Clause",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n22",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "VP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n23",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "V",
+                                                            "text": "going",
+                                                            "position": 8,
+                                                            "lemma": "go",
+                                                            "xpos": "VBG"
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n24",
+                                                            "@type": "Node",
+                                                            "function": "Comp",
+                                                            "category": "PP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n25",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "P",
+                                                                "text": "to",
+                                                                "position": 9
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n26",
+                                                                "@type": "Node",
+                                                                "function": "Obj",
+                                                                "category": "NP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n27",
+                                                                    "@type": "Node",
+                                                                    "function": "Det",
+                                                                    "category": "DP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n28",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "D",
+                                                                        "text": "the",
+                                                                        "position": 10
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n29",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Nom",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n30",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "N",
+                                                                        "text": "bathroom",
+                                                                        "position": 11
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n31",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n32",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V_aux",
+                            "text": "won't",
+                            "position": 12,
+                            "lemma": "will",
+                            "xpos": "MD",
+                            "subtokens": [
+                              {
+                                "kind": "subt",
+                                "value": "wo"
+                              },
+                              {
+                                "kind": "subt",
+                                "value": "n't"
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n33",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n34",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108105629AAiZUDY_ans-0008#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "eat",
+                                    "position": 13,
+                                    "xpos": "VB",
+                                    "postPunct": [
+                                      ".",
+                                      ")"
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

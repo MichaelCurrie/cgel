@@ -1,0 +1,1 @@
+An abstract syntax tree is abstract because it is a mathematical object that has certain structure by its very nature.

@@ -1,0 +1,747 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006",
+      "sentNum": 4,
+      "text": "\"Our plans include raising private capital to develop, build, flight test, and operate this Earth-Moon highway for the benefit of the country and the benefit of our investors.\"",
+      "sent": "our plans include raising private capital to develop -- build -- flight-test -- and operate -- this Earth Moon highway for the benefit of the country and the benefit of our investors",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006"
+        },
+        {
+          "key": "sent_num",
+          "value": "4"
+        },
+        {
+          "key": "text",
+          "value": "\"Our plans include raising private capital to develop, build, flight test, and operate this Earth-Moon highway for the benefit of the country and the benefit of our investors.\""
+        },
+        {
+          "key": "sent",
+          "value": "our plans include raising private capital to develop -- build -- flight-test -- and operate -- this Earth Moon highway for the benefit of the country and the benefit of our investors"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n2",
+                "@type": "Node",
+                "function": "Det",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n4",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "our",
+                        "position": 1,
+                        "lemma": "we",
+                        "prePunct": [
+                          "\""
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "plans",
+                    "position": 2,
+                    "lemma": "plan"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n7",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n8",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "include",
+                "position": 3,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n9",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "raising",
+                            "position": 4,
+                            "lemma": "raise",
+                            "xpos": "VBG"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n13",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n14",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n15",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "AdjP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n16",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adj",
+                                        "text": "private",
+                                        "position": 5
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n17",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "capital",
+                                    "position": 6
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n18",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n19",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n20",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n21",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Sdr",
+                                    "text": "to",
+                                    "position": 7
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n22",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Coordination",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n23",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "develop",
+                                            "position": 8,
+                                            "xpos": "VB",
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n25",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "GAP",
+                                            "index": "x",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n37"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n26",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n27",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "build",
+                                            "position": 9,
+                                            "xpos": "VB",
+                                            "postPunct": [
+                                              ","
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n28",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "GAP",
+                                            "index": "x",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n37"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n29",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n30",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "flight-test",
+                                            "position": 10,
+                                            "lemma": "flight",
+                                            "xpos": "VB",
+                                            "postPunct": [
+                                              ","
+                                            ],
+                                            "subtokens": [
+                                              {
+                                                "kind": "subt",
+                                                "value": "flight"
+                                              },
+                                              {
+                                                "kind": "subt",
+                                                "value": "test"
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n31",
+                                            "@type": "Node",
+                                            "function": "Obj",
+                                            "category": "GAP",
+                                            "index": "x",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n37"
+                                            }
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n32",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n33",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Coordinator",
+                                            "text": "and",
+                                            "position": 11
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n34",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n35",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "operate",
+                                                "position": 12,
+                                                "xpos": "VB"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n36",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "GAP",
+                                                "index": "x",
+                                                "antecedent": {
+                                                  "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n37"
+                                                }
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n37",
+                                "@type": "Node",
+                                "function": "Postnucleus",
+                                "category": "NP",
+                                "index": "x",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n38",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "DP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n39",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "D",
+                                        "text": "this",
+                                        "position": 13
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n40",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n41",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "Coordination",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n42",
+                                            "@type": "Node",
+                                            "function": "Coordinate",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n43",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "Earth",
+                                                "position": 14,
+                                                "postPunct": [
+                                                  "-"
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n44",
+                                            "@type": "Node",
+                                            "function": "Coordinate",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n45",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "Moon",
+                                                "position": 15
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n46",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "highway",
+                                        "position": 16
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n47",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n48",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "for",
+                                "position": 17
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n49",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "Coordination",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n50",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n51",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n52",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 18
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n53",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n54",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "benefit",
+                                            "position": 19
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n55",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n56",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "of",
+                                                "position": 20
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n57",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n58",
+                                                    "@type": "Node",
+                                                    "function": "Det",
+                                                    "category": "DP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n59",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "D",
+                                                        "text": "the",
+                                                        "position": 21
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n60",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n61",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "country",
+                                                        "position": 22
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n62",
+                                    "@type": "Node",
+                                    "function": "Coordinate",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n63",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Coordinator",
+                                        "text": "and",
+                                        "position": 23
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n64",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n65",
+                                            "@type": "Node",
+                                            "function": "Det",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n66",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "the",
+                                                "position": 24
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n67",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n68",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "benefit",
+                                                "position": 25
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n69",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n70",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "of",
+                                                    "position": 26
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n71",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n72",
+                                                        "@type": "Node",
+                                                        "function": "Det",
+                                                        "category": "NP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n73",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n74",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N_pro",
+                                                                "text": "our",
+                                                                "position": 27,
+                                                                "lemma": "we"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n75",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt-test_iaa50:newsgroup-groups.google.com_hiddennook_88969236563fa748_ENG_20050215_173600-0006#n76",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "investors",
+                                                            "position": 28,
+                                                            "lemma": "investor",
+                                                            "postPunct": [
+                                                              ".",
+                                                              "\""
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

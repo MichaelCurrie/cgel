@@ -1,0 +1,395 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108091921AAaLK4e_ans-0070",
+      "sentNum": 30,
+      "text": "Leaving nails out so you'll call and have him come back out later?",
+      "sent": "leaving nails out so you 'll call and have him come back out later",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108091921AAaLK4e_ans-0070"
+        },
+        {
+          "key": "sent_num",
+          "value": "30"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/030.tex"
+        },
+        {
+          "key": "text",
+          "value": "Leaving nails out so you'll call and have him come back out later?"
+        },
+        {
+          "key": "sent",
+          "value": "leaving nails out so you 'll call and have him come back out later"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n0",
+        "@type": "Node",
+        "category": "VP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "leaving",
+                "position": 1,
+                "lemma": "leave",
+                "xpos": "VBG"
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n3",
+                "@type": "Node",
+                "function": "Obj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "nails",
+                        "position": 2,
+                        "lemma": "nail"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n6",
+                "@type": "Node",
+                "function": "Particle",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "out",
+                    "position": 3
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n8",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n9",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "so",
+                "position": 4
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n10",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n11",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n12",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n13",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "you",
+                            "position": 5
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n14",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Coordination",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n15",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V_aux",
+                            "text": "'ll",
+                            "position": 6,
+                            "lemma": "will",
+                            "xpos": "MD"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n17",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "call",
+                                    "position": 7,
+                                    "xpos": "VB"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n20",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n21",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Coordinator",
+                            "text": "and",
+                            "position": 8
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n22",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n23",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "have",
+                                "position": 9,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n24",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n25",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n26",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "him",
+                                        "position": 10,
+                                        "lemma": "he"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n27",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n28",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n29",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n30",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "come",
+                                            "position": 11,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n31",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n32",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n33",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "back",
+                                                    "position": 12,
+                                                    "note": "directional preposition modifier (p. 645)"
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n34",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "out",
+                                                "position": 13
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n35",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdvP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108091921AAaLK4e_ans-0070#n36",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adv",
+                                            "text": "later",
+                                            "position": 14,
+                                            "lemma": "late",
+                                            "postPunct": [
+                                              "?"
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

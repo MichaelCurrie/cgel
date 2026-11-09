@@ -1,0 +1,392 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree OneCanNeverTell-0",
+      "sentNum": 29,
+      "text": "One can never tell when or even whether Alan was wholly serious.",
+      "sent": "one can never tell when -- or even whether -- Alan was wholly serious --",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree OneCanNeverTell-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "29"
+        },
+        {
+          "key": "text",
+          "value": "One can never tell when or even whether Alan was wholly serious."
+        },
+        {
+          "key": "sent",
+          "value": "one can never tell when -- or even whether -- Alan was wholly serious --"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "one",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "can",
+                "position": 2,
+                "xpos": "MD"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n7",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "never",
+                        "position": 3
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "tell",
+                        "position": 4,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n11",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Coordination",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n13",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n14",
+                                    "@type": "Node",
+                                    "function": "Prenucleus",
+                                    "category": "PP",
+                                    "index": "x",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "P",
+                                        "text": "when",
+                                        "position": 5
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "GAP",
+                                    "index": "y",
+                                    "antecedent": {
+                                      "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n25"
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n17",
+                                "@type": "Node",
+                                "function": "Coordinate",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n18",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Coordinator",
+                                    "text": "or",
+                                    "position": 6
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n20",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdvP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n21",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adv",
+                                            "text": "even",
+                                            "position": 7
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n22",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Clause",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n23",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Sdr",
+                                            "text": "whether",
+                                            "position": 8
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "GAP",
+                                            "index": "y",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n25"
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n25",
+                            "@type": "Node",
+                            "function": "Postnucleus",
+                            "category": "Clause",
+                            "index": "y",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n26",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n27",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n28",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "Alan",
+                                        "position": 9
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n29",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n30",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n31",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V_aux",
+                                        "text": "was",
+                                        "position": 10,
+                                        "lemma": "be",
+                                        "xpos": "VBD"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n32",
+                                        "@type": "Node",
+                                        "function": "PredComp",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n33",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "AdvP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n34",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Adv",
+                                                "text": "wholly",
+                                                "position": 11
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n35",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "serious",
+                                            "position": 12,
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n36",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "GAP",
+                                    "index": "x",
+                                    "antecedent": {
+                                      "@id": "urn:cgel:twitter:Tree%20OneCanNeverTell-0#n14"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

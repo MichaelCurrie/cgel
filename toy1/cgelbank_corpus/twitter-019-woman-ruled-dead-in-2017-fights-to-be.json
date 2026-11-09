@@ -1,0 +1,289 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree WomanRuledDead2-0",
+      "sentNum": 19,
+      "text": "Woman Ruled Dead in 2017 Fights to be Declared Alive",
+      "sent": "woman ruled dead in 2017 fights to be declared alive",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree WomanRuledDead2-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "19"
+        },
+        {
+          "key": "text",
+          "value": "Woman Ruled Dead in 2017 Fights to be Declared Alive"
+        },
+        {
+          "key": "sent",
+          "value": "woman ruled dead in 2017 fights to be declared alive"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n0",
+        "@type": "Node",
+        "category": "Nom",
+        "note": "'Wrong answers only version' (https://twitter.com/DailySyntaxTree/status/1351714293071409157)",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "N",
+            "text": "woman",
+            "position": 1
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n2",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n3",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "ruled",
+                        "position": 2,
+                        "lemma": "rule",
+                        "xpos": "VBN"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n6",
+                        "@type": "Node",
+                        "function": "PredComp",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n7",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "dead",
+                            "position": 3
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n8",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "PP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "P",
+                        "text": "in",
+                        "position": 4
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n10",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n11",
+                            "@type": "Node",
+                            "function": "Det",
+                            "category": "DP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n12",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "D",
+                                "text": "2017",
+                                "position": 5,
+                                "xpos": "CD"
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n13",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n14",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "fights",
+                                "position": 6,
+                                "lemma": "fight"
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n15",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n17",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "to",
+                                        "position": 7
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n19",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V_aux",
+                                            "text": "be",
+                                            "position": 8,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n20",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "Clause",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n21",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "VP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n22",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "V",
+                                                    "text": "declared",
+                                                    "position": 9,
+                                                    "lemma": "declare",
+                                                    "xpos": "VBN"
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n23",
+                                                    "@type": "Node",
+                                                    "function": "PredComp",
+                                                    "category": "AdjP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20WomanRuledDead2-0#n24",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adj",
+                                                        "text": "alive",
+                                                        "position": 10
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

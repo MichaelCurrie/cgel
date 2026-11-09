@@ -1,0 +1,412 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree IdidntRealize-0",
+      "sentNum": 33,
+      "text": "I didn't realize how much hungrier than I thought I was I am.",
+      "sent": "I didn't realize how much hungrier than I thought I was I am --",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree IdidntRealize-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "33"
+        },
+        {
+          "key": "text",
+          "value": "I didn't realize how much hungrier than I thought I was I am."
+        },
+        {
+          "key": "sent",
+          "value": "I didn't realize how much hungrier than I thought I was I am --"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V_aux",
+                "text": "didn't",
+                "position": 2,
+                "lemma": "do",
+                "xpos": "VBD",
+                "subtokens": [
+                  {
+                    "kind": "subt",
+                    "value": "did"
+                  },
+                  {
+                    "kind": "subt",
+                    "value": "n't"
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "realize",
+                        "position": 3,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n9",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "Clause",
+                        "note": "exclamative",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n10",
+                            "@type": "Node",
+                            "function": "Prenucleus",
+                            "category": "AdjP",
+                            "index": "x",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n11",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "AdvP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n12",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "AdvP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n13",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Adv",
+                                        "text": "how",
+                                        "position": 4
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adv",
+                                    "text": "much",
+                                    "position": 5
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n15",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "AdjP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n16",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Adj",
+                                    "text": "hungrier",
+                                    "position": 6
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n17",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "PP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "P",
+                                        "text": "than",
+                                        "position": 7
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n19",
+                                        "@type": "Node",
+                                        "function": "Comp",
+                                        "category": "Clause",
+                                        "note": "comparative",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n20",
+                                            "@type": "Node",
+                                            "function": "Subj",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n21",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n22",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N_pro",
+                                                    "text": "I",
+                                                    "position": 8
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n23",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n24",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "thought",
+                                                "position": 9,
+                                                "lemma": "think",
+                                                "xpos": "VBD"
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n25",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "Clause",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n26",
+                                                    "@type": "Node",
+                                                    "function": "Subj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n27",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n28",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N_pro",
+                                                            "text": "I",
+                                                            "position": 10
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n29",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n30",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "V_aux",
+                                                        "text": "was",
+                                                        "position": 11,
+                                                        "lemma": "be",
+                                                        "xpos": "VBD"
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n32",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n33",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n34",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N_pro",
+                                        "text": "I",
+                                        "position": 12
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n35",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n36",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V_aux",
+                                    "text": "am",
+                                    "position": 13,
+                                    "lemma": "be",
+                                    "xpos": "VBP",
+                                    "postPunct": [
+                                      "."
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n37",
+                                    "@type": "Node",
+                                    "function": "PredComp",
+                                    "category": "GAP",
+                                    "index": "x",
+                                    "antecedent": {
+                                      "@id": "urn:cgel:twitter:Tree%20IdidntRealize-0#n10"
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

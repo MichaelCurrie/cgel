@@ -1,0 +1,475 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:email-enronsent02_01-0041",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "email-enronsent02_01-0041",
+      "sentNum": 21,
+      "text": "The Corporate requirement to lower working capital usage for the Merchanting business irrespective of the above parochial business issues.",
+      "sent": "the corporate requirement to lower working capital usage for the Merchanting business irrespective of the above parochial business issues",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "email-enronsent02_01-0041"
+        },
+        {
+          "key": "sent_num",
+          "value": "21"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/021.tex"
+        },
+        {
+          "key": "text",
+          "value": "The Corporate requirement to lower working capital usage for the Merchanting business irrespective of the above parochial business issues."
+        },
+        {
+          "key": "sent",
+          "value": "the corporate requirement to lower working capital usage for the Merchanting business irrespective of the above parochial business issues"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n1",
+            "@type": "Node",
+            "function": "Det",
+            "category": "DP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "D",
+                "text": "the",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n4",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "AdjP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n5",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adj",
+                    "text": "corporate",
+                    "position": 2
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "requirement",
+                    "position": 3
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n8",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n9",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n12",
+                                    "@type": "Node",
+                                    "function": "Marker",
+                                    "category": "Sdr",
+                                    "text": "to",
+                                    "position": 4
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n13",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n14",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "V",
+                                        "text": "lower",
+                                        "position": 5,
+                                        "xpos": "VB"
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n15",
+                                        "@type": "Node",
+                                        "function": "Obj",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n17",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n18",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n19",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "V",
+                                                        "text": "working",
+                                                        "position": 6,
+                                                        "xpos": "VBG"
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n20",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "capital",
+                                                    "position": 7
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n21",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "usage",
+                                                "position": 8
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n22",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n23",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "for",
+                                    "position": 9
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n24",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n25",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n26",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 10
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n27",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n28",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n29",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "Merchanting",
+                                                "position": 11
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n30",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "business",
+                                            "position": 12
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n31",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n32",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "irrespective",
+                                "position": 13
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n33",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n34",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "of",
+                                    "position": 14
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n35",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n36",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n37",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "the",
+                                            "position": 15
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n38",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n39",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n40",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "above",
+                                                "position": 16
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n41",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n42",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "AdjP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n43",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Adj",
+                                                    "text": "parochial",
+                                                    "position": 17
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n44",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n45",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n46",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "business",
+                                                        "position": 18
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:email-enronsent02_01-0041#n47",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "issues",
+                                                    "position": 19,
+                                                    "lemma": "issue",
+                                                    "postPunct": [
+                                                      "."
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

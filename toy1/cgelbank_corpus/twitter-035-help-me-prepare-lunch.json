@@ -1,0 +1,180 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree SIEGtrees-21",
+      "sentNum": 35,
+      "text": "Help me prepare lunch",
+      "sent": "help me prepare lunch",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree SIEGtrees-21"
+        },
+        {
+          "key": "sent_num",
+          "value": "35"
+        },
+        {
+          "key": "text",
+          "value": "Help me prepare lunch"
+        },
+        {
+          "key": "sent",
+          "value": "help me prepare lunch"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "help",
+                "position": 1,
+                "xpos": "VB"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n3",
+                "@type": "Node",
+                "function": "Obj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "me",
+                        "position": 2,
+                        "lemma": "I"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n6",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V",
+                        "text": "prepare",
+                        "position": 3,
+                        "xpos": "VB"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n9",
+                        "@type": "Node",
+                        "function": "Obj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20SIEGtrees-21#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N",
+                                "text": "lunch",
+                                "position": 4
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

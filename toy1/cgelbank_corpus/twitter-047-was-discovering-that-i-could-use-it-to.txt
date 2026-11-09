@@ -1,0 +1,1 @@
+Was discovering that I could use it to easily produce a plot of my own vowel space what finally convinced me to figure out R?

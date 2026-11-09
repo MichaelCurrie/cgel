@@ -1,0 +1,589 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111106153454AAgT9Df_ans-0016",
+      "sentNum": 14,
+      "text": "Not that there is anything wrong with that because they also employ local people that live and shop in the area.",
+      "sent": "not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111106153454AAgT9Df_ans-0016"
+        },
+        {
+          "key": "sent_num",
+          "value": "14"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/014.tex"
+        },
+        {
+          "key": "text",
+          "value": "Not that there is anything wrong with that because they also employ local people that live and shop in the area."
+        },
+        {
+          "key": "sent",
+          "value": "not that there is anything wrong with that because they also employ local people that -- live -- and shop -- in the area"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "AdvP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Adv",
+                "text": "not",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n4",
+                "@type": "Node",
+                "function": "Marker",
+                "category": "Sdr",
+                "text": "that",
+                "position": 2
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n6",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n8",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "there",
+                            "position": 3
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n9",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n10",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "is",
+                        "position": 4,
+                        "lemma": "be",
+                        "xpos": "VBZ"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n11",
+                        "@type": "Node",
+                        "function": "DisplacedSubj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n12",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n13",
+                                "@type": "Node",
+                                "function": "Det-Head",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "anything",
+                                    "position": 5
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n15",
+                        "@type": "Node",
+                        "function": "PredComp",
+                        "category": "AdjP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adj",
+                            "text": "wrong",
+                            "position": 6
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n17",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "with",
+                                "position": 7
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n19",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n20",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n21",
+                                        "@type": "Node",
+                                        "function": "Det-Head",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n22",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "that",
+                                            "position": 8
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n23",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n24",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "because",
+                "position": 9
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n25",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n26",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n27",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n28",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "they",
+                            "position": 10
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n29",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n30",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "AdvP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Adv",
+                            "text": "also",
+                            "position": 11
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n32",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n33",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "employ",
+                            "position": 12,
+                            "xpos": "VBP"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n34",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n35",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n36",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "index": "x",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n37",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n38",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "local",
+                                            "position": 13
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n39",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "people",
+                                        "position": 14
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n40",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "Clause_rel",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n41",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "that",
+                                        "position": 15
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n42",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Clause_rel",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n43",
+                                            "@type": "Node",
+                                            "function": "Subj",
+                                            "category": "GAP",
+                                            "index": "x",
+                                            "antecedent": {
+                                              "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n36"
+                                            }
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n44",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n45",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Coordination",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n46",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n47",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "V",
+                                                        "text": "live",
+                                                        "position": 16,
+                                                        "xpos": "VBP"
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n48",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "GAP",
+                                                        "index": "y",
+                                                        "antecedent": {
+                                                          "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n54"
+                                                        }
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n49",
+                                                    "@type": "Node",
+                                                    "function": "Coordinate",
+                                                    "category": "VP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n50",
+                                                        "@type": "Node",
+                                                        "function": "Marker",
+                                                        "category": "Coordinator",
+                                                        "text": "and",
+                                                        "position": 17
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n51",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "VP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n52",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "V",
+                                                            "text": "shop",
+                                                            "position": 18,
+                                                            "xpos": "VBP"
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n53",
+                                                            "@type": "Node",
+                                                            "function": "Mod",
+                                                            "category": "GAP",
+                                                            "index": "y",
+                                                            "antecedent": {
+                                                              "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n54"
+                                                            }
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n54",
+                                                "@type": "Node",
+                                                "function": "Postnucleus",
+                                                "category": "PP",
+                                                "index": "y",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n55",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "in",
+                                                    "position": 19
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n56",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n57",
+                                                        "@type": "Node",
+                                                        "function": "Det",
+                                                        "category": "DP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n58",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "D",
+                                                            "text": "the",
+                                                            "position": 20
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n59",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:answers-20111106153454AAgT9Df_ans-0016#n60",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "area",
+                                                            "position": 21,
+                                                            "postPunct": [
+                                                              "."
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

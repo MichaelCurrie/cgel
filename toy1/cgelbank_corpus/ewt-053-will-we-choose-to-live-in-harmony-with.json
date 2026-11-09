@@ -1,0 +1,560 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024",
+      "sentNum": 53,
+      "text": "Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?",
+      "sent": "will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024"
+        },
+        {
+          "key": "sent_num",
+          "value": "53"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/053.tex"
+        },
+        {
+          "key": "text",
+          "value": "Will we choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard?"
+        },
+        {
+          "key": "sent",
+          "value": "will we -- choose to live in harmony with this planet or crash and burn in a conflagration of arrogance and disregard"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n1",
+            "@type": "Node",
+            "function": "Prenucleus",
+            "category": "V_aux",
+            "index": "x",
+            "text": "will",
+            "position": 1,
+            "xpos": "MD"
+          },
+          {
+            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n2",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n3",
+                "@type": "Node",
+                "function": "Subj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N_pro",
+                        "text": "we",
+                        "position": 2
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "GAP",
+                    "index": "x",
+                    "antecedent": {
+                      "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n1"
+                    }
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n8",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Coordination",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n9",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n10",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n11",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "choose",
+                                "position": 3,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n12",
+                                "@type": "Node",
+                                "function": "Comp",
+                                "category": "Clause",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n13",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "VP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n14",
+                                        "@type": "Node",
+                                        "function": "Marker",
+                                        "category": "Sdr",
+                                        "text": "to",
+                                        "position": 4
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n15",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n16",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "live",
+                                            "position": 5,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n17",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n18",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "in",
+                                                "position": 6
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n19",
+                                                "@type": "Node",
+                                                "function": "Obj",
+                                                "category": "NP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n20",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n21",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "harmony",
+                                                        "position": 7
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n22",
+                                                        "@type": "Node",
+                                                        "function": "Comp",
+                                                        "category": "PP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n23",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "P",
+                                                            "text": "with",
+                                                            "position": 8
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n24",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n25",
+                                                                "@type": "Node",
+                                                                "function": "Det",
+                                                                "category": "DP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n26",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "D",
+                                                                    "text": "this",
+                                                                    "position": 9
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n27",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n28",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "N",
+                                                                    "text": "planet",
+                                                                    "position": 10
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n29",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "Clause",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n30",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Coordinator",
+                            "text": "or",
+                            "position": 11
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n32",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n33",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Coordination",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n34",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n35",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "crash",
+                                            "position": 12,
+                                            "xpos": "VB"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n36",
+                                        "@type": "Node",
+                                        "function": "Coordinate",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n37",
+                                            "@type": "Node",
+                                            "function": "Marker",
+                                            "category": "Coordinator",
+                                            "text": "and",
+                                            "position": 13
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n38",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "VP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n39",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "V",
+                                                "text": "burn",
+                                                "position": 14,
+                                                "xpos": "VB"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n40",
+                                    "@type": "Node",
+                                    "function": "Mod",
+                                    "category": "PP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n41",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "P",
+                                        "text": "in",
+                                        "position": 15
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n42",
+                                        "@type": "Node",
+                                        "function": "Obj",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n43",
+                                            "@type": "Node",
+                                            "function": "Det",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n44",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "a",
+                                                "position": 16
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n45",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n46",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "conflagration",
+                                                "position": 17
+                                              },
+                                              {
+                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n47",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "PP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n48",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "P",
+                                                    "text": "of",
+                                                    "position": 18
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n49",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "Coordination",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n50",
+                                                        "@type": "Node",
+                                                        "function": "Coordinate",
+                                                        "category": "NP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n51",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n52",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N",
+                                                                "text": "arrogance",
+                                                                "position": 19
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n53",
+                                                        "@type": "Node",
+                                                        "function": "Coordinate",
+                                                        "category": "NP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n54",
+                                                            "@type": "Node",
+                                                            "function": "Marker",
+                                                            "category": "Coordinator",
+                                                            "text": "and",
+                                                            "position": 20
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n55",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n56",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:ewt:newsgroup-groups.google.com_herpesnation_c74170a0fcfdc880_ENG_20051125_075200-0024#n57",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "N",
+                                                                    "text": "disregard",
+                                                                    "position": 21,
+                                                                    "postPunct": [
+                                                                      "?"
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

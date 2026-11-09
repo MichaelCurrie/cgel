@@ -1,0 +1,416 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111106103415AAqdokn_ans-0016",
+      "sentNum": 20,
+      "text": "Along with the great burger try a brick of onion rings if you are with someone.",
+      "sent": "along with the great burger try a brick of onion rings if you are with someone",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111106103415AAqdokn_ans-0016"
+        },
+        {
+          "key": "sent_num",
+          "value": "20"
+        },
+        {
+          "key": "text",
+          "value": "Along with the great burger try a brick of onion rings if you are with someone."
+        },
+        {
+          "key": "sent",
+          "value": "along with the great burger try a brick of onion rings if you are with someone"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n1",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "along",
+                "position": 1
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n3",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n4",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "with",
+                    "position": 2
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n5",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n6",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n7",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "the",
+                            "position": 3
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n9",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "AdjP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n10",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Adj",
+                                "text": "great",
+                                "position": 4
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n11",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "burger",
+                            "position": 5
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n12",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n13",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n14",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "try",
+                    "position": 6,
+                    "xpos": "VB"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n15",
+                    "@type": "Node",
+                    "function": "Obj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n16",
+                        "@type": "Node",
+                        "function": "Det",
+                        "category": "DP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n17",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "D",
+                            "text": "a",
+                            "position": 7
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n18",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n19",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N",
+                            "text": "brick",
+                            "position": 8
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n20",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n21",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "of",
+                                "position": 9
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n22",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n23",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n24",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n25",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "onion",
+                                            "position": 10
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n26",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "rings",
+                                        "position": 11,
+                                        "lemma": "ring"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n27",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "PP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n28",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "P",
+                    "text": "if",
+                    "position": 12
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n29",
+                    "@type": "Node",
+                    "function": "Comp",
+                    "category": "Clause",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n30",
+                        "@type": "Node",
+                        "function": "Subj",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n31",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n32",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "N_pro",
+                                "text": "you",
+                                "position": 13
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n33",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n34",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V_aux",
+                            "text": "are",
+                            "position": 14,
+                            "lemma": "be",
+                            "xpos": "VBP"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n35",
+                            "@type": "Node",
+                            "function": "Comp",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n36",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "with",
+                                "position": 15
+                              },
+                              {
+                                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n37",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n38",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n39",
+                                        "@type": "Node",
+                                        "function": "Det-Head",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0016#n40",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "someone",
+                                            "position": 16,
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,636 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree Here-sThePaper-0",
+      "sentNum": 2,
+      "text": "Here's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier.",
+      "sent": "here -- 's -- the paper that people who -- read it will find out about how resumptive pronouns help islands go down a little easier --",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree Here-sThePaper-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "2"
+        },
+        {
+          "key": "text",
+          "value": "Here's the paper that people who read it will find out about how resumptive pronouns help islands go down a little easier."
+        },
+        {
+          "key": "sent",
+          "value": "here -- 's -- the paper that people who -- read it will find out about how resumptive pronouns help islands go down a little easier --"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n1",
+            "@type": "Node",
+            "function": "Prenucleus",
+            "category": "PP",
+            "index": "a",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "here",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n5",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "GAP",
+                    "index": "b",
+                    "antecedent": {
+                      "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n9"
+                    }
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n7",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "'s",
+                        "position": 2,
+                        "lemma": "be",
+                        "xpos": "VBZ"
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n8",
+                        "@type": "Node",
+                        "function": "PredComp",
+                        "category": "GAP",
+                        "index": "a",
+                        "antecedent": {
+                          "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n9",
+                "@type": "Node",
+                "function": "Postnucleus",
+                "category": "NP",
+                "index": "b",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n10",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "the",
+                        "position": 3
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n12",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n13",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "paper",
+                        "position": 4
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n14",
+                        "@type": "Node",
+                        "function": "Mod",
+                        "category": "Clause_rel",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n15",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Sdr",
+                            "text": "that",
+                            "position": 5
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n16",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Clause_rel",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n17",
+                                "@type": "Node",
+                                "function": "Subj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n18",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n19",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "people",
+                                        "position": 6
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n20",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "Clause_rel",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n21",
+                                            "@type": "Node",
+                                            "function": "Prenucleus",
+                                            "category": "NP",
+                                            "index": "y",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n22",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n23",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N_pro",
+                                                    "text": "who",
+                                                    "position": 7
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Clause_rel",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n25",
+                                                "@type": "Node",
+                                                "function": "Subj",
+                                                "category": "GAP",
+                                                "index": "y",
+                                                "antecedent": {
+                                                  "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n21"
+                                                }
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n26",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "VP",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n27",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "V",
+                                                    "text": "read",
+                                                    "position": 8,
+                                                    "xpos": "VBP"
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n28",
+                                                    "@type": "Node",
+                                                    "function": "Obj",
+                                                    "category": "NP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n29",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n30",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N_pro",
+                                                            "text": "it",
+                                                            "position": 9,
+                                                            "note": "resumptive pronoun"
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n31",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n32",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V_aux",
+                                    "text": "will",
+                                    "position": 10,
+                                    "xpos": "MD"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n33",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n34",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n35",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "find",
+                                            "position": 11,
+                                            "xpos": "VB"
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n36",
+                                            "@type": "Node",
+                                            "function": "Particle",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n37",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "out",
+                                                "position": 12
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n38",
+                                            "@type": "Node",
+                                            "function": "Comp",
+                                            "category": "PP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n39",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "P",
+                                                "text": "about",
+                                                "position": 13
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n40",
+                                                "@type": "Node",
+                                                "function": "Comp",
+                                                "category": "Clause",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n41",
+                                                    "@type": "Node",
+                                                    "function": "Prenucleus",
+                                                    "category": "AdvP",
+                                                    "index": "z",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n42",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adv",
+                                                        "text": "how",
+                                                        "position": 14
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n43",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Clause",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n44",
+                                                        "@type": "Node",
+                                                        "function": "Subj",
+                                                        "category": "NP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n45",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "Nom",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n46",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "AdjP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n47",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "Adj",
+                                                                    "text": "resumptive",
+                                                                    "position": 15
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n48",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "N",
+                                                                "text": "pronouns",
+                                                                "position": 16,
+                                                                "lemma": "pronoun"
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n49",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "VP",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n50",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "V",
+                                                            "text": "help",
+                                                            "position": 17,
+                                                            "xpos": "VBP"
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n51",
+                                                            "@type": "Node",
+                                                            "function": "Obj",
+                                                            "category": "NP",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n52",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "Nom",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n53",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "N",
+                                                                    "text": "islands",
+                                                                    "position": 18,
+                                                                    "lemma": "island"
+                                                                  }
+                                                                ]
+                                                              }
+                                                            ]
+                                                          },
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n54",
+                                                            "@type": "Node",
+                                                            "function": "Comp",
+                                                            "category": "Clause",
+                                                            "children": [
+                                                              {
+                                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n55",
+                                                                "@type": "Node",
+                                                                "function": "Head",
+                                                                "category": "VP",
+                                                                "children": [
+                                                                  {
+                                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n56",
+                                                                    "@type": "Node",
+                                                                    "function": "Head",
+                                                                    "category": "VP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n57",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "V",
+                                                                        "text": "go",
+                                                                        "position": 19,
+                                                                        "xpos": "VB"
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n58",
+                                                                        "@type": "Node",
+                                                                        "function": "Comp",
+                                                                        "category": "PP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n59",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "P",
+                                                                            "text": "down",
+                                                                            "position": 20
+                                                                          }
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  },
+                                                                  {
+                                                                    "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n60",
+                                                                    "@type": "Node",
+                                                                    "function": "Mod",
+                                                                    "category": "AdvP",
+                                                                    "children": [
+                                                                      {
+                                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n61",
+                                                                        "@type": "Node",
+                                                                        "function": "Mod",
+                                                                        "category": "DP",
+                                                                        "children": [
+                                                                          {
+                                                                            "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n62",
+                                                                            "@type": "Node",
+                                                                            "function": "Head",
+                                                                            "category": "D",
+                                                                            "text": "a little",
+                                                                            "position": 21,
+                                                                            "subtokens": [
+                                                                              {
+                                                                                "kind": "subt",
+                                                                                "value": "a"
+                                                                              },
+                                                                              {
+                                                                                "kind": "subt",
+                                                                                "value": "little"
+                                                                              }
+                                                                            ]
+                                                                          }
+                                                                        ]
+                                                                      },
+                                                                      {
+                                                                        "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n63",
+                                                                        "@type": "Node",
+                                                                        "function": "Head",
+                                                                        "category": "Adv",
+                                                                        "text": "easier",
+                                                                        "position": 22,
+                                                                        "postPunct": [
+                                                                          "."
+                                                                        ]
+                                                                      }
+                                                                    ]
+                                                                  }
+                                                                ]
+                                                              },
+                                                              {
+                                                                "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n64",
+                                                                "@type": "Node",
+                                                                "function": "Mod",
+                                                                "category": "GAP",
+                                                                "index": "z",
+                                                                "antecedent": {
+                                                                  "@id": "urn:cgel:twitter:Tree%20Here-sThePaper-0#n41"
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        ]
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

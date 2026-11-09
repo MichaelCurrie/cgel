@@ -1,0 +1,214 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029",
+      "sentNum": 49,
+      "text": "Zakaria Amara, 20, Mississauga, Ont.;",
+      "sent": "Zakaria Amara 20 Mississauga Ont.",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029"
+        },
+        {
+          "key": "sent_num",
+          "value": "49"
+        },
+        {
+          "key": "text",
+          "value": "Zakaria Amara, 20, Mississauga, Ont.;"
+        },
+        {
+          "key": "sent",
+          "value": "Zakaria Amara 20 Mississauga Ont."
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "N",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n3",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Zakaria",
+                    "position": 1
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n4",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Amara",
+                    "position": 2,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n5",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n7",
+                    "@type": "Node",
+                    "function": "Det-Head",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "20",
+                        "position": 3,
+                        "xpos": "CD",
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n9",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n10",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "Mississauga",
+                    "position": 4,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n12",
+                "@type": "Node",
+                "function": "Supplement",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n13",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0029#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "Ont.",
+                        "position": 5,
+                        "postPunct": [
+                          ";"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

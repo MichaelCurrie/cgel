@@ -1,0 +1,585 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:email-enronsent39_01-0018",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "email-enronsent39_01-0018",
+      "sentNum": 72,
+      "text": "If you have any questions or require any assistance at all, please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710.",
+      "sent": "if you have any questions or require any assistance at all please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "email-enronsent39_01-0018"
+        },
+        {
+          "key": "sent_num",
+          "value": "72"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/074.tex"
+        },
+        {
+          "key": "text",
+          "value": "If you have any questions or require any assistance at all, please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710."
+        },
+        {
+          "key": "sent",
+          "value": "if you have any questions or require any assistance at all please contact Hope Duncan at 202.739.0134 or Jeff Mangold at 703.729.2710"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "PP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "P",
+                "text": "if",
+                "position": 1
+              },
+              {
+                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n3",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n4",
+                    "@type": "Node",
+                    "function": "Subj",
+                    "category": "NP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n5",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Nom",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n6",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "N_pro",
+                            "text": "you",
+                            "position": 2
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n7",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Coordination",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n8",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n9",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "V",
+                            "text": "have",
+                            "position": 3,
+                            "xpos": "VBP"
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n10",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n11",
+                                "@type": "Node",
+                                "function": "Det",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n12",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "any",
+                                    "position": 4
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n13",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n14",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "text": "questions",
+                                    "position": 5,
+                                    "lemma": "question"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n15",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "VP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n16",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Coordinator",
+                            "text": "or",
+                            "position": 6
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n17",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n18",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n19",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "require",
+                                    "position": 7,
+                                    "xpos": "VBP"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n20",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n21",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "DP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n22",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "D",
+                                            "text": "any",
+                                            "position": 8
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n23",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n24",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "assistance",
+                                            "position": 9
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n25",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n26",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "at",
+                                    "position": 10
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n27",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n28",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n29",
+                                            "@type": "Node",
+                                            "function": "Det-Head",
+                                            "category": "DP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n30",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "D",
+                                                "text": "all",
+                                                "position": 11,
+                                                "postPunct": [
+                                                  ","
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n31",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n32",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "AdvP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n33",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adv",
+                    "text": "please",
+                    "position": 12
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n34",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n35",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "contact",
+                    "position": 13,
+                    "xpos": "VB"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n36",
+                    "@type": "Node",
+                    "function": "Obj+Mod",
+                    "category": "Coordination",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n37",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "NP+PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n38",
+                            "@type": "Node",
+                            "function": "Obj",
+                            "category": "NP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n39",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "Nom",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n40",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "N",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n41",
+                                        "@type": "Node",
+                                        "function": "Flat",
+                                        "category": "N",
+                                        "text": "Hope",
+                                        "position": 14
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n42",
+                                        "@type": "Node",
+                                        "function": "Flat",
+                                        "category": "N",
+                                        "text": "Duncan",
+                                        "position": 15
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n43",
+                            "@type": "Node",
+                            "function": "Mod",
+                            "category": "PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n44",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "P",
+                                "text": "at",
+                                "position": 16
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n45",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n46",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n47",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "text": "202.739.0134",
+                                        "position": 17,
+                                        "xpos": "CD"
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n48",
+                        "@type": "Node",
+                        "function": "Coordinate",
+                        "category": "NP+PP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n49",
+                            "@type": "Node",
+                            "function": "Marker",
+                            "category": "Coordinator",
+                            "text": "or",
+                            "position": 18
+                          },
+                          {
+                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n50",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "NP+PP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n51",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n52",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n53",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "N",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n54",
+                                            "@type": "Node",
+                                            "function": "Flat",
+                                            "category": "N",
+                                            "text": "Jeff",
+                                            "position": 19
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n55",
+                                            "@type": "Node",
+                                            "function": "Flat",
+                                            "category": "N",
+                                            "text": "Mangold",
+                                            "position": 20
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n56",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n57",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "at",
+                                    "position": 21
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n58",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n59",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:email-enronsent39_01-0018#n60",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "703.729.2710",
+                                            "position": 22,
+                                            "xpos": "CD",
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

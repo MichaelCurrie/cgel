@@ -1,0 +1,200 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "answers-20111106103415AAqdokn_ans-0010",
+      "sentNum": 24,
+      "text": "There are currently 5 locations:",
+      "sent": "there are currently 5 locations",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111106103415AAqdokn_ans-0010"
+        },
+        {
+          "key": "sent_num",
+          "value": "24"
+        },
+        {
+          "key": "text",
+          "value": "There are currently 5 locations:"
+        },
+        {
+          "key": "sent",
+          "value": "there are currently 5 locations"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "there",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "are",
+                    "position": 2,
+                    "lemma": "be",
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n7",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "currently",
+                        "position": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n9",
+                "@type": "Node",
+                "function": "DisplacedSubj",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n10",
+                    "@type": "Node",
+                    "function": "Det",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "5",
+                        "position": 4,
+                        "xpos": "CD"
+                      }
+                    ]
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n12",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:answers-20111106103415AAqdokn_ans-0010#n13",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "locations",
+                        "position": 5,
+                        "lemma": "location",
+                        "postPunct": [
+                          ":"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

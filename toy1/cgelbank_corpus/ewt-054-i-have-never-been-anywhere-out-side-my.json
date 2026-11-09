@@ -1,0 +1,412 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004",
+      "@type": "Tree",
+      "source": "datasets/ewt.cgel",
+      "sentId": "answers-20111108084416AAoPgBv_ans-0004",
+      "sentNum": 54,
+      "text": "I have never been anywhere out side my home town Charlotte north Carolina please help!!!!",
+      "sent": "I have never been anywhere outside my hometown Charlotte North Carolina please help",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "answers-20111108084416AAoPgBv_ans-0004"
+        },
+        {
+          "key": "sent_num",
+          "value": "54"
+        },
+        {
+          "key": "alias",
+          "value": "trees/TrainingSet1 2/054.tex"
+        },
+        {
+          "key": "text",
+          "value": "I have never been anywhere out side my home town Charlotte north Carolina please help!!!!"
+        },
+        {
+          "key": "sent",
+          "value": "I have never been anywhere outside my hometown Charlotte North Carolina please help"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n1",
+            "@type": "Node",
+            "function": "Subj",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n3",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N_pro",
+                    "text": "I",
+                    "position": 1
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n4",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n5",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V_aux",
+                    "text": "have",
+                    "position": 2,
+                    "xpos": "VBP"
+                  },
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n7",
+                    "@type": "Node",
+                    "function": "Mod",
+                    "category": "AdvP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Adv",
+                        "text": "never",
+                        "position": 3
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n9",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n10",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n11",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "V_aux",
+                        "text": "been",
+                        "position": 4,
+                        "lemma": "be",
+                        "xpos": "VBN"
+                      },
+                      {
+                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n12",
+                        "@type": "Node",
+                        "function": "Comp",
+                        "category": "NP",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n13",
+                            "@type": "Node",
+                            "function": "Head",
+                            "category": "Nom",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n14",
+                                "@type": "Node",
+                                "function": "Det-Head",
+                                "category": "DP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n15",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "D",
+                                    "text": "anywhere",
+                                    "position": 5
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n16",
+                                "@type": "Node",
+                                "function": "Mod",
+                                "category": "PP",
+                                "note": "post-head modifier of compound determinative, p. 423",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n17",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "outside",
+                                    "position": 6,
+                                    "subtokens": [
+                                      {
+                                        "kind": "subt",
+                                        "value": "out"
+                                      },
+                                      {
+                                        "kind": "subt",
+                                        "value": "side"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n18",
+                                    "@type": "Node",
+                                    "function": "Obj",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n19",
+                                        "@type": "Node",
+                                        "function": "Det",
+                                        "category": "NP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n20",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n21",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N_pro",
+                                                "text": "my",
+                                                "position": 7,
+                                                "lemma": "I"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n22",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n23",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N",
+                                            "text": "hometown",
+                                            "position": 8,
+                                            "lemma": "home",
+                                            "subtokens": [
+                                              {
+                                                "kind": "subt",
+                                                "value": "home"
+                                              },
+                                              {
+                                                "kind": "subt",
+                                                "value": "town"
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n24",
+                                        "@type": "Node",
+                                        "function": "Supplement",
+                                        "category": "NP",
+                                        "note": "city-state construction",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n25",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n26",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "Charlotte",
+                                                "position": 9
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n27",
+                                            "@type": "Node",
+                                            "function": "Supplement",
+                                            "category": "NP",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n28",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n29",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "AdjP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n30",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adj",
+                                                        "text": "North",
+                                                        "position": 10
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n31",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "N",
+                                                    "text": "Carolina",
+                                                    "position": 11
+                                                  }
+                                                ]
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n32",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "Clause",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n33",
+                "@type": "Node",
+                "function": "Mod",
+                "category": "AdvP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n34",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Adv",
+                    "text": "please",
+                    "position": 12
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n35",
+                "@type": "Node",
+                "function": "Head",
+                "category": "VP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt:answers-20111108084416AAoPgBv_ans-0004#n36",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "V",
+                    "text": "help",
+                    "position": 13,
+                    "xpos": "VB",
+                    "postPunct": [
+                      "!!!!"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,215 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033",
+      "@type": "Tree",
+      "source": "datasets/ewt-test_iaa50.cgel",
+      "sentId": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033",
+      "sentNum": 16,
+      "text": "Mohammed Dirie, 22, Kingston, Ont.;",
+      "sent": "Mohammed Dirie 22 Kingston Ont.",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033"
+        },
+        {
+          "key": "sent_num",
+          "value": "16"
+        },
+        {
+          "key": "text",
+          "value": "Mohammed Dirie, 22, Kingston, Ont.;"
+        },
+        {
+          "key": "sent",
+          "value": "Mohammed Dirie 22 Kingston Ont."
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n0",
+        "@type": "Node",
+        "category": "NP",
+        "children": [
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n1",
+            "@type": "Node",
+            "function": "Head",
+            "category": "Nom",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "N",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n3",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Mohammed",
+                    "position": 1
+                  },
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n4",
+                    "@type": "Node",
+                    "function": "Flat",
+                    "category": "N",
+                    "text": "Dirie",
+                    "position": 2,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n5",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "note": "bare age",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n6",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n7",
+                    "@type": "Node",
+                    "function": "Det-Head",
+                    "category": "DP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "D",
+                        "text": "22",
+                        "position": 3,
+                        "xpos": "CD",
+                        "postPunct": [
+                          ","
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n9",
+            "@type": "Node",
+            "function": "Supplement",
+            "category": "NP",
+            "children": [
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n10",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Nom",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n11",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "N",
+                    "text": "Kingston",
+                    "position": 4,
+                    "postPunct": [
+                      ","
+                    ]
+                  }
+                ]
+              },
+              {
+                "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n12",
+                "@type": "Node",
+                "function": "Supplement",
+                "category": "NP",
+                "children": [
+                  {
+                    "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n13",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "Nom",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:ewt-test_iaa50:weblog-blogspot.com_aggressivevoicedaily_20060811122000_ENG_20060811_122000-0033#n14",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "N",
+                        "text": "Ont.",
+                        "position": 5,
+                        "postPunct": [
+                          ";"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,401 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "@vocab": "https://nert-nlp.github.io/cgel/ns#",
+    "cgel": "https://nert-nlp.github.io/cgel/ns#",
+    "Corpus": "cgel:Corpus",
+    "Tree": "cgel:Tree",
+    "Node": "cgel:Node",
+    "trees": {
+      "@id": "cgel:tree",
+      "@container": "@list"
+    },
+    "children": {
+      "@id": "cgel:child",
+      "@container": "@list"
+    },
+    "metadata": {
+      "@id": "cgel:metadata",
+      "@container": "@list"
+    },
+    "prePunct": {
+      "@id": "cgel:prePunct",
+      "@container": "@list"
+    },
+    "postPunct": {
+      "@id": "cgel:postPunct",
+      "@container": "@list"
+    },
+    "subtokens": {
+      "@id": "cgel:subtoken",
+      "@container": "@list"
+    },
+    "antecedent": {
+      "@id": "cgel:antecedent",
+      "@type": "@id"
+    },
+    "root": {
+      "@id": "cgel:root"
+    },
+    "source": {
+      "@id": "cgel:source"
+    },
+    "sentNum": {
+      "@id": "cgel:sentNum",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "position": {
+      "@id": "cgel:position",
+      "@type": "http://www.w3.org/2001/XMLSchema#integer"
+    }
+  },
+  "@type": "Corpus",
+  "trees": [
+    {
+      "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0",
+      "@type": "Tree",
+      "source": "datasets/twitter.cgel",
+      "sentId": "Tree KindaWantTo-0",
+      "sentNum": 32,
+      "text": "Kinda want to take my huge IKEA plastic storage box lid out and go sledding.",
+      "sent": "kinda want to take my huge IKEA plastic storage box lid out and go sledding",
+      "metadata": [
+        {
+          "key": "sent_id",
+          "value": "Tree KindaWantTo-0"
+        },
+        {
+          "key": "sent_num",
+          "value": "32"
+        },
+        {
+          "key": "text",
+          "value": "Kinda want to take my huge IKEA plastic storage box lid out and go sledding."
+        },
+        {
+          "key": "sent",
+          "value": "kinda want to take my huge IKEA plastic storage box lid out and go sledding"
+        }
+      ],
+      "root": {
+        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n0",
+        "@type": "Node",
+        "category": "Clause",
+        "children": [
+          {
+            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n1",
+            "@type": "Node",
+            "function": "Mod",
+            "category": "AdvP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n2",
+                "@type": "Node",
+                "function": "Head",
+                "category": "Adv",
+                "text": "kinda",
+                "position": 1
+              }
+            ]
+          },
+          {
+            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n3",
+            "@type": "Node",
+            "function": "Head",
+            "category": "VP",
+            "children": [
+              {
+                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n4",
+                "@type": "Node",
+                "function": "Head",
+                "category": "V",
+                "text": "want",
+                "position": 2,
+                "xpos": "VBP"
+              },
+              {
+                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n5",
+                "@type": "Node",
+                "function": "Comp",
+                "category": "Clause",
+                "children": [
+                  {
+                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n6",
+                    "@type": "Node",
+                    "function": "Head",
+                    "category": "VP",
+                    "children": [
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n7",
+                        "@type": "Node",
+                        "function": "Marker",
+                        "category": "Sdr",
+                        "text": "to",
+                        "position": 3
+                      },
+                      {
+                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n8",
+                        "@type": "Node",
+                        "function": "Head",
+                        "category": "Coordination",
+                        "children": [
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n9",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n10",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "V",
+                                "text": "take",
+                                "position": 4,
+                                "xpos": "VB"
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n11",
+                                "@type": "Node",
+                                "function": "Obj",
+                                "category": "NP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n12",
+                                    "@type": "Node",
+                                    "function": "Det",
+                                    "category": "NP",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n13",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n14",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "N_pro",
+                                            "text": "my",
+                                            "position": 5,
+                                            "lemma": "I"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n15",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "Nom",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n16",
+                                        "@type": "Node",
+                                        "function": "Mod",
+                                        "category": "AdjP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n17",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Adj",
+                                            "text": "huge",
+                                            "position": 6
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n18",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "Nom",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n19",
+                                            "@type": "Node",
+                                            "function": "Mod",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n20",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "IKEA",
+                                                "position": 7
+                                              }
+                                            ]
+                                          },
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n21",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "Nom",
+                                            "children": [
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n22",
+                                                "@type": "Node",
+                                                "function": "Mod",
+                                                "category": "Nom",
+                                                "children": [
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n23",
+                                                    "@type": "Node",
+                                                    "function": "Mod",
+                                                    "category": "AdjP",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n24",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "Adj",
+                                                        "text": "plastic",
+                                                        "position": 8
+                                                      }
+                                                    ]
+                                                  },
+                                                  {
+                                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n25",
+                                                    "@type": "Node",
+                                                    "function": "Head",
+                                                    "category": "Nom",
+                                                    "children": [
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n26",
+                                                        "@type": "Node",
+                                                        "function": "Mod",
+                                                        "category": "Nom",
+                                                        "children": [
+                                                          {
+                                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n27",
+                                                            "@type": "Node",
+                                                            "function": "Head",
+                                                            "category": "N",
+                                                            "text": "storage",
+                                                            "position": 9
+                                                          }
+                                                        ]
+                                                      },
+                                                      {
+                                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n28",
+                                                        "@type": "Node",
+                                                        "function": "Head",
+                                                        "category": "N",
+                                                        "text": "box",
+                                                        "position": 10
+                                                      }
+                                                    ]
+                                                  }
+                                                ]
+                                              },
+                                              {
+                                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n29",
+                                                "@type": "Node",
+                                                "function": "Head",
+                                                "category": "N",
+                                                "text": "lid",
+                                                "position": 11
+                                              }
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n30",
+                                "@type": "Node",
+                                "function": "Particle",
+                                "category": "PP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n31",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "P",
+                                    "text": "out",
+                                    "position": 12
+                                  }
+                                ]
+                              }
+                            ]
+                          },
+                          {
+                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n32",
+                            "@type": "Node",
+                            "function": "Coordinate",
+                            "category": "VP",
+                            "children": [
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n33",
+                                "@type": "Node",
+                                "function": "Marker",
+                                "category": "Coordinator",
+                                "text": "and",
+                                "position": 13
+                              },
+                              {
+                                "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n34",
+                                "@type": "Node",
+                                "function": "Head",
+                                "category": "VP",
+                                "children": [
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n35",
+                                    "@type": "Node",
+                                    "function": "Head",
+                                    "category": "V",
+                                    "text": "go",
+                                    "position": 14,
+                                    "xpos": "VB"
+                                  },
+                                  {
+                                    "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n36",
+                                    "@type": "Node",
+                                    "function": "Comp",
+                                    "category": "Clause",
+                                    "children": [
+                                      {
+                                        "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n37",
+                                        "@type": "Node",
+                                        "function": "Head",
+                                        "category": "VP",
+                                        "children": [
+                                          {
+                                            "@id": "urn:cgel:twitter:Tree%20KindaWantTo-0#n38",
+                                            "@type": "Node",
+                                            "function": "Head",
+                                            "category": "V",
+                                            "text": "sledding",
+                                            "position": 15,
+                                            "xpos": "VBG",
+                                            "postPunct": [
+                                              "."
+                                            ]
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
